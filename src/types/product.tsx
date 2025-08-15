@@ -3,7 +3,6 @@ export interface Product {
     product_name: string;
     price: number;
     description?: string;
-    imageUrl: string;
     categoryId: number;
     inStock: boolean;
     image_url: string;
@@ -11,4 +10,6 @@ export interface Product {
     createdAt: string;
     updatedAt: string;
     stock_quantity: number;
+    size: [];
+    color: [string];
 }

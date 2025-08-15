@@ -4,6 +4,7 @@ import './globals.css';
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import React from "react";
+import { ToastProvider } from "@/components/product/toast/ToastProvider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,12 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
         {children}
+        <ToastProvider />
         <Footer />
       </body>
     </html>

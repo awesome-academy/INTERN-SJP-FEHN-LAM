@@ -35,7 +35,7 @@ const Sidebar: React.FC<SidebarProps> = ({ categories, priceRanges, onCategorySe
                         <li key={category.id}>
                             <button
                                 onClick={() => onCategorySelect(category.id)}
-                                className={`w-full text-left text-gray-700 hover:text-amber-700 text-sm transition-colors ${selectedCategoryId === category.id ? 'text-amber-700 font-bold' : ''}`}
+                                className={`w-full text-left text-gray-700 hover:text-amber-700 cursor-pointer  text-sm transition-colors ${selectedCategoryId === category.id ? 'text-amber-700 font-bold' : ''}`}
                             >
                                 {category.category_name}
                             </button>
@@ -50,7 +50,7 @@ const Sidebar: React.FC<SidebarProps> = ({ categories, priceRanges, onCategorySe
                         <li key={price.value}>
                             <button
                                 onClick={() => onPriceSelect(price.value)}
-                                className="w-full flex justify-between text-gray-700 hover:text-amber-700 text-sm transition-colors"
+                                className="w-full flex justify-between text-gray-700 hover:text-amber-700 text-sm transition-colors cursor-pointer"
                             >
                                 <span>{price.label}</span>
                                 <span className="text-gray-500">({price.count})</span>

@@ -3,7 +3,7 @@ export interface Order {
     userId: number;
     items: OrderItem[];
     total: number;
-    status: 'pending' | 'confirmed' | 'shipped' | 'delivered' | 'cancelled';
+    status: 'Processing' | 'Shipped' | '' | 'Completed' | 'Cancelled';
     createdAt: string;
 }
 

@@ -11,4 +11,4 @@ export const getCategories = () => fetcher('/api/categories');
 export const getOrders = () => fetcher('/api/orders');
 export const getOrderDetails = () => fetcher('/api/order_details');
 export const getNewProducts = () => fetcher('/api/products?_sort=created_at&_order=desc&_limit=3');
-export const getLimitProduct = (limit: number) => fetcher(`/api/products?_limit=${limit}`);
+

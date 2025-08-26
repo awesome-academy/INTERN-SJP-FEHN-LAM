@@ -9,7 +9,6 @@ import ProductListItem from '@/components/product/ProductListItem';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { List, LayoutGrid } from 'lucide-react';
 import Sidebar from '@/components/product/Sidebar';
 import { getCategories, getProductReviews, getProducts } from '@/services/api';

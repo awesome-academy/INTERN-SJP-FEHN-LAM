@@ -5,6 +5,7 @@ import { Product } from "@/types";
 import { Review } from "@/types/review";
 import { Card, CardContent } from "@/components/ui/card";
 import { formatCurrency } from "@/lib/utils";
+import Link from "next/link";
 interface ProductCardProps {
     product: Product;
     reviews: Review[];
@@ -53,12 +54,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, reviews, size = 'med
             className={`text-center group hover:shadow-lg transition-all duration-300 ${styles.padding} border border-transparent hover:border-gray-200`}
         >
             <div className={`relative w-full ${styles.imageHeight} mb-3 overflow-hidden rounded-lg`}>
-                <Image
-                    src={product.image_url || '/images/placeholder.png'}
-                    alt={product.product_name}
-                    fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-300"
-                />
+                <Link href={`/products/${product.id}`} className="absolute inset-0 z-10" >
+                    <Image
+                        src={product.image_url || '/images/placeholder.png'}
+                        alt={product.product_name}
+                        fill
+                        className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
+                </Link>
             </div>
 
             <CardContent className="p-0">

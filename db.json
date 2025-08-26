@@ -1,1506 +1,2100 @@
 {
-    "categories": [
-        {
-            "id": 1,
-            "parentCategoryId": null,
-            "category_name": "Máy in phun khổ lớn",
-            "description": "Máy in chuyên dụng cho các vật liệu kích thước lớn như bạt, decal.",
-            "created_at": "2025-08-13T16:20:00+07:00",
-            "updated_at": "2025-08-13T16:20:00+07:00"
-        },
-        {
-            "id": 2,
-            "parentCategoryId": null,
-            "category_name": "Máy quét Canon 3D",
-            "description": "Thiết bị quét vật thể để tạo mô hình 3D với độ chính xác cao.",
-            "created_at": "2025-08-13T16:21:00+07:00",
-            "updated_at": "2025-08-13T16:21:00+07:00"
-        },
-        {
-            "id": 3,
-            "parentCategoryId": null,
-            "category_name": "Máy hàn điện Alunima",
-            "description": "Máy hàn que, hàn TIG thương hiệu Alunima, hiệu suất ổn định.",
-            "created_at": "2025-08-13T16:22:00+07:00",
-            "updated_at": "2025-08-13T16:22:00+07:00"
-        },
-        {
-            "id": 4,
-            "parentCategoryId": null,
-            "category_name": "Máy khoan Decameta",
-            "description": "Các loại máy khoan bàn, khoan từ của thương hiệu Decameta.",
-            "created_at": "2025-08-13T16:23:00+07:00",
-            "updated_at": "2025-08-13T16:23:00+07:00"
-        },
-        {
-            "id": 5,
-            "parentCategoryId": null,
-            "category_name": "Máy phay đa năng CNC",
-            "description": "Máy phay điều khiển bằng máy tính, gia công chi tiết phức tạp.",
-            "created_at": "2025-08-13T16:24:00+07:00",
-            "updated_at": "2025-08-13T16:24:00+07:00"
-        },
-        {
-            "id": 6,
-            "parentCategoryId": null,
-            "category_name": "Máy mài, tiện DC 12V",
-            "description": "Dụng cụ mài, tiện mini sử dụng nguồn điện DC 12V an toàn.",
-            "created_at": "2025-08-13T16:25:00+07:00",
-            "updated_at": "2025-08-13T16:25:00+07:00"
-        },
-        {
-            "id": 7,
-            "parentCategoryId": null,
-            "category_name": "Máy khoan, cắt CNC",
-            "description": "Tổ hợp máy CNC tích hợp chức năng khoan và cắt plasma/laser.",
-            "created_at": "2025-08-13T16:26:00+07:00",
-            "updated_at": "2025-08-13T16:26:00+07:00"
-        },
-        {
-            "id": 8,
-            "parentCategoryId": null,
-            "category_name": "Máy quay thông minh N3",
-            "description": "Thiết bị ghi hình giám sát công nghiệp thông minh.",
-            "created_at": "2025-08-13T16:27:00+07:00",
-            "updated_at": "2025-08-13T16:27:00+07:00"
-        },
-        {
-            "id": 9,
-            "parentCategoryId": null,
-            "category_name": "Motor R34C đa dụng",
-            "description": "Động cơ điện R34C công suất cao, ứng dụng đa dạng.",
-            "created_at": "2025-08-13T16:28:00+07:00",
-            "updated_at": "2025-08-13T16:28:00+07:00"
-        },
-        {
-            "id": 10,
-            "parentCategoryId": null,
-            "category_name": "Máy in laser màu 3D",
-            "description": "Công nghệ in 3D sử dụng laser để tạo mẫu sản phẩm có màu.",
-            "created_at": "2025-08-13T16:29:00+07:00",
-            "updated_at": "2025-08-13T16:29:00+07:00"
-        }
-    ],
-    "products": [
-        {
-            "id": 1,
-            "categoryId": 1,
-            "product_name": "Máy in phun Epson SureColor T-Series",
-            "brand": "Epson",
-            "price": "85500000.00",
-            "description": "Máy in phun khổ lớn chuyên dụng cho bản vẽ kỹ thuật và quảng cáo.",
-            "image_url": "/images/products/epson-surecolor.jpg",
-            "stock_quantity": 15,
-            "created_at": "2025-06-01T10:11:00+07:00",
-            "updated_at": "2025-06-01T10:11:00+07:00"
-        },
-        {
-            "id": 2,
-            "categoryId": 2,
-            "product_name": "Máy quét 3D Canon Matterport Pro2",
-            "brand": "Canon",
-            "price": "92000000.00",
-            "description": "Quét và tạo mô hình 3D không gian thực tế ảo với chất lượng ảnh 4K.",
-            "image_url": "/images/products/canon-matterport.jpg",
-            "stock_quantity": 8,
-            "created_at": "2025-06-02T12:22:00+07:00",
-            "updated_at": "2025-06-02T12:22:00+07:00"
-        },
-        {
-            "id": 3,
-            "categoryId": 3,
-            "product_name": "Máy hàn TIG Alunima 250A",
-            "brand": "Alunima",
-            "price": "6800000.00",
-            "description": "Máy hàn TIG/ARC công nghệ Inverter, tiết kiệm điện, mối hàn đẹp.",
-            "image_url": "/images/products/alunima-tig-250a.jpg",
-            "stock_quantity": 40,
-            "created_at": "2025-06-03T14:33:00+07:00",
-            "updated_at": "2025-06-03T14:33:00+07:00"
-        },
-        {
-            "id": 4,
-            "categoryId": 4,
-            "product_name": "Máy khoan bàn Decameta ZQ4119",
-            "brand": "Decameta",
-            "price": "9500000.00",
-            "description": "Máy khoan bàn công suất 1.5HP, đầu kẹp 19mm, chuyên dùng cho xưởng cơ khí.",
-            "image_url": "/images/products/decameta-zq4119.jpg",
-            "stock_quantity": 25,
-            "created_at": "2025-06-04T16:44:00+07:00",
-            "updated_at": "2025-06-04T16:44:00+07:00"
-        },
-        {
-            "id": 5,
-            "categoryId": 5,
-            "product_name": "Máy phay CNC Mini 3040",
-            "brand": "OEM",
-            "price": "25000000.00",
-            "description": "Máy phay CNC 4 trục, phù hợp gia công bo mạch, đồ trang sức, chi tiết nhỏ.",
-            "image_url": "/images/products/cnc-mini-3040.jpg",
-            "stock_quantity": 10,
-            "created_at": "2025-06-05T18:55:00+07:00",
-            "updated_at": "2025-06-05T18:55:00+07:00"
-        },
-        {
-            "id": 6,
-            "categoryId": 6,
-            "product_name": "Bộ máy mài, khắc mini DC 12V",
-            "brand": "OEM",
-            "price": "750000.00",
-            "description": "Bộ dụng cụ đa năng gồm máy mài và nhiều phụ kiện, dùng điện 12V an toàn.",
-            "image_url": "/images/products/mini-grinder-12v.jpg",
-            "stock_quantity": 100,
-            "created_at": "2025-06-06T20:06:00+07:00",
-            "updated_at": "2025-06-06T20:06:00+07:00"
-        },
-        {
-            "id": 7,
-            "categoryId": 1,
-            "product_name": "Máy in bạt HP Latex 335",
-            "brand": "HP",
-            "price": "145000000.00",
-            "description": "In trên nhiều vật liệu, mực gốc nước thân thiện môi trường.",
-            "image_url": "/images/products/hp-latex-355.jpg",
-            "stock_quantity": 10,
-            "created_at": "2025-06-07T22:17:00+07:00",
-            "updated_at": "2025-06-07T22:17:00+07:00"
-        },
-        {
-            "id": 8,
-            "categoryId": 1,
-            "product_name": "Máy in UV phẳng Fortune YF-2513",
-            "brand": "Fortune",
-            "price": "210000000.00",
-            "description": "In trực tiếp lên các vật liệu phẳng như kính, gỗ, mica với mực UV.",
-            "image_url": "/images/products/fortune-yf-2513.jpg",
-            "stock_quantity": 5,
-            "created_at": "2025-06-08T00:28:00+07:00",
-            "updated_at": "2025-06-08T00:28:00+07:00"
-        },
-        {
-            "id": 9,
-            "categoryId": 1,
-            "product_name": "Máy in Decal Mimaki CJV150",
-            "brand": "Mimaki",
-            "price": "180000000.00",
-            "description": "Tích hợp in và cắt decal, tem nhãn với độ chính xác cao.",
-            "image_url": "/images/products/mimaki-cjv150.jpg",
-            "stock_quantity": 12,
-            "created_at": "2025-06-09T02:39:00+07:00",
-            "updated_at": "2025-06-09T02:39:00+07:00"
-        },
-        {
-            "id": 10,
-            "categoryId": 1,
-            "product_name": "Máy in Hiflex Taimes T5",
-            "brand": "Taimes",
-            "price": "115000000.00",
-            "description": "Đầu phun Konica 512i, tốc độ in nhanh, chuyên in bạt Hiflex.",
-            "image_url": "/images/products/taimes-t5.jpg",
-            "stock_quantity": 20,
-            "created_at": "2025-06-10T04:50:00+07:00",
-            "updated_at": "2025-06-10T04:50:00+07:00"
-        },
-        {
-            "id": 11,
-            "categoryId": 1,
-            "product_name": "Máy in Pet chuyển nhiệt Audley",
-            "brand": "Audley",
-            "price": "98000000.00",
-            "description": "Công nghệ in Pet film chuyển nhiệt lên vải, áo thun.",
-            "image_url": "/images/products/audley-pet.jpg",
-            "stock_quantity": 18,
-            "created_at": "2025-06-11T07:01:00+07:00",
-            "updated_at": "2025-06-11T07:01:00+07:00"
-        },
-        {
-            "id": 12,
-            "categoryId": 1,
-            "product_name": "Máy in Canvas Roland VersaEXPRESS",
-            "brand": "Roland",
-            "price": "165000000.00",
-            "description": "Chất lượng in ảnh nghệ thuật trên vải canvas vượt trội.",
-            "image_url": "/images/products/roland-versaexpress.jpg",
-            "stock_quantity": 9,
-            "created_at": "2025-06-12T09:12:00+07:00",
-            "updated_at": "2025-06-12T09:12:00+07:00"
-        },
-        {
-            "id": 13,
-            "categoryId": 1,
-            "product_name": "Máy in backlit film Crystaljet",
-            "brand": "Crystaljet",
-            "price": "130000000.00",
-            "description": "Chuyên in các sản phẩm hộp đèn quảng cáo, tranh điện.",
-            "image_url": "/images/products/crystaljet-backlit.jpg",
-            "stock_quantity": 14,
-            "created_at": "2025-06-13T11:23:00+07:00",
-            "updated_at": "2025-06-13T11:23:00+07:00"
-        },
-        {
-            "id": 14,
-            "categoryId": 2,
-            "product_name": "Máy quét 3D cầm tay EinScan H",
-            "brand": "Shining 3D",
-            "price": "110000000.00",
-            "description": "Máy quét 3D cầm tay linh hoạt, tích hợp đèn LED và hồng ngoại.",
-            "image_url": "/images/products/einscan-h.jpg",
-            "stock_quantity": 15,
-            "created_at": "2025-06-14T13:34:00+07:00",
-            "updated_at": "2025-06-14T13:34:00+07:00"
-        },
-        {
-            "id": 15,
-            "categoryId": 2,
-            "product_name": "Máy quét 3D laser Artec Leo",
-            "brand": "Artec 3D",
-            "price": "650000000.00",
-            "description": "Tốc độ quét siêu nhanh, xử lý trên bo mạch, không cần kết nối máy tính.",
-            "image_url": "/images/products/artec-leo.jpg",
-            "stock_quantity": 4,
-            "created_at": "2025-06-15T15:45:00+07:00",
-            "updated_at": "2025-06-15T15:45:00+07:00"
-        },
-        {
-            "id": 16,
-            "categoryId": 2,
-            "product_name": "Máy quét 3D để bàn Revopoint POP 2",
-            "brand": "Revopoint",
-            "price": "18500000.00",
-            "description": "Độ chính xác cao cho các vật thể nhỏ, giá cả phải chăng.",
-            "image_url": "/images/products/revopoint-pop2.jpg",
-            "stock_quantity": 30,
-            "created_at": "2025-06-16T17:56:00+07:00",
-            "updated_at": "2025-06-16T17:56:00+07:00"
-        },
-        {
-            "id": 17,
-            "categoryId": 2,
-            "product_name": "Máy quét nha khoa Medit i700",
-            "brand": "Medit",
-            "price": "450000000.00",
-            "description": "Chuyên dụng cho ngành nha khoa, quét mẫu răng và hàm.",
-            "image_url": "/images/products/medit-i700.jpg",
-            "stock_quantity": 7,
-            "created_at": "2025-06-17T20:07:00+07:00",
-            "updated_at": "2025-06-17T20:07:00+07:00"
-        },
-        {
-            "id": 18,
-            "categoryId": 2,
-            "product_name": "Phần mềm quét và xử lý Geomagic",
-            "brand": "3D Systems",
-            "price": "75000000.00",
-            "description": "Bộ phần mềm chuyên nghiệp cho thiết kế ngược và kiểm tra 3D.",
-            "image_url": "/images/products/geomagic-software.jpg",
-            "stock_quantity": 50,
-            "created_at": "2025-06-18T22:18:00+07:00",
-            "updated_at": "2025-06-18T22:18:00+07:00"
-        },
-        {
-            "id": 19,
-            "categoryId": 2,
-            "product_name": "Máy quét 3D Creaform HandySCAN",
-            "brand": "Creaform",
-            "price": "890000000.00",
-            "description": "Độ chính xác cấp công nghiệp, phù hợp cho kiểm tra chất lượng (QC).",
-            "image_url": "/images/products/creaform-handyscan.jpg",
-            "stock_quantity": 3,
-            "created_at": "2025-06-20T00:29:00+07:00",
-            "updated_at": "2025-06-20T00:29:00+07:00"
-        },
-        {
-            "id": 20,
-            "categoryId": 2,
-            "product_name": "Máy quét kiến trúc Faro Focus",
-            "brand": "Faro",
-            "price": "1200000000.00",
-            "description": "Quét laser toàn cảnh cho các công trình xây dựng và kiến trúc lớn.",
-            "image_url": "/images/products/faro-focus.jpg",
-            "stock_quantity": 2,
-            "created_at": "2025-06-21T02:40:00+07:00",
-            "updated_at": "2025-06-21T02:40:00+07:00"
-        },
-        {
-            "id": 21,
-            "categoryId": 3,
-            "product_name": "Máy hàn que Jasic ARC 200",
-            "brand": "Jasic",
-            "price": "2800000.00",
-            "description": "Máy hàn que điện tử phổ thông, dòng hàn ổn định, dễ sử dụng.",
-            "image_url": "/images/products/jasic-arc-200.jpg",
-            "stock_quantity": 150,
-            "created_at": "2025-06-22T04:51:00+07:00",
-            "updated_at": "2025-06-22T04:51:00+07:00"
-        },
-        {
-            "id": 22,
-            "categoryId": 3,
-            "product_name": "Máy hàn MIG Hồng Ký HK MIG 250",
-            "brand": "Hồng Ký",
-            "price": "8500000.00",
-            "description": "Máy hàn MIG/MAG dùng khí CO2, hàng Việt Nam chất lượng cao.",
-            "image_url": "/images/products/hongky-mig-250.jpg",
-            "stock_quantity": 60,
-            "created_at": "2025-06-23T07:02:00+07:00",
-            "updated_at": "2025-06-23T07:02:00+07:00"
-        },
-        {
-            "id": 23,
-            "categoryId": 3,
-            "product_name": "Máy cắt Plasma Riland CUT 40",
-            "brand": "Riland",
-            "price": "4200000.00",
-            "description": "Máy cắt kim loại bằng hồ quang plasma, cắt được thép dày 10mm.",
-            "image_url": "/images/products/riland-cut-40.jpg",
-            "stock_quantity": 70,
-            "created_at": "2025-06-24T09:13:00+07:00",
-            "updated_at": "2025-06-24T09:13:00+07:00"
-        },
-        {
-            "id": 24,
-            "categoryId": 3,
-            "product_name": "Máy hàn TIG lạnh Alunima TIG 200S",
-            "brand": "Alunima",
-            "price": "4500000.00",
-            "description": "Chuyên hàn inox mỏng, mối hàn trắng đẹp, không cần tản nhiệt.",
-            "image_url": "/images/products/alunima-tig-200s.jpg",
-            "stock_quantity": 55,
-            "created_at": "2025-06-25T11:24:00+07:00",
-            "updated_at": "2025-06-25T11:24:00+07:00"
-        },
-        {
-            "id": 25,
-            "categoryId": 3,
-            "product_name": "Máy hàn que mini gia đình Ziziweld",
-            "brand": "Ziziweld",
-            "price": "1600000.00",
-            "description": "Thiết kế nhỏ gọn, trọng lượng nhẹ, phù hợp cho sửa chữa gia đình.",
-            "image_url": "/images/products/ziziweld-mini.jpg",
-            "stock_quantity": 200,
-            "created_at": "2025-06-26T13:35:00+07:00",
-            "updated_at": "2025-06-26T13:35:00+07:00"
-        },
-        {
-            "id": 26,
-            "categoryId": 3,
-            "product_name": "Máy hàn Laser Fiber Senfeng",
-            "brand": "Senfeng",
-            "price": "350000000.00",
-            "description": "Công nghệ hàn laser tiên tiến, tốc độ nhanh, không biến dạng vật liệu.",
-            "image_url": "/images/products/senfeng-laser-welder.jpg",
-            "stock_quantity": 8,
-            "created_at": "2025-06-27T15:46:00+07:00",
-            "updated_at": "2025-06-27T15:46:00+07:00"
-        },
-        {
-            "id": 27,
-            "categoryId": 3,
-            "product_name": "Máy hàn bấm Kenyo",
-            "brand": "Kenyo",
-            "price": "5500000.00",
-            "description": "Máy hàn điểm chuyên dụng để hàn ghép các tấm kim loại mỏng.",
-            "image_url": "/images/products/kenyo-spot-welder.jpg",
-            "stock_quantity": 30,
-            "created_at": "2025-06-28T17:57:00+07:00",
-            "updated_at": "2025-06-28T17:57:00+07:00"
-        },
-        {
-            "id": 28,
-            "categoryId": 4,
-            "product_name": "Máy khoan từ Decameta MD-T35",
-            "brand": "Decameta",
-            "price": "12500000.00",
-            "description": "Máy khoan có đế từ, dùng để khoan trên các kết cấu thép lớn.",
-            "image_url": "/images/products/decameta-md-t35.jpg",
-            "stock_quantity": 35,
-            "created_at": "2025-06-29T20:08:00+07:00",
-            "updated_at": "2025-06-29T20:08:00+07:00"
-        },
-        {
-            "id": 29,
-            "categoryId": 4,
-            "product_name": "Máy khoan cần Decameta Z3050",
-            "brand": "Decameta",
-            "price": "88000000.00",
-            "description": "Máy khoan công nghiệp hạng nặng, bán kính làm việc lớn.",
-            "image_url": "/images/products/decameta-z3050.jpg",
-            "stock_quantity": 6,
-            "created_at": "2025-06-30T22:19:00+07:00",
-            "updated_at": "2025-06-30T22:19:00+07:00"
-        },
-        {
-            "id": 30,
-            "categoryId": 4,
-            "product_name": "Máy khoan phay WDDM ZS-40B",
-            "brand": "WDDM",
-            "price": "45000000.00",
-            "description": "Tích hợp chức năng khoan và phay mặt, đa năng cho xưởng nhỏ.",
-            "image_url": "/images/products/wddm-zs-40b.jpg",
-            "stock_quantity": 12,
-            "created_at": "2025-07-02T00:30:00+07:00",
-            "updated_at": "2025-07-02T00:30:00+07:00"
-        },
-        {
-            "id": 31,
-            "categoryId": 4,
-            "product_name": "Đầu khoan nhiều mũi Decameta",
-            "brand": "Decameta",
-            "price": "15000000.00",
-            "description": "Phụ kiện lắp vào máy khoan để khoan nhiều lỗ cùng lúc.",
-            "image_url": "/images/products/decameta-multi-head.jpg",
-            "stock_quantity": 40,
-            "created_at": "2025-07-03T02:41:00+07:00",
-            "updated_at": "2025-07-03T02:41:00+07:00"
-        },
-        {
-            "id": 32,
-            "categoryId": 4,
-            "product_name": "Mũi khoan từ hợp kim TCT",
-            "brand": "Unifast",
-            "price": "450000.00",
-            "description": "Mũi khoan khoét lỗ nhanh trên kim loại, độ bền cao.",
-            "image_url": "/images/products/tct-annular-cutter.jpg",
-            "stock_quantity": 500,
-            "created_at": "2025-07-04T04:52:00+07:00",
-            "updated_at": "2025-07-04T04:52:00+07:00"
-        },
-        {
-            "id": 33,
-            "categoryId": 4,
-            "product_name": "Máy khoan pin Bosch GSB 180-LI",
-            "brand": "Bosch",
-            "price": "3200000.00",
-            "description": "Máy khoan pin động lực 18V chuyên nghiệp, thương hiệu Đức.",
-            "image_url": "/images/products/bosch-gsb-180li.jpg",
-            "stock_quantity": 80,
-            "created_at": "2025-07-05T07:03:00+07:00",
-            "updated_at": "2025-07-05T07:03:00+07:00"
-        },
-        {
-            "id": 34,
-            "categoryId": 4,
-            "product_name": "Ê tô kẹp máy khoan",
-            "brand": "Vertex",
-            "price": "1800000.00",
-            "description": "Ê tô chuyên dụng kẹp chi tiết gia công trên bàn máy khoan.",
-            "image_url": "/images/products/drill-press-vise.jpg",
-            "stock_quantity": 120,
-            "created_at": "2025-07-06T09:14:00+07:00",
-            "updated_at": "2025-07-06T09:14:00+07:00"
-        },
-        {
-            "id": 35,
-            "categoryId": 5,
-            "product_name": "Máy phay CNC 5 trục Hermle",
-            "brand": "Hermle",
-            "price": "2500000000.00",
-            "description": "Trung tâm gia công 5 trục độ chính xác cao từ Đức.",
-            "image_url": "/images/products/hermle-5axis.jpg",
-            "stock_quantity": 2,
-            "created_at": "2025-07-07T11:25:00+07:00",
-            "updated_at": "2025-07-07T11:25:00+07:00"
-        },
-        {
-            "id": 36,
-            "categoryId": 5,
-            "product_name": "Máy phay CNC khắc gỗ 1325",
-            "brand": "Windcam",
-            "price": "135000000.00",
-            "description": "Chuyên dùng để khắc, cắt hoa văn trên gỗ, vách ngăn CNC.",
-            "image_url": "/images/products/cnc-wood-1325.jpg",
-            "stock_quantity": 15,
-            "created_at": "2025-07-08T13:36:00+07:00",
-            "updated_at": "2025-07-08T13:36:00+07:00"
-        },
-        {
-            "id": 37,
-            "categoryId": 5,
-            "product_name": "Máy tiện CNC Mazak",
-            "brand": "Mazak",
-            "price": "1800000000.00",
-            "description": "Máy tiện CNC Nhật Bản, độ tin cậy và hiệu suất hàng đầu.",
-            "image_url": "/images/products/mazak-cnc-lathe.jpg",
-            "stock_quantity": 4,
-            "created_at": "2025-07-09T15:47:00+07:00",
-            "updated_at": "2025-07-09T15:47:00+07:00"
-        },
-        {
-            "id": 38,
-            "categoryId": 5,
-            "product_name": "Bộ điều khiển CNC Mach3",
-            "brand": "ArtSoft",
-            "price": "5000000.00",
-            "description": "Card và phần mềm điều khiển máy CNC phổ biến cho máy tự chế.",
-            "image_url": "/images/products/mach3-controller.jpg",
-            "stock_quantity": 60,
-            "created_at": "2025-07-10T17:58:00+07:00",
-            "updated_at": "2025-07-10T17:58:00+07:00"
-        },
-        {
-            "id": 39,
-            "categoryId": 5,
-            "product_name": "Dao phay ngón hợp kim",
-            "brand": "Widin",
-            "price": "350000.00",
-            "description": "Dao phay CNC chất liệu carbide, nhiều kích thước, lớp phủ TiAlN.",
-            "image_url": "/images/products/carbide-endmill.jpg",
-            "stock_quantity": 1000,
-            "created_at": "2025-07-11T20:09:00+07:00",
-            "updated_at": "2025-07-11T20:09:00+07:00"
-        },
-        {
-            "id": 40,
-            "categoryId": 5,
-            "product_name": "Máy phay CNC mini để bàn",
-            "brand": "OEM",
-            "price": "15000000.00",
-            "description": "Phiên bản nhỏ gọn, phù hợp cho mục đích giáo dục, làm mô hình.",
-            "image_url": "/images/products/desktop-cnc.jpg",
-            "stock_quantity": 25,
-            "created_at": "2025-07-12T22:20:00+07:00",
-            "updated_at": "2025-07-12T22:20:00+07:00"
-        },
-        {
-            "id": 41,
-            "categoryId": 5,
-            "product_name": "Spindle giải nhiệt nước 2.2kW",
-            "brand": "ChangSheng",
-            "price": "4500000.00",
-            "description": "Động cơ phay CNC tốc độ cao, giải nhiệt bằng nước, hoạt động êm ái.",
-            "image_url": "/images/products/water-cooled-spindle.jpg",
-            "stock_quantity": 70,
-            "created_at": "2025-07-14T00:31:00+07:00",
-            "updated_at": "2025-07-14T00:31:00+07:00"
-        },
-        {
-            "id": 42,
-            "categoryId": 6,
-            "product_name": "Máy tiện mini DC 12V",
-            "brand": "OEM",
-            "price": "2800000.00",
-            "description": "Máy tiện kim loại nhỏ gọn, dùng để chế tác các chi tiết nhỏ.",
-            "image_url": "/images/products/mini-lathe-12v.jpg",
-            "stock_quantity": 40,
-            "created_at": "2025-07-15T02:42:00+07:00",
-            "updated_at": "2025-07-15T02:42:00+07:00"
-        },
-        {
-            "id": 43,
-            "categoryId": 6,
-            "product_name": "Máy cưa bàn mini DC 12V",
-            "brand": "OEM",
-            "price": "1200000.00",
-            "description": "Dùng để cắt gỗ, mica, nhôm mỏng, an toàn và chính xác.",
-            "image_url": "/images/products/mini-table-saw-12v.jpg",
-            "stock_quantity": 80,
-            "created_at": "2025-07-16T04:53:00+07:00",
-            "updated_at": "2025-07-16T04:53:00+07:00"
-        },
-        {
-            "id": 44,
-            "categoryId": 6,
-            "product_name": "Bộ nguồn adapter 12V 10A",
-            "brand": "OEM",
-            "price": "250000.00",
-            "description": "Bộ nguồn chuyển đổi từ 220V AC sang 12V DC cho các máy mini.",
-            "image_url": "/images/products/adapter-12v-10a.jpg",
-            "stock_quantity": 200,
-            "created_at": "2025-07-17T07:04:00+07:00",
-            "updated_at": "2025-07-17T07:04:00+07:00"
-        },
-        {
-            "id": 45,
-            "categoryId": 6,
-            "product_name": "Máy khoan mạch mini DC 12V",
-            "brand": "OEM",
-            "price": "350000.00",
-            "description": "Chuyên dùng để khoan bo mạch điện tử PCB, đầu kẹp mũi khoan nhỏ.",
-            "image_url": "/images/products/pcb-drill-12v.jpg",
-            "stock_quantity": 150,
-            "created_at": "2025-07-18T09:15:00+07:00",
-            "updated_at": "2025-07-18T09:15:00+07:00"
-        },
-        {
-            "id": 46,
-            "categoryId": 6,
-            "product_name": "Đĩa mài kim cương mini",
-            "brand": "OEM",
-            "price": "80000.00",
-            "description": "Phụ kiện cho máy mài mini, dùng để mài các vật liệu cứng.",
-            "image_url": "/images/products/mini-diamond-disc.jpg",
-            "stock_quantity": 400,
-            "created_at": "2025-07-19T11:26:00+07:00",
-            "updated_at": "2025-07-19T11:26:00+07:00"
-        },
-        {
-            "id": 47,
-            "categoryId": 6,
-            "product_name": "Máy đánh bóng mini 12V",
-            "brand": "OEM",
-            "price": "950000.00",
-            "description": "Dùng để đánh bóng các chi tiết nhỏ, bề mặt sơn, mica.",
-            "image_url": "/images/products/mini-polisher-12v.jpg",
-            "stock_quantity": 60,
-            "created_at": "2025-07-20T13:37:00+07:00",
-            "updated_at": "2025-07-20T13:37:00+07:00"
-        },
-        {
-            "id": 48,
-            "categoryId": 6,
-            "product_name": "Trục uốn dây đa năng",
-            "brand": "OEM",
-            "price": "180000.00",
-            "description": "Phụ kiện nối dài cho máy mài, giúp thao tác ở các vị trí khó.",
-            "image_url": "/images/products/flexible-shaft.jpg",
-            "stock_quantity": 130,
-            "created_at": "2025-07-21T15:48:00+07:00",
-            "updated_at": "2025-07-21T15:48:00+07:00"
-        },
-        {
-            "id": 49,
-            "categoryId": 7,
-            "product_name": "Máy cắt Plasma CNC Hypertherm",
-            "brand": "Hypertherm",
-            "price": "450000000.00",
-            "description": "Hệ thống cắt plasma CNC công nghiệp, cắt kim loại dày với tốc độ cao.",
-            "image_url": "/images/products/hypertherm-plasma-cnc.jpg",
-            "stock_quantity": 7,
-            "created_at": "2025-07-22T17:59:00+07:00",
-            "updated_at": "2025-07-22T17:59:00+07:00"
-        },
-        {
-            "id": 50,
-            "categoryId": 7,
-            "product_name": "Máy cắt Laser Fiber CNC 1kW",
-            "brand": "Bodor",
-            "price": "850000000.00",
-            "description": "Chuyên cắt kim loại tấm, độ chính xác cao, không ba via.",
-            "image_url": "/images/products/bodor-fiber-laser.jpg",
-            "stock_quantity": 5,
-            "created_at": "2025-07-23T20:10:00+07:00",
-            "updated_at": "2025-07-23T20:10:00+07:00"
-        },
-        {
-            "id": 51,
-            "categoryId": 7,
-            "product_name": "Máy khoan CNC tự động thay dao",
-            "brand": "Fanuc",
-            "price": "1500000000.00",
-            "description": "Trung tâm khoan CNC với ổ chứa dao tự động (ATC).",
-            "image_url": "/images/products/fanuc-robodrill.jpg",
-            "stock_quantity": 3,
-            "created_at": "2025-07-24T22:21:00+07:00",
-            "updated_at": "2025-07-24T22:21:00+07:00"
-        },
-        {
-            "id": 52,
-            "categoryId": 7,
-            "product_name": "Máy cắt tia nước Waterjet",
-            "brand": "Flow",
-            "price": "2800000000.00",
-            "description": "Cắt mọi vật liệu bằng tia nước áp suất siêu cao, không sinh nhiệt.",
-            "image_url": "/images/products/flow-waterjet.jpg",
-            "stock_quantity": 2,
-            "created_at": "2025-07-26T00:32:00+07:00",
-            "updated_at": "2025-07-26T00:32:00+07:00"
-        },
-        {
-            "id": 53,
-            "categoryId": 7,
-            "product_name": "Nguồn cắt Plasma Hypertherm Powermax",
-            "brand": "Hypertherm",
-            "price": "65000000.00",
-            "description": "Nguồn cắt plasma cầm tay hoặc lắp máy CNC, hiệu suất cao.",
-            "image_url": "/images/products/powermax-source.jpg",
-            "stock_quantity": 25,
-            "created_at": "2025-07-27T02:43:00+07:00",
-            "updated_at": "2025-07-27T02:43:00+07:00"
-        },
-        {
-            "id": 54,
-            "categoryId": 7,
-            "product_name": "Béc cắt Plasma",
-            "brand": "OEM",
-            "price": "120000.00",
-            "description": "Phụ kiện tiêu hao cho mỏ cắt plasma, nhiều kích cỡ.",
-            "image_url": "/images/products/plasma-nozzle.jpg",
-            "stock_quantity": 1000,
-            "created_at": "2025-07-28T04:54:00+07:00",
-            "updated_at": "2025-07-28T04:54:00+07:00"
-        },
-        {
-            "id": 55,
-            "categoryId": 7,
-            "product_name": "Máy khoan và taro CNC",
-            "brand": "Brother",
-            "price": "1300000000.00",
-            "description": "Tích hợp chức năng khoan và taro ren tốc độ cao.",
-            "image_url": "/images/products/brother-speedio.jpg",
-            "stock_quantity": 4,
-            "created_at": "2025-07-29T07:05:00+07:00",
-            "updated_at": "2025-07-29T07:05:00+07:00"
-        },
-        {
-            "id": 56,
-            "categoryId": 8,
-            "product_name": "Camera IP giám sát Hikvision N3",
-            "brand": "Hikvision",
-            "price": "2500000.00",
-            "description": "Camera IP Dome 4MP, hồng ngoại thông minh, chuẩn nén H.265+.",
-            "image_url": "/images/products/hikvision-n3-dome.jpg",
-            "stock_quantity": 250,
-            "created_at": "2025-07-30T09:16:00+07:00",
-            "updated_at": "2025-07-30T09:16:00+07:00"
-        },
-        {
-            "id": 57,
-            "categoryId": 8,
-            "product_name": "Đầu ghi hình Dahua NVR N3 Series",
-            "brand": "Dahua",
-            "price": "3800000.00",
-            "description": "Đầu ghi 16 kênh, hỗ trợ camera IP lên tới 8MP, tích hợp AI.",
-            "image_url": "/images/products/dahua-nvr-n3.jpg",
-            "stock_quantity": 180,
-            "created_at": "2025-07-31T11:27:00+07:00",
-            "updated_at": "2025-07-31T11:27:00+07:00"
-        },
-        {
-            "id": 58,
-            "categoryId": 8,
-            "product_name": "Camera quay quét PTZ UNV N3",
-            "brand": "UNV",
-            "price": "7500000.00",
-            "description": "Camera Speed Dome, zoom quang 20x, quay 360 độ.",
-            "image_url": "/images/products/unv-ptz-n3.jpg",
-            "stock_quantity": 70,
-            "created_at": "2025-08-01T13:38:00+07:00",
-            "updated_at": "2025-08-01T13:38:00+07:00"
-        },
-        {
-            "id": 59,
-            "categoryId": 8,
-            "product_name": "Camera thân trụ hồng ngoại KBVision N3",
-            "brand": "KBVision",
-            "price": "2800000.00",
-            "description": "Camera ngoài trời, chống nước IP67, tầm xa hồng ngoại 80m.",
-            "image_url": "/images/products/kbvision-bullet-n3.jpg",
-            "stock_quantity": 130,
-            "created_at": "2025-08-02T15:49:00+07:00",
-            "updated_at": "2025-08-02T15:49:00+07:00"
-        },
-        {
-            "id": 60,
-            "categoryId": 8,
-            "product_name": "Ổ cứng chuyên dụng Seagate SkyHawk 4TB",
-            "brand": "Seagate",
-            "price": "2900000.00",
-            "description": "Ổ cứng thiết kế để ghi hình giám sát 24/7, độ bền cao.",
-            "image_url": "/images/products/seagate-skyhawk-4tb.jpg",
-            "stock_quantity": 300,
-            "created_at": "2025-08-03T18:00:00+07:00",
-            "updated_at": "2025-08-03T18:00:00+07:00"
-        },
-        {
-            "id": 61,
-            "categoryId": 8,
-            "product_name": "Switch PoE 8 Port N3",
-            "brand": "TP-Link",
-            "price": "1500000.00",
-            "description": "Bộ chia mạng có cấp nguồn qua dây mạng (PoE) cho camera IP.",
-            "image_url": "/images/products/tplink-poe-switch.jpg",
-            "stock_quantity": 220,
-            "created_at": "2025-08-04T20:11:00+07:00",
-            "updated_at": "2025-08-04T20:11:00+07:00"
-        },
-        {
-            "id": 62,
-            "categoryId": 8,
-            "product_name": "Tủ rack chứa đầu ghi N3",
-            "brand": "Vietrack",
-            "price": "1200000.00",
-            "description": "Tủ chuyên dụng để bảo vệ đầu ghi hình và các thiết bị mạng.",
-            "image_url": "/images/products/server-rack-n3.jpg",
-            "stock_quantity": 90,
-            "created_at": "2025-08-05T22:22:00+07:00",
-            "updated_at": "2025-08-05T22:22:00+07:00"
-        },
-        {
-            "id": 63,
-            "categoryId": 8,
-            "product_name": "Phần mềm quản lý tập trung VMS N3",
-            "brand": "Milestone",
-            "price": "15000000.00",
-            "description": "Phần mềm quản lý hệ thống camera giám sát quy mô lớn.",
-            "image_url": "/images/products/milestone-vms.jpg",
-            "stock_quantity": 45,
-            "created_at": "2025-08-07T00:33:00+07:00",
-            "updated_at": "2025-08-07T00:33:00+07:00"
-        },
-        {
-            "id": 64,
-            "categoryId": 9,
-            "product_name": "Động cơ điện 3 pha Siemens R34C",
-            "brand": "Siemens",
-            "price": "8900000.00",
-            "description": "Motor 3 pha 2.2kW, tiêu chuẩn IE3 tiết kiệm năng lượng.",
-            "image_url": "/images/products/siemens-motor-r34c.jpg",
-            "stock_quantity": 80,
-            "created_at": "2025-08-08T02:44:00+07:00",
-            "updated_at": "2025-08-08T02:44:00+07:00"
-        },
-        {
-            "id": 65,
-            "categoryId": 9,
-            "product_name": "Động cơ giảm tốc Dolin R34C",
-            "brand": "Dolin",
-            "price": "4500000.00",
-            "description": "Motor liền hộp giảm tốc, tỷ số truyền đa dạng, xuất xứ Đài Loan.",
-            "image_url": "/images/products/dolin-gearmotor-r34c.jpg",
-            "stock_quantity": 120,
-            "created_at": "2025-08-09T04:55:00+07:00",
-            "updated_at": "2025-08-09T04:55:00+07:00"
-        },
-        {
-            "id": 66,
-            "categoryId": 9,
-            "product_name": "Động cơ bước Leadshine R34C",
-            "brand": "Leadshine",
-            "price": "1200000.00",
-            "description": "Step motor size 86, dùng cho các máy CNC, máy tự động.",
-            "image_url": "/images/products/leadshine-stepper-r34c.jpg",
-            "stock_quantity": 250,
-            "created_at": "2025-08-10T07:06:00+07:00",
-            "updated_at": "2025-08-10T07:06:00+07:00"
-        },
-        {
-            "id": 67,
-            "categoryId": 9,
-            "product_name": "Động cơ Servo Delta R34C",
-            "brand": "Delta",
-            "price": "7800000.00",
-            "description": "Hệ thống động cơ servo và driver, độ chính xác và tốc độ cao.",
-            "image_url": "/images/products/delta-servo-r34c.jpg",
-            "stock_quantity": 90,
-            "created_at": "2025-08-11T09:17:00+07:00",
-            "updated_at": "2025-08-11T09:17:00+07:00"
-        },
-        {
-            "id": 68,
-            "categoryId": 9,
-            "product_name": "Biến tần INVT R34C",
-            "brand": "INVT",
-            "price": "3500000.00",
-            "description": "Thiết bị điều khiển tốc độ động cơ điện 3 pha.",
-            "image_url": "/images/products/invt-vfd-r34c.jpg",
-            "stock_quantity": 150,
-            "created_at": "2025-08-12T11:28:00+07:00",
-            "updated_at": "2025-08-12T11:28:00+07:00"
-        },
-        {
-            "id": 69,
-            "categoryId": 9,
-            "product_name": "Động cơ DC không chổi than Nidec",
-            "brand": "Nidec",
-            "price": "950000.00",
-            "description": "Motor DC brushless hiệu suất cao, tuổi thọ dài.",
-            "image_url": "/images/products/nidec-bldc.jpg",
-            "stock_quantity": 180,
-            "created_at": "2025-08-13T13:39:00+07:00",
-            "updated_at": "2025-08-13T13:39:00+07:00"
-        },
-        {
-            "id": 70,
-            "categoryId": 9,
-            "product_name": "Khớp nối trục R34C",
-            "brand": "NBK",
-            "price": "450000.00",
-            "description": "Khớp nối mềm, khớp nối cứng cho trục động cơ.",
-            "image_url": "/images/products/shaft-coupling-r34c.jpg",
-            "stock_quantity": 400,
-            "created_at": "2025-08-14T15:50:00+07:00",
-            "updated_at": "2025-08-14T15:50:00+07:00"
-        },
-        {
-            "id": 71,
-            "categoryId": 9,
-            "product_name": "Pully đai răng R34C",
-            "brand": "Gates",
-            "price": "320000.00",
-            "description": "Bánh đai và dây đai răng dùng cho truyền động chính xác.",
-            "image_url": "/images/products/timing-pulley-r34c.jpg",
-            "stock_quantity": 600,
-            "created_at": "2025-08-15T18:01:00+07:00",
-            "updated_at": "2025-08-15T18:01:00+07:00"
-        },
-        {
-            "id": 72,
-            "categoryId": 10,
-            "product_name": "Máy in 3D FDM Creality Ender 3 V2",
-            "brand": "Creality",
-            "price": "6500000.00",
-            "description": "Máy in 3D công nghệ FDM phổ biến nhất cho người mới bắt đầu.",
-            "image_url": "/images/products/creality-ender3-v2.jpg",
-            "stock_quantity": 150,
-            "created_at": "2025-08-16T20:12:00+07:00",
-            "updated_at": "2025-08-16T20:12:00+07:00"
-        },
-        {
-            "id": 73,
-            "categoryId": 10,
-            "product_name": "Máy in 3D Resin SLA Anycubic Photon",
-            "brand": "Anycubic",
-            "price": "8900000.00",
-            "description": "In mẫu vật có độ chi tiết siêu cao bằng nhựa lỏng (resin).",
-            "image_url": "/images/products/anycubic-photon.jpg",
-            "stock_quantity": 90,
-            "created_at": "2025-08-17T22:23:00+07:00",
-            "updated_at": "2025-08-17T22:23:00+07:00"
-        },
-        {
-            "id": 74,
-            "categoryId": 10,
-            "product_name": "Máy in 3D màu Stratasys J55",
-            "brand": "Stratasys",
-            "price": "2200000000.00",
-            "description": "Công nghệ PolyJet in 3D đa vật liệu và đầy đủ màu sắc.",
-            "image_url": "/images/products/stratasys-j55.jpg",
-            "stock_quantity": 3,
-            "created_at": "2025-08-18T00:34:00+07:00",
-            "updated_at": "2025-08-18T00:34:00+07:00"
-        },
-        {
-            "id": 75,
-            "categoryId": 10,
-            "product_name": "Sợi nhựa in 3D PLA eSun",
-            "brand": "eSun",
-            "price": "350000.00",
-            "description": "Nhựa in PLA+ chất lượng cao, nhiều màu sắc, dễ in.",
-            "image_url": "/images/products/esun-pla.jpg",
-            "stock_quantity": 1000,
-            "created_at": "2025-08-19T02:45:00+07:00",
-            "updated_at": "2025-08-19T02:45:00+07:00"
-        },
-        {
-            "id": 76,
-            "categoryId": 10,
-            "product_name": "Nhựa in 3D Resin an toàn sinh học",
-            "brand": "Siraya Tech",
-            "price": "1200000.00",
-            "description": "Nhựa resin chuyên dụng cho ứng dụng y tế, nha khoa.",
-            "image_url": "/images/products/sirayatech-biocompatible.jpg",
-            "stock_quantity": 80,
-            "created_at": "2025-08-20T04:56:00+07:00",
-            "updated_at": "2025-08-20T04:56:00+07:00"
-        },
-        {
-            "id": 77,
-            "categoryId": 10,
-            "product_name": "Máy in 3D kim loại SLM",
-            "brand": "EOS",
-            "price": "8500000000.00",
-            "description": "In 3D các chi tiết kim loại từ bột bằng công nghệ Selective Laser Melting.",
-            "image_url": "/images/products/eos-slm.jpg",
-            "stock_quantity": 1,
-            "created_at": "2025-08-21T07:07:00+07:00",
-            "updated_at": "2025-08-21T07:07:00+07:00"
-        },
-        {
-            "id": 78,
-            "categoryId": 10,
-            "product_name": "Bút vẽ 3D Mynt3D",
-            "brand": "Mynt3D",
-            "price": "1500000.00",
-            "description": "Bút vẽ sáng tạo, biến ý tưởng thành mô hình 3D trong không khí.",
-            "image_url": "/images/products/mynt3d-pen.jpg",
-            "stock_quantity": 200,
-            "created_at": "2025-08-22T09:18:00+07:00",
-            "updated_at": "2025-08-22T09:18:00+07:00"
-        },
-        {
-            "id": 79,
-            "categoryId": 10,
-            "product_name": "Máy quét và in 3D All-in-one",
-            "brand": "XYZprinting",
-            "price": "18000000.00",
-            "description": "Thiết bị tích hợp cả chức năng quét và in 3D tiện lợi.",
-            "image_url": "/images/products/xyzprinting-aio.jpg",
-            "stock_quantity": 15,
-            "created_at": "2025-08-23T11:29:00+07:00",
-            "updated_at": "2025-08-23T11:29:00+07:00"
-        }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "username": "nguyenvana",
-            "email": "nguyenvana@example.com",
-            "password": "hashed_password_123",
-            "full_name": "Nguyễn Văn An",
-            "phone_number": "0987654321",
-            "address": "Số 10, đường Giải Phóng, Hai Bà Trưng, Hà Nội",
-            "is_active": true,
-            "activation_token": null,
-            "created_at": "2025-08-13T10:00:00+07:00",
-            "updated_at": "2025-08-13T10:00:00+07:00"
-        }
-    ],
-    "shipping_addresses": [
-        {
-            "id": 1,
-            "userId": 1,
-            "full_name": "Nguyễn Văn An",
-            "phone_number": "0987654321",
-            "address": "Số 10, đường Giải Phóng, Hai Bà Trưng, Hà Nội",
-            "is_default": true,
-            "created_at": "2025-08-13T10:05:00+07:00",
-            "updated_at": "2025-08-13T10:05:00+07:00"
-        }
-    ],
-    "vouchers": [
-        {
-            "id": 1,
-            "code": "SALE10",
-            "discount": "10.00",
-            "expiry_date": "2025-12-31",
-            "is_active": true,
-            "created_at": "2025-08-01T09:00:00+07:00",
-            "updated_at": "2025-08-01T09:00:00+07:00"
-        }
-    ],
-    "cart": [
-        {
-            "id": 1,
-            "userId": 1,
-            "productId": 3,
-            "quantity": 1,
-            "added_at": "2025-08-13T18:00:00+07:00",
-            "updated_at": "2025-08-13T18:00:00+07:00"
-        },
-        {
-            "id": 2,
-            "userId": 1,
-            "productId": 6,
-            "quantity": 2,
-            "added_at": "2025-08-13T18:01:00+07:00",
-            "updated_at": "2025-08-13T18:01:00+07:00"
-        }
-    ],
-    "orders": [
-        {
-            "id": 1,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": null,
-            "order_date": "2025-08-12T11:30:00+07:00",
-            "total_amount": "9500000.00",
-            "status": "Processing",
-            "note": "Giao máy khoan bàn Decameta",
-            "created_at": "2025-08-12T11:30:00+07:00",
-            "updated_at": "2025-08-12T11:35:00+07:00"
-        },
-        {
-            "id": 2,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": 1,
-            "order_date": "2025-08-11T14:00:00+07:00",
-            "total_amount": "8280000.00",
-            "status": "Completed",
-            "note": "Giao hàng nhanh, đã áp dụng voucher SALE10.",
-            "created_at": "2025-08-11T14:00:00+07:00",
-            "updated_at": "2025-08-11T14:05:00+07:00"
-        },
-        {
-            "id": 3,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": null,
-            "order_date": "2025-08-10T09:20:00+07:00",
-            "total_amount": "750000.00",
-            "status": "Shipped",
-            "note": "",
-            "created_at": "2025-08-10T09:20:00+07:00",
-            "updated_at": "2025-08-10T09:25:00+07:00"
-        },
-        {
-            "id": 4,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": null,
-            "order_date": "2025-08-09T18:45:00+07:00",
-            "total_amount": "6500000.00",
-            "status": "Completed",
-            "note": "Khách hàng yêu cầu kiểm tra hàng trước khi thanh toán.",
-            "created_at": "2025-08-09T18:45:00+07:00",
-            "updated_at": "2025-08-09T18:50:00+07:00"
-        },
-        {
-            "id": 5,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": null,
-            "order_date": "2025-08-08T12:00:00+07:00",
-            "total_amount": "3200000.00",
-            "status": "Cancelled",
-            "note": "Khách hàng báo hủy do đặt nhầm sản phẩm.",
-            "created_at": "2025-08-08T12:00:00+07:00",
-            "updated_at": "2025-08-08T13:00:00+07:00"
-        },
-        {
-            "id": 6,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": null,
-            "order_date": "2025-08-07T20:10:00+07:00",
-            "total_amount": "5800000.00",
-            "status": "Completed",
-            "note": "",
-            "created_at": "2025-08-07T20:10:00+07:00",
-            "updated_at": "2025-08-07T20:15:00+07:00"
-        },
-        {
-            "id": 7,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": null,
-            "order_date": "2025-08-06T11:05:00+07:00",
-            "total_amount": "8500000.00",
-            "status": "Shipped",
-            "note": "Giao trong giờ hành chính.",
-            "created_at": "2025-08-06T11:05:00+07:00",
-            "updated_at": "2025-08-06T11:10:00+07:00"
-        },
-        {
-            "id": 8,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": null,
-            "order_date": "2025-08-05T16:30:00+07:00",
-            "total_amount": "2800000.00",
-            "status": "Completed",
-            "note": "",
-            "created_at": "2025-08-05T16:30:00+07:00",
-            "updated_at": "2025-08-05T16:35:00+07:00"
-        },
-        {
-            "id": 9,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": null,
-            "order_date": "2025-08-04T08:00:00+07:00",
-            "total_amount": "145000000.00",
-            "status": "Processing",
-            "note": "Đơn hàng giá trị cao, cần xác nhận lại với khách hàng.",
-            "created_at": "2025-08-04T08:00:00+07:00",
-            "updated_at": "2025-08-04T08:05:00+07:00"
-        },
-        {
-            "id": 10,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": 1,
-            "order_date": "2025-08-03T22:15:00+07:00",
-            "total_amount": "5850000.00",
-            "status": "Completed",
-            "note": "",
-            "created_at": "2025-08-03T22:15:00+07:00",
-            "updated_at": "2025-08-03T22:20:00+07:00"
-        },
-        {
-            "id": 11,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": null,
-            "order_date": "2025-08-02T13:40:00+07:00",
-            "total_amount": "12500000.00",
-            "status": "Completed",
-            "note": "",
-            "created_at": "2025-08-02T13:40:00+07:00",
-            "updated_at": "2025-08-02T13:45:00+07:00"
-        },
-        {
-            "id": 12,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": null,
-            "order_date": "2025-08-01T10:00:00+07:00",
-            "total_amount": "25000000.00",
-            "status": "Shipped",
-            "note": "",
-            "created_at": "2025-08-01T10:00:00+07:00",
-            "updated_at": "2025-08-01T10:05:00+07:00"
-        },
-        {
-            "id": 13,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": null,
-            "order_date": "2025-07-31T19:50:00+07:00",
-            "total_amount": "92000000.00",
-            "status": "Completed",
-            "note": "",
-            "created_at": "2025-07-31T19:50:00+07:00",
-            "updated_at": "2025-07-31T19:55:00+07:00"
-        },
-        {
-            "id": 14,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": null,
-            "order_date": "2025-07-30T17:25:00+07:00",
-            "total_amount": "6800000.00",
-            "status": "Completed",
-            "note": "Khách hàng cũ.",
-            "created_at": "2025-07-30T17:25:00+07:00",
-            "updated_at": "2025-07-30T17:30:00+07:00"
-        },
-        {
-            "id": 15,
-            "userId": 1,
-            "addressId": 1,
-            "voucherId": 1,
-            "order_date": "2025-07-29T11:11:00+07:00",
-            "total_amount": "1350000.00",
-            "status": "Processing",
-            "note": "Đã áp dụng voucher SALE10.",
-            "created_at": "2025-07-29T11:11:00+07:00",
-            "updated_at": "2025-07-29T11:16:00+07:00"
-        }
-    ],
-    "order_details": [
-        {
-            "id": 1,
-            "orderId": 1,
-            "productId": 4,
-            "quantity": 1,
-            "unit_price": "9500000.00"
-        },
-        {
-            "id": 2,
-            "orderId": 2,
-            "productId": 22,
-            "quantity": 1,
-            "unit_price": "8500000.00"
-        },
-        {
-            "id": 3,
-            "orderId": 2,
-            "productId": 32,
-            "quantity": 2,
-            "unit_price": "450000.00"
-        },
-        {
-            "id": 4,
-            "orderId": 3,
-            "productId": 6,
-            "quantity": 1,
-            "unit_price": "750000.00"
-        },
-        {
-            "id": 5,
-            "orderId": 4,
-            "productId": 72,
-            "quantity": 1,
-            "unit_price": "6500000.00"
-        },
-        {
-            "id": 6,
-            "orderId": 5,
-            "productId": 33,
-            "quantity": 1,
-            "unit_price": "3200000.00"
-        },
-        {
-            "id": 7,
-            "orderId": 6,
-            "productId": 60,
-            "quantity": 2,
-            "unit_price": "2900000.00"
-        },
-        {
-            "id": 8,
-            "orderId": 7,
-            "productId": 22,
-            "quantity": 1,
-            "unit_price": "8500000.00"
-        },
-        {
-            "id": 9,
-            "orderId": 8,
-            "productId": 21,
-            "quantity": 1,
-            "unit_price": "2800000.00"
-        },
-        {
-            "id": 10,
-            "orderId": 9,
-            "productId": 7,
-            "quantity": 1,
-            "unit_price": "145000000.00"
-        },
-        {
-            "id": 11,
-            "orderId": 10,
-            "productId": 72,
-            "quantity": 1,
-            "unit_price": "6500000.00"
-        },
-        {
-            "id": 12,
-            "orderId": 11,
-            "productId": 28,
-            "quantity": 1,
-            "unit_price": "12500000.00"
-        },
-        {
-            "id": 13,
-            "orderId": 12,
-            "productId": 5,
-            "quantity": 1,
-            "unit_price": "25000000.00"
-        },
-        {
-            "id": 14,
-            "orderId": 13,
-            "productId": 2,
-            "quantity": 1,
-            "unit_price": "92000000.00"
-        },
-        {
-            "id": 15,
-            "orderId": 14,
-            "productId": 3,
-            "quantity": 1,
-            "unit_price": "6800000.00"
-        },
-        {
-            "id": 16,
-            "orderId": 15,
-            "productId": 25,
-            "quantity": 1,
-            "unit_price": "1500000.00"
-        }
-    ],
-    "product_reviews": [
-        {
-            "id": 1,
-            "userId": 1,
-            "productId": 4,
-            "rating": 4,
-            "comment": "Máy chạy tốt, khá nặng và đầm. Nên có hướng dẫn lắp đặt chi tiết hơn.",
-            "review_date": "2025-08-13T15:00:00+07:00",
-            "updated_at": "2025-08-13T15:00:00+07:00"
-        },
-        {
-            "id": 2,
-            "userId": 1,
-            "productId": 1,
-            "rating": 5,
-            "comment": "Chất lượng in tuyệt vời, màu sắc trung thực. Rất đáng tiền!",
-            "review_date": "2025-08-14T11:00:00+07:00",
-            "updated_at": "2025-08-14T11:00:00+07:00"
-        },
-        {
-            "id": 3,
-            "userId": 1,
-            "productId": 3,
-            "rating": 4,
-            "comment": "Máy hàn hoạt động ổn định, mối hàn đẹp. Giao hàng nhanh.",
-            "review_date": "2025-08-15T09:30:00+07:00",
-            "updated_at": "2025-08-15T09:30:00+07:00"
-        },
-        {
-            "id": 4,
-            "userId": 1,
-            "productId": 6,
-            "rating": 5,
-            "comment": "Bộ dụng cụ rất tiện lợi cho các công việc nhỏ trong nhà. Máy chạy êm.",
-            "review_date": "2025-08-16T14:00:00+07:00",
-            "updated_at": "2025-08-16T14:00:00+07:00"
-        },
-        {
-            "id": 5,
-            "userId": 1,
-            "productId": 72,
-            "rating": 5,
-            "comment": "Máy in 3D Ender 3 V2 rất dễ sử dụng cho người mới bắt đầu. Chất lượng in tốt trong tầm giá.",
-            "review_date": "2025-08-17T18:45:00+07:00",
-            "updated_at": "2025-08-17T18:45:00+07:00"
-        },
-        {
-            "id": 6,
-            "userId": 1,
-            "productId": 33,
-            "rating": 5,
-            "comment": "Máy khoan pin Bosch rất mạnh, pin dùng được lâu. Hàng chính hãng, chất lượng Đức.",
-            "review_date": "2025-08-18T10:15:00+07:00",
-            "updated_at": "2025-08-18T10:15:00+07:00"
-        },
-        {
-            "id": 7,
-            "userId": 1,
-            "productId": 22,
-            "rating": 4,
-            "comment": "Máy hàn MIG Hồng Ký dùng tốt, mối hàn chắc chắn. Ủng hộ hàng Việt Nam chất lượng cao.",
-            "review_date": "2025-08-19T16:00:00+07:00",
-            "updated_at": "2025-08-19T16:00:00+07:00"
-        },
-        {
-            "id": 8,
-            "userId": 1,
-            "productId": 60,
-            "rating": 5,
-            "comment": "Ổ cứng Seagate SkyHawk chạy êm, tối ưu cho việc ghi hình camera 24/7. Rất yên tâm khi sử dụng.",
-            "review_date": "2025-08-20T11:20:00+07:00",
-            "updated_at": "2025-08-20T11:20:00+07:00"
-        },
-        {
-            "id": 9,
-            "userId": 1,
-            "productId": 4,
-            "rating": 5,
-            "comment": "Shop tư vấn nhiệt tình, giao hàng nhanh. Máy khoan Decameta đúng như mô tả, rất chắc chắn.",
-            "review_date": "2025-08-21T09:00:00+07:00",
-            "updated_at": "2025-08-21T09:00:00+07:00"
-        },
-        {
-            "id": 10,
-            "userId": 1,
-            "productId": 16,
-            "rating": 4,
-            "comment": "Máy quét Revopoint POP 2 quét các chi tiết nhỏ rất nét, tuy nhiên phần mềm cần cải thiện thêm một chút.",
-            "review_date": "2025-08-22T14:30:00+07:00",
-            "updated_at": "2025-08-22T14:30:00+07:00"
-        }
-    ],
-    "email_subscriptions": [
-        {
-            "id": 1,
-            "email": "customer@example.com",
-            "subscribed_at": "2025-08-10T15:00:00+07:00",
-            "is_active": true
-        }
-    ],
-    "product_suggestions": [
-        {
-            "id": 1,
-            "userId": 1,
-            "product_name": "Máy phay CNC 5 trục",
-            "description": "Mong shop nhập thêm dòng máy phay CNC 5 trục để phục vụ gia công phức tạp.",
-            "suggested_at": "2025-08-11T17:45:00+07:00"
-        }
-    ],
-    "statistics": [
-        {
-            "id": 1,
-            "stat_date": "2025-08-12",
-            "total_orders": 25,
-            "total_revenue": "120500000.00",
-            "total_users": 150,
-            "created_at": "2025-08-13T00:00:00+07:00",
-            "updated_at": "2025-08-13T00:00:00+07:00"
-        }
-    ]
+  "categories": [
+    {
+      "id": "1",
+      "parentCategoryId": null,
+      "category_name": "Máy in phun khổ lớn",
+      "description": "Máy in chuyên dụng cho các vật liệu kích thước lớn như bạt, decal.",
+      "created_at": "2025-08-13T16:20:00+07:00",
+      "updated_at": "2025-08-13T16:20:00+07:00"
+    },
+    {
+      "id": "2",
+      "parentCategoryId": null,
+      "category_name": "Máy quét Canon 3D",
+      "description": "Thiết bị quét vật thể để tạo mô hình 3D với độ chính xác cao.",
+      "created_at": "2025-08-13T16:21:00+07:00",
+      "updated_at": "2025-08-13T16:21:00+07:00"
+    },
+    {
+      "id": "3",
+      "parentCategoryId": null,
+      "category_name": "Máy hàn điện Alunima",
+      "description": "Máy hàn que, hàn TIG thương hiệu Alunima, hiệu suất ổn định.",
+      "created_at": "2025-08-13T16:22:00+07:00",
+      "updated_at": "2025-08-13T16:22:00+07:00"
+    },
+    {
+      "id": "4",
+      "parentCategoryId": null,
+      "category_name": "Máy khoan Decameta",
+      "description": "Các loại máy khoan bàn, khoan từ của thương hiệu Decameta.",
+      "created_at": "2025-08-13T16:23:00+07:00",
+      "updated_at": "2025-08-13T16:23:00+07:00"
+    },
+    {
+      "id": "5",
+      "parentCategoryId": null,
+      "category_name": "Máy phay đa năng CNC",
+      "description": "Máy phay điều khiển bằng máy tính, gia công chi tiết phức tạp.",
+      "created_at": "2025-08-13T16:24:00+07:00",
+      "updated_at": "2025-08-13T16:24:00+07:00"
+    },
+    {
+      "id": "6",
+      "parentCategoryId": null,
+      "category_name": "Máy mài, tiện DC 12V",
+      "description": "Dụng cụ mài, tiện mini sử dụng nguồn điện DC 12V an toàn.",
+      "created_at": "2025-08-13T16:25:00+07:00",
+      "updated_at": "2025-08-13T16:25:00+07:00"
+    },
+    {
+      "id": "7",
+      "parentCategoryId": null,
+      "category_name": "Máy khoan, cắt CNC",
+      "description": "Tổ hợp máy CNC tích hợp chức năng khoan và cắt plasma/laser.",
+      "created_at": "2025-08-13T16:26:00+07:00",
+      "updated_at": "2025-08-13T16:26:00+07:00"
+    },
+    {
+      "id": "8",
+      "parentCategoryId": null,
+      "category_name": "Máy quay thông minh N3",
+      "description": "Thiết bị ghi hình giám sát công nghiệp thông minh.",
+      "created_at": "2025-08-13T16:27:00+07:00",
+      "updated_at": "2025-08-13T16:27:00+07:00"
+    },
+    {
+      "id": "9",
+      "parentCategoryId": null,
+      "category_name": "Motor R34C đa dụng",
+      "description": "Động cơ điện R34C công suất cao, ứng dụng đa dạng.",
+      "created_at": "2025-08-13T16:28:00+07:00",
+      "updated_at": "2025-08-13T16:28:00+07:00"
+    },
+    {
+      "id": "10",
+      "parentCategoryId": null,
+      "category_name": "Máy in laser màu 3D",
+      "description": "Công nghệ in 3D sử dụng laser để tạo mẫu sản phẩm có màu.",
+      "created_at": "2025-08-13T16:29:00+07:00",
+      "updated_at": "2025-08-13T16:29:00+07:00"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "categoryId": 1,
+      "product_name": "Máy in phun Epson SureColor T-Series",
+      "brand": "Epson",
+      "price": "85500000.00",
+      "description": "Máy in phun khổ lớn chuyên dụng cho bản vẽ kỹ thuật và quảng cáo.",
+      "image_url": "/images/products/epson-surecolor.jpg",
+      "stock_quantity": 15,
+      "created_at": "2025-06-01T10:11:00+07:00",
+      "updated_at": "2025-06-01T10:11:00+07:00",
+      "color": [
+        "White",
+        "Gray"
+      ],
+      "size": [
+        "Khổ A0 (914mm)",
+        "Khổ A1 (594mm)"
+      ]
+    },
+    {
+      "id": "2",
+      "categoryId": 2,
+      "product_name": "Máy quét 3D Canon Matterport Pro2",
+      "brand": "Canon",
+      "price": "92000000.00",
+      "description": "Quét và tạo mô hình 3D không gian thực tế ảo với chất lượng ảnh 4K.",
+      "image_url": "/images/products/canon-matterport.jpg",
+      "stock_quantity": 8,
+      "created_at": "2025-06-02T12:22:00+07:00",
+      "updated_at": "2025-06-02T12:22:00+07:00",
+      "color": [
+        "Black"
+      ],
+      "size": [
+        "230 x 260 x 110 mm"
+      ]
+    },
+    {
+      "id": "3",
+      "categoryId": 3,
+      "product_name": "Máy hàn TIG Alunima 250A",
+      "brand": "Alunima",
+      "price": "6800000.00",
+      "description": "Máy hàn TIG/ARC công nghệ Inverter, tiết kiệm điện, mối hàn đẹp.",
+      "image_url": "/images/products/alunima-tig-250a.jpg",
+      "stock_quantity": 40,
+      "created_at": "2025-06-03T14:33:00+07:00",
+      "updated_at": "2025-06-03T14:33:00+07:00",
+      "color": [
+        "Red",
+        "Black"
+      ],
+      "size": [
+        "480 x 240 x 400 mm"
+      ]
+    },
+    {
+      "id": "4",
+      "categoryId": 4,
+      "product_name": "Máy khoan bàn Decameta ZQ4119",
+      "brand": "Decameta",
+      "price": "9500000.00",
+      "description": "Máy khoan bàn công suất 1.5HP, đầu kẹp 19mm, chuyên dùng cho xưởng cơ khí.",
+      "image_url": "/images/products/decameta-zq4119.jpg",
+      "stock_quantity": 25,
+      "created_at": "2025-06-04T16:44:00+07:00",
+      "updated_at": "2025-06-04T16:44:00+07:00",
+      "color": [
+        "Blue",
+        "Silver"
+      ],
+      "size": [
+        "Đầu kẹp 19mm",
+        "Đầu kẹp 16mm"
+      ]
+    },
+    {
+      "id": "5",
+      "categoryId": 5,
+      "product_name": "Máy phay CNC Mini 3040",
+      "brand": "OEM",
+      "price": "25000000.00",
+      "description": "Máy phay CNC 4 trục, phù hợp gia công bo mạch, đồ trang sức, chi tiết nhỏ.",
+      "image_url": "/images/products/cnc-mini-3040.jpg",
+      "stock_quantity": 10,
+      "created_at": "2025-06-05T18:55:00+07:00",
+      "updated_at": "2025-06-05T18:55:00+07:00",
+      "color": [
+        "Silver"
+      ],
+      "size": [
+        "Vùng làm việc 300x400mm"
+      ]
+    },
+    {
+      "id": "6",
+      "categoryId": 6,
+      "product_name": "Bộ máy mài, khắc mini DC 12V",
+      "brand": "OEM",
+      "price": "750000.00",
+      "description": "Bộ dụng cụ đa năng gồm máy mài và nhiều phụ kiện, dùng điện 12V an toàn.",
+      "image_url": "/images/products/mini-grinder-12v.jpg",
+      "stock_quantity": 100,
+      "created_at": "2025-06-06T20:06:00+07:00",
+      "updated_at": "2025-06-06T20:06:00+07:00",
+      "color": [
+        "Black",
+        "Orange"
+      ],
+      "size": [
+        "12V",
+        "24V"
+      ]
+    },
+    {
+      "id": "7",
+      "categoryId": 1,
+      "product_name": "Máy in bạt HP Latex 335",
+      "brand": "HP",
+      "price": "145000000.00",
+      "description": "In trên nhiều vật liệu, mực gốc nước thân thiện môi trường.",
+      "image_url": "/images/products/hp-latex-355.jpg",
+      "stock_quantity": 10,
+      "created_at": "2025-06-07T22:17:00+07:00",
+      "updated_at": "2025-06-07T22:17:00+07:00",
+      "color": [
+        "White",
+        "Dark Gray"
+      ],
+      "size": [
+        "Khổ 1.37m"
+      ]
+    },
+    {
+      "id": "8",
+      "categoryId": 1,
+      "product_name": "Máy in UV phẳng Fortune YF-2513",
+      "brand": "Fortune",
+      "price": "210000000.00",
+      "description": "In trực tiếp lên các vật liệu phẳng như kính, gỗ, mica với mực UV.",
+      "image_url": "/images/products/fortune-yf-2513.jpg",
+      "stock_quantity": 5,
+      "created_at": "2025-06-08T00:28:00+07:00",
+      "updated_at": "2025-06-08T00:28:00+07:00",
+      "color": [
+        "Blue",
+        "White"
+      ],
+      "size": [
+        "Bàn in 2.5m x 1.3m"
+      ]
+    },
+    {
+      "id": "9",
+      "categoryId": 1,
+      "product_name": "Máy in Decal Mimaki CJV150",
+      "brand": "Mimaki",
+      "price": "180000000.00",
+      "description": "Tích hợp in và cắt decal, tem nhãn với độ chính xác cao.",
+      "image_url": "/images/products/mimaki-cjv150.jpg",
+      "stock_quantity": 12,
+      "created_at": "2025-06-09T02:39:00+07:00",
+      "updated_at": "2025-06-09T02:39:00+07:00",
+      "color": [
+        "White",
+        "Orange"
+      ],
+      "size": [
+        "Khổ 1.6m",
+        "Khổ 1.3m"
+      ]
+    },
+    {
+      "id": "10",
+      "categoryId": 1,
+      "product_name": "Máy in Hiflex Taimes T5",
+      "brand": "Taimes",
+      "price": "115000000.00",
+      "description": "Đầu phun Konica 512i, tốc độ in nhanh, chuyên in bạt Hiflex.",
+      "image_url": "/images/products/taimes-t5.jpg",
+      "stock_quantity": 20,
+      "created_at": "2025-06-10T04:50:00+07:00",
+      "updated_at": "2025-06-10T04:50:00+07:00",
+      "color": [
+        "Gray",
+        "Black"
+      ],
+      "size": [
+        "Khổ 3.2m"
+      ]
+    },
+    {
+      "id": "11",
+      "categoryId": 1,
+      "product_name": "Máy in Pet chuyển nhiệt Audley",
+      "brand": "Audley",
+      "price": "98000000.00",
+      "description": "Công nghệ in Pet film chuyển nhiệt lên vải, áo thun.",
+      "image_url": "/images/products/audley-pet.jpg",
+      "stock_quantity": 18,
+      "created_at": "2025-06-11T07:01:00+07:00",
+      "updated_at": "2025-06-11T07:01:00+07:00",
+      "color": [
+        "White",
+        "Green"
+      ],
+      "size": [
+        "Khổ 60cm",
+        "Khổ 30cm"
+      ]
+    },
+    {
+      "id": "12",
+      "categoryId": 1,
+      "product_name": "Máy in Canvas Roland VersaEXPRESS",
+      "brand": "Roland",
+      "price": "165000000.00",
+      "description": "Chất lượng in ảnh nghệ thuật trên vải canvas vượt trội.",
+      "image_url": "/images/products/roland-versaexpress.jpg",
+      "stock_quantity": 9,
+      "created_at": "2025-06-12T09:12:00+07:00",
+      "updated_at": "2025-06-12T09:12:00+07:00",
+      "color": [
+        "White"
+      ],
+      "size": [
+        "Khổ 1.6m"
+      ]
+    },
+    {
+      "id": "13",
+      "categoryId": 1,
+      "product_name": "Máy in backlit film Crystaljet",
+      "brand": "Crystaljet",
+      "price": "130000000.00",
+      "description": "Chuyên in các sản phẩm hộp đèn quảng cáo, tranh điện.",
+      "image_url": "/images/products/crystaljet-backlit.jpg",
+      "stock_quantity": 14,
+      "created_at": "2025-06-13T11:23:00+07:00",
+      "updated_at": "2025-06-13T11:23:00+07:00",
+      "color": [
+        "Blue",
+        "Gray"
+      ],
+      "size": [
+        "Khổ 1.8m"
+      ]
+    },
+    {
+      "id": "14",
+      "categoryId": 2,
+      "product_name": "Máy quét 3D cầm tay EinScan H",
+      "brand": "Shining 3D",
+      "price": "110000000.00",
+      "description": "Máy quét 3D cầm tay linh hoạt, tích hợp đèn LED và hồng ngoại.",
+      "image_url": "/images/products/einscan-h.jpg",
+      "stock_quantity": 15,
+      "created_at": "2025-06-14T13:34:00+07:00",
+      "updated_at": "2025-06-14T13:34:00+07:00",
+      "color": [
+        "Gray",
+        "Black"
+      ],
+      "size": [
+        "Cầm tay"
+      ]
+    },
+    {
+      "id": "15",
+      "categoryId": 2,
+      "product_name": "Máy quét 3D laser Artec Leo",
+      "brand": "Artec 3D",
+      "price": "650000000.00",
+      "description": "Tốc độ quét siêu nhanh, xử lý trên bo mạch, không cần kết nối máy tính.",
+      "image_url": "/images/products/artec-leo.jpg",
+      "stock_quantity": 4,
+      "created_at": "2025-06-15T15:45:00+07:00",
+      "updated_at": "2025-06-15T15:45:00+07:00",
+      "color": [
+        "White"
+      ],
+      "size": [
+        "Cầm tay không dây"
+      ]
+    },
+    {
+      "id": "16",
+      "categoryId": 2,
+      "product_name": "Máy quét 3D để bàn Revopoint POP 2",
+      "brand": "Revopoint",
+      "price": "18500000.00",
+      "description": "Độ chính xác cao cho các vật thể nhỏ, giá cả phải chăng.",
+      "image_url": "/images/products/revopoint-pop2.jpg",
+      "stock_quantity": 30,
+      "created_at": "2025-06-16T17:56:00+07:00",
+      "updated_at": "2025-06-16T17:56:00+07:00",
+      "color": [
+        "Black",
+        "White"
+      ],
+      "size": [
+        "Để bàn"
+      ]
+    },
+    {
+      "id": "17",
+      "categoryId": 2,
+      "product_name": "Máy quét nha khoa Medit i700",
+      "brand": "Medit",
+      "price": "450000000.00",
+      "description": "Chuyên dụng cho ngành nha khoa, quét mẫu răng và hàm.",
+      "image_url": "/images/products/medit-i700.jpg",
+      "stock_quantity": 7,
+      "created_at": "2025-06-17T20:07:00+07:00",
+      "updated_at": "2025-06-17T20:07:00+07:00",
+      "color": [
+        "White"
+      ],
+      "size": [
+        "Cầm tay y tế"
+      ]
+    },
+    {
+      "id": "18",
+      "categoryId": 2,
+      "product_name": "Phần mềm quét và xử lý Geomagic",
+      "brand": "3D Systems",
+      "price": "75000000.00",
+      "description": "Bộ phần mềm chuyên nghiệp cho thiết kế ngược và kiểm tra 3D.",
+      "image_url": "/images/products/geomagic-software.jpg",
+      "stock_quantity": 50,
+      "created_at": "2025-06-18T22:18:00+07:00",
+      "updated_at": "2025-06-18T22:18:00+07:00",
+      "color": [
+        "Không áp dụng"
+      ],
+      "size": [
+        "Không áp dụng"
+      ]
+    },
+    {
+      "id": "19",
+      "categoryId": 2,
+      "product_name": "Máy quét 3D Creaform HandySCAN",
+      "brand": "Creaform",
+      "price": "890000000.00",
+      "description": "Độ chính xác cấp công nghiệp, phù hợp cho kiểm tra chất lượng (QC).",
+      "image_url": "/images/products/creaform-handyscan.jpg",
+      "stock_quantity": 3,
+      "created_at": "2025-06-20T00:29:00+07:00",
+      "updated_at": "2025-06-20T00:29:00+07:00",
+      "color": [
+        "Black",
+        "Silver"
+      ],
+      "size": [
+        "Cầm tay"
+      ]
+    },
+    {
+      "id": "20",
+      "categoryId": 2,
+      "product_name": "Máy quét kiến trúc Faro Focus",
+      "brand": "Faro",
+      "price": "1200000000.00",
+      "description": "Quét laser toàn cảnh cho các công trình xây dựng và kiến trúc lớn.",
+      "image_url": "/images/products/faro-focus.jpg",
+      "stock_quantity": 2,
+      "created_at": "2025-06-21T02:40:00+07:00",
+      "updated_at": "2025-06-21T02:40:00+07:00",
+      "color": [
+        "Black",
+        "Blue"
+      ],
+      "size": [
+        "Để trên tripod"
+      ]
+    },
+    {
+      "id": "21",
+      "categoryId": 3,
+      "product_name": "Máy hàn que Jasic ARC 200",
+      "brand": "Jasic",
+      "price": "2800000.00",
+      "description": "Máy hàn que điện tử phổ thông, dòng hàn ổn định, dễ sử dụng.",
+      "image_url": "/images/products/jasic-arc-200.jpg",
+      "stock_quantity": 150,
+      "created_at": "2025-06-22T04:51:00+07:00",
+      "updated_at": "2025-06-22T04:51:00+07:00",
+      "color": [
+        "Orange",
+        "Black"
+      ],
+      "size": [
+        "200A"
+      ]
+    },
+    {
+      "id": "22",
+      "categoryId": 3,
+      "product_name": "Máy hàn MIG Hồng Ký HK MIG 250",
+      "brand": "Hồng Ký",
+      "price": "8500000.00",
+      "description": "Máy hàn MIG/MAG dùng khí CO2, hàng Việt Nam chất lượng cao.",
+      "image_url": "/images/products/hongky-mig-250.jpg",
+      "stock_quantity": 60,
+      "created_at": "2025-06-23T07:02:00+07:00",
+      "updated_at": "2025-06-23T07:02:00+07:00",
+      "color": [
+        "Yellow",
+        "Black"
+      ],
+      "size": [
+        "250A"
+      ]
+    },
+    {
+      "id": "23",
+      "categoryId": 3,
+      "product_name": "Máy cắt Plasma Riland CUT 40",
+      "brand": "Riland",
+      "price": "4200000.00",
+      "description": "Máy cắt kim loại bằng hồ quang plasma, cắt được thép dày 10mm.",
+      "image_url": "/images/products/riland-cut-40.jpg",
+      "stock_quantity": 70,
+      "created_at": "2025-06-24T09:13:00+07:00",
+      "updated_at": "2025-06-24T09:13:00+07:00",
+      "color": [
+        "Blue"
+      ],
+      "size": [
+        "CUT 40",
+        "CUT 60"
+      ]
+    },
+    {
+      "id": "24",
+      "categoryId": 3,
+      "product_name": "Máy hàn TIG lạnh Alunima TIG 200S",
+      "brand": "Alunima",
+      "price": "4500000.00",
+      "description": "Chuyên hàn inox mỏng, mối hàn trắng đẹp, không cần tản nhiệt.",
+      "image_url": "/images/products/alunima-tig-200s.jpg",
+      "stock_quantity": 55,
+      "created_at": "2025-06-25T11:24:00+07:00",
+      "updated_at": "2025-06-25T11:24:00+07:00",
+      "color": [
+        "Red"
+      ],
+      "size": [
+        "200A"
+      ]
+    },
+    {
+      "id": "25",
+      "categoryId": 3,
+      "product_name": "Máy hàn que mini gia đình Ziziweld",
+      "brand": "Ziziweld",
+      "price": "1600000.00",
+      "description": "Thiết kế nhỏ gọn, trọng lượng nhẹ, phù hợp cho sửa chữa gia đình.",
+      "image_url": "/images/products/ziziweld-mini.jpg",
+      "stock_quantity": 200,
+      "created_at": "2025-06-26T13:35:00+07:00",
+      "updated_at": "2025-06-26T13:35:00+07:00",
+      "color": [
+        "Yellow"
+      ],
+      "size": [
+        "Mini 200A"
+      ]
+    },
+    {
+      "id": "26",
+      "categoryId": 3,
+      "product_name": "Máy hàn Laser Fiber Senfeng",
+      "brand": "Senfeng",
+      "price": "350000000.00",
+      "description": "Công nghệ hàn laser tiên tiến, tốc độ nhanh, không biến dạng vật liệu.",
+      "image_url": "/images/products/senfeng-laser-welder.jpg",
+      "stock_quantity": 8,
+      "created_at": "2025-06-27T15:46:00+07:00",
+      "updated_at": "2025-06-27T15:46:00+07:00",
+      "color": [
+        "White",
+        "Blue"
+      ],
+      "size": [
+        "1000W",
+        "1500W",
+        "2000W"
+      ]
+    },
+    {
+      "id": "27",
+      "categoryId": 3,
+      "product_name": "Máy hàn bấm Kenyo",
+      "brand": "Kenyo",
+      "price": "5500000.00",
+      "description": "Máy hàn điểm chuyên dụng để hàn ghép các tấm kim loại mỏng.",
+      "image_url": "/images/products/kenyo-spot-welder.jpg",
+      "stock_quantity": 30,
+      "created_at": "2025-06-28T17:57:00+07:00",
+      "updated_at": "2025-06-28T17:57:00+07:00",
+      "color": [
+        "Yellow"
+      ],
+      "size": [
+        "Cầm tay"
+      ]
+    },
+    {
+      "id": "28",
+      "categoryId": 4,
+      "product_name": "Máy khoan từ Decameta MD-T35",
+      "brand": "Decameta",
+      "price": "12500000.00",
+      "description": "Máy khoan có đế từ, dùng để khoan trên các kết cấu thép lớn.",
+      "image_url": "/images/products/decameta-md-t35.jpg",
+      "stock_quantity": 35,
+      "created_at": "2025-06-29T20:08:00+07:00",
+      "updated_at": "2025-06-29T20:08:00+07:00",
+      "color": [
+        "Orange",
+        "Black"
+      ],
+      "size": [
+        "Mũi 35mm",
+        "Mũi 50mm"
+      ]
+    },
+    {
+      "id": "29",
+      "categoryId": 4,
+      "product_name": "Máy khoan cần Decameta Z3050",
+      "brand": "Decameta",
+      "price": "88000000.00",
+      "description": "Máy khoan công nghiệp hạng nặng, bán kính làm việc lớn.",
+      "image_url": "/images/products/decameta-z3050.jpg",
+      "stock_quantity": 6,
+      "created_at": "2025-06-30T22:19:00+07:00",
+      "updated_at": "2025-06-30T22:19:00+07:00",
+      "color": [
+        "Green",
+        "Gray"
+      ],
+      "size": [
+        "Tầm với 1.6m"
+      ]
+    },
+    {
+      "id": "30",
+      "categoryId": 4,
+      "product_name": "Máy khoan phay WDDM ZS-40B",
+      "brand": "WDDM",
+      "price": "45000000.00",
+      "description": "Tích hợp chức năng khoan và phay mặt, đa năng cho xưởng nhỏ.",
+      "image_url": "/images/products/wddm-zs-40b.jpg",
+      "stock_quantity": 12,
+      "created_at": "2025-07-02T00:30:00+07:00",
+      "updated_at": "2025-07-02T00:30:00+07:00",
+      "color": [
+        "Gray"
+      ],
+      "size": [
+        "Bàn 800x240mm"
+      ]
+    },
+    {
+      "id": "31",
+      "categoryId": 4,
+      "product_name": "Đầu khoan nhiều mũi Decameta",
+      "brand": "Decameta",
+      "price": "15000000.00",
+      "description": "Phụ kiện lắp vào máy khoan để khoan nhiều lỗ cùng lúc.",
+      "image_url": "/images/products/decameta-multi-head.jpg",
+      "stock_quantity": 40,
+      "created_at": "2025-07-03T02:41:00+07:00",
+      "updated_at": "2025-07-03T02:41:00+07:00",
+      "color": [
+        "Silver"
+      ],
+      "size": [
+        "2 mũi",
+        "4 mũi",
+        "6 mũi",
+        "Tùy chỉnh"
+      ]
+    },
+    {
+      "id": "32",
+      "categoryId": 4,
+      "product_name": "Mũi khoan từ hợp kim TCT",
+      "brand": "Unifast",
+      "price": "450000.00",
+      "description": "Mũi khoan khoét lỗ nhanh trên kim loại, độ bền cao.",
+      "image_url": "/images/products/tct-annular-cutter.jpg",
+      "stock_quantity": 500,
+      "created_at": "2025-07-04T04:52:00+07:00",
+      "updated_at": "2025-07-04T04:52:00+07:00",
+      "color": [
+        "Silver",
+        "Titanium Coated"
+      ],
+      "size": [
+        "Ø18x50mm",
+        "Ø22x50mm",
+        "Ø25x50mm",
+        "Ø30x50mm"
+      ]
+    },
+    {
+      "id": "33",
+      "categoryId": 4,
+      "product_name": "Máy khoan pin Bosch GSB 180-LI",
+      "brand": "Bosch",
+      "price": "3200000.00",
+      "description": "Máy khoan pin động lực 18V chuyên nghiệp, thương hiệu Đức.",
+      "image_url": "/images/products/bosch-gsb-180li.jpg",
+      "stock_quantity": 80,
+      "created_at": "2025-07-05T07:03:00+07:00",
+      "updated_at": "2025-07-05T07:03:00+07:00",
+      "color": [
+        "Blue",
+        "Black"
+      ],
+      "size": [
+        "18V"
+      ]
+    },
+    {
+      "id": "34",
+      "categoryId": 4,
+      "product_name": "Ê tô kẹp máy khoan",
+      "brand": "Vertex",
+      "price": "1800000.00",
+      "description": "Ê tô chuyên dụng kẹp chi tiết gia công trên bàn máy khoan.",
+      "image_url": "/images/products/drill-press-vise.jpg",
+      "stock_quantity": 120,
+      "created_at": "2025-07-06T09:14:00+07:00",
+      "updated_at": "2025-07-06T09:14:00+07:00",
+      "color": [
+        "Gray"
+      ],
+      "size": [
+        "Độ mở 100mm",
+        "Độ mở 150mm"
+      ]
+    },
+    {
+      "id": "35",
+      "categoryId": 5,
+      "product_name": "Máy phay CNC 5 trục Hermle",
+      "brand": "Hermle",
+      "price": "2500000000.00",
+      "description": "Trung tâm gia công 5 trục độ chính xác cao từ Đức.",
+      "image_url": "/images/products/hermle-5axis.jpg",
+      "stock_quantity": 2,
+      "created_at": "2025-07-07T11:25:00+07:00",
+      "updated_at": "2025-07-07T11:25:00+07:00",
+      "color": [
+        "White",
+        "Gray"
+      ],
+      "size": [
+        "C32"
+      ]
+    },
+    {
+      "id": "36",
+      "categoryId": 5,
+      "product_name": "Máy phay CNC khắc gỗ 1325",
+      "brand": "Windcam",
+      "price": "135000000.00",
+      "description": "Chuyên dùng để khắc, cắt hoa văn trên gỗ, vách ngăn CNC.",
+      "image_url": "/images/products/cnc-wood-1325.jpg",
+      "stock_quantity": 15,
+      "created_at": "2025-07-08T13:36:00+07:00",
+      "updated_at": "2025-07-08T13:36:00+07:00",
+      "color": [
+        "Red",
+        "White"
+      ],
+      "size": [
+        "Vùng làm việc 1300x2500mm"
+      ]
+    },
+    {
+      "id": "37",
+      "categoryId": 5,
+      "product_name": "Máy tiện CNC Mazak",
+      "brand": "Mazak",
+      "price": "1800000000.00",
+      "description": "Máy tiện CNC Nhật Bản, độ tin cậy và hiệu suất hàng đầu.",
+      "image_url": "/images/products/mazak-cnc-lathe.jpg",
+      "stock_quantity": 4,
+      "created_at": "2025-07-09T15:47:00+07:00",
+      "updated_at": "2025-07-09T15:47:00+07:00",
+      "color": [
+        "White",
+        "Blue"
+      ],
+      "size": [
+        "QT-250"
+      ]
+    },
+    {
+      "id": "38",
+      "categoryId": 5,
+      "product_name": "Bộ điều khiển CNC Mach3",
+      "brand": "ArtSoft",
+      "price": "5000000.00",
+      "description": "Card và phần mềm điều khiển máy CNC phổ biến cho máy tự chế.",
+      "image_url": "/images/products/mach3-controller.jpg",
+      "stock_quantity": 60,
+      "created_at": "2025-07-10T17:58:00+07:00",
+      "updated_at": "2025-07-10T17:58:00+07:00",
+      "color": [
+        "Green",
+        "Red"
+      ],
+      "size": [
+        "USB Interface",
+        "Ethernet Interface"
+      ]
+    },
+    {
+      "id": "39",
+      "categoryId": 5,
+      "product_name": "Dao phay ngón hợp kim",
+      "brand": "Widin",
+      "price": "350000.00",
+      "description": "Dao phay CNC chất liệu carbide, nhiều kích thước, lớp phủ TiAlN.",
+      "image_url": "/images/products/carbide-endmill.jpg",
+      "stock_quantity": 1000,
+      "created_at": "2025-07-11T20:09:00+07:00",
+      "updated_at": "2025-07-11T20:09:00+07:00",
+      "color": [
+        "Dark Gray"
+      ],
+      "size": [
+        "4mm",
+        "6mm",
+        "8mm",
+        "10mm",
+        "12mm"
+      ]
+    },
+    {
+      "id": "40",
+      "categoryId": 5,
+      "product_name": "Máy phay CNC mini để bàn",
+      "brand": "OEM",
+      "price": "15000000.00",
+      "description": "Phiên bản nhỏ gọn, phù hợp cho mục đích giáo dục, làm mô hình.",
+      "image_url": "/images/products/desktop-cnc.jpg",
+      "stock_quantity": 25,
+      "created_at": "2025-07-12T22:20:00+07:00",
+      "updated_at": "2025-07-12T22:20:00+07:00",
+      "color": [
+        "Black",
+        "Silver"
+      ],
+      "size": [
+        "3018-Pro"
+      ]
+    },
+    {
+      "id": "41",
+      "categoryId": 5,
+      "product_name": "Spindle giải nhiệt nước 2.2kW",
+      "brand": "ChangSheng",
+      "price": "4500000.00",
+      "description": "Động cơ phay CNC tốc độ cao, giải nhiệt bằng nước, hoạt động êm ái.",
+      "image_url": "/images/products/water-cooled-spindle.jpg",
+      "stock_quantity": 70,
+      "created_at": "2025-07-14T00:31:00+07:00",
+      "updated_at": "2025-07-14T00:31:00+07:00",
+      "color": [
+        "Silver"
+      ],
+      "size": [
+        "80mm diameter, 2.2kW",
+        "65mm diameter, 1.5kW"
+      ]
+    },
+    {
+      "id": "42",
+      "categoryId": 6,
+      "product_name": "Máy tiện mini DC 12V",
+      "brand": "OEM",
+      "price": "2800000.00",
+      "description": "Máy tiện kim loại nhỏ gọn, dùng để chế tác các chi tiết nhỏ.",
+      "image_url": "/images/products/mini-lathe-12v.jpg",
+      "stock_quantity": 40,
+      "created_at": "2025-07-15T02:42:00+07:00",
+      "updated_at": "2025-07-15T02:42:00+07:00",
+      "color": [
+        "Red",
+        "Silver"
+      ],
+      "size": [
+        "Mini"
+      ]
+    },
+    {
+      "id": "43",
+      "categoryId": 6,
+      "product_name": "Máy cưa bàn mini DC 12V",
+      "brand": "OEM",
+      "price": "1200000.00",
+      "description": "Dùng để cắt gỗ, mica, nhôm mỏng, an toàn và chính xác.",
+      "image_url": "/images/products/mini-table-saw-12v.jpg",
+      "stock_quantity": 80,
+      "created_at": "2025-07-16T04:53:00+07:00",
+      "updated_at": "2025-07-16T04:53:00+07:00",
+      "color": [
+        "Silver"
+      ],
+      "size": [
+        "Mini"
+      ]
+    },
+    {
+      "id": "44",
+      "categoryId": 6,
+      "product_name": "Bộ nguồn adapter 12V 10A",
+      "brand": "OEM",
+      "price": "250000.00",
+      "description": "Bộ nguồn chuyển đổi từ 220V AC sang 12V DC cho các máy mini.",
+      "image_url": "/images/products/adapter-12v-10a.jpg",
+      "stock_quantity": 200,
+      "created_at": "2025-07-17T07:04:00+07:00",
+      "updated_at": "2025-07-17T07:04:00+07:00",
+      "color": [
+        "Black"
+      ],
+      "size": [
+        "12V 10A",
+        "12V 5A",
+        "24V 5A"
+      ]
+    },
+    {
+      "id": "45",
+      "categoryId": 6,
+      "product_name": "Máy khoan mạch mini DC 12V",
+      "brand": "OEM",
+      "price": "350000.00",
+      "description": "Chuyên dùng để khoan bo mạch điện tử PCB, đầu kẹp mũi khoan nhỏ.",
+      "image_url": "/images/products/pcb-drill-12v.jpg",
+      "stock_quantity": 150,
+      "created_at": "2025-07-18T09:15:00+07:00",
+      "updated_at": "2025-07-18T09:15:00+07:00",
+      "color": [
+        "Yellow",
+        "Black"
+      ],
+      "size": [
+        "Mini"
+      ]
+    },
+    {
+      "id": "46",
+      "categoryId": 6,
+      "product_name": "Đĩa mài kim cương mini",
+      "brand": "OEM",
+      "price": "80000.00",
+      "description": "Phụ kiện cho máy mài mini, dùng để mài các vật liệu cứng.",
+      "image_url": "/images/products/mini-diamond-disc.jpg",
+      "stock_quantity": 400,
+      "created_at": "2025-07-19T11:26:00+07:00",
+      "updated_at": "2025-07-19T11:26:00+07:00",
+      "color": [
+        "Silver"
+      ],
+      "size": [
+        "50mm",
+        "60mm"
+      ]
+    },
+    {
+      "id": "47",
+      "categoryId": 6,
+      "product_name": "Máy đánh bóng mini 12V",
+      "brand": "OEM",
+      "price": "950000.00",
+      "description": "Dùng để đánh bóng các chi tiết nhỏ, bề mặt sơn, mica.",
+      "image_url": "/images/products/mini-polisher-12v.jpg",
+      "stock_quantity": 60,
+      "created_at": "2025-07-20T13:37:00+07:00",
+      "updated_at": "2025-07-20T13:37:00+07:00",
+      "color": [
+        "Red",
+        "Black"
+      ],
+      "size": [
+        "Mini"
+      ]
+    },
+    {
+      "id": "48",
+      "categoryId": 6,
+      "product_name": "Trục uốn dây đa năng",
+      "brand": "OEM",
+      "price": "180000.00",
+      "description": "Phụ kiện nối dài cho máy mài, giúp thao tác ở các vị trí khó.",
+      "image_url": "/images/products/flexible-shaft.jpg",
+      "stock_quantity": 130,
+      "created_at": "2025-07-21T15:48:00+07:00",
+      "updated_at": "2025-07-21T15:48:00+07:00",
+      "color": [
+        "Black",
+        "Silver"
+      ],
+      "size": [
+        "Dài 1m"
+      ]
+    },
+    {
+      "id": "49",
+      "categoryId": 7,
+      "product_name": "Máy cắt Plasma CNC Hypertherm",
+      "brand": "Hypertherm",
+      "price": "450000000.00",
+      "description": "Hệ thống cắt plasma CNC công nghiệp, cắt kim loại dày với tốc độ cao.",
+      "image_url": "/images/products/hypertherm-plasma-cnc.jpg",
+      "stock_quantity": 7,
+      "created_at": "2025-07-22T17:59:00+07:00",
+      "updated_at": "2025-07-22T17:59:00+07:00",
+      "color": [
+        "Yellow",
+        "Black"
+      ],
+      "size": [
+        "Bàn cắt 1.5m x 3m"
+      ]
+    },
+    {
+      "id": "50",
+      "categoryId": 7,
+      "product_name": "Máy cắt Laser Fiber CNC 1kW",
+      "brand": "Bodor",
+      "price": "850000000.00",
+      "description": "Chuyên cắt kim loại tấm, độ chính xác cao, không ba via.",
+      "image_url": "/images/products/bodor-fiber-laser.jpg",
+      "stock_quantity": 5,
+      "created_at": "2025-07-23T20:10:00+07:00",
+      "updated_at": "2025-07-23T20:10:00+07:00",
+      "color": [
+        "White",
+        "Black"
+      ],
+      "size": [
+        "Bàn cắt 1.5m x 3m"
+      ]
+    },
+    {
+      "id": "51",
+      "categoryId": 7,
+      "product_name": "Máy khoan CNC tự động thay dao",
+      "brand": "Fanuc",
+      "price": "1500000000.00",
+      "description": "Trung tâm khoan CNC với ổ chứa dao tự động (ATC).",
+      "image_url": "/images/products/fanuc-robodrill.jpg",
+      "stock_quantity": 3,
+      "created_at": "2025-07-24T22:21:00+07:00",
+      "updated_at": "2025-07-24T22:21:00+07:00",
+      "color": [
+        "White",
+        "Yellow"
+      ],
+      "size": [
+        "Robodrill a-D21LiB5"
+      ]
+    },
+    {
+      "id": "52",
+      "categoryId": 7,
+      "product_name": "Máy cắt tia nước Waterjet",
+      "brand": "Flow",
+      "price": "2800000000.00",
+      "description": "Cắt mọi vật liệu bằng tia nước áp suất siêu cao, không sinh nhiệt.",
+      "image_url": "/images/products/flow-waterjet.jpg",
+      "stock_quantity": 2,
+      "created_at": "2025-07-26T00:32:00+07:00",
+      "updated_at": "2025-07-26T00:32:00+07:00",
+      "color": [
+        "Blue",
+        "Gray"
+      ],
+      "size": [
+        "Bàn cắt 2m x 4m"
+      ]
+    },
+    {
+      "id": "53",
+      "categoryId": 7,
+      "product_name": "Nguồn cắt Plasma Hypertherm Powermax",
+      "brand": "Hypertherm",
+      "price": "65000000.00",
+      "description": "Nguồn cắt plasma cầm tay hoặc lắp máy CNC, hiệu suất cao.",
+      "image_url": "/images/products/powermax-source.jpg",
+      "stock_quantity": 25,
+      "created_at": "2025-07-27T02:43:00+07:00",
+      "updated_at": "2025-07-27T02:43:00+07:00",
+      "color": [
+        "Yellow",
+        "Black"
+      ],
+      "size": [
+        "Powermax 45",
+        "Powermax 65",
+        "Powermax 85"
+      ]
+    },
+    {
+      "id": "54",
+      "categoryId": 7,
+      "product_name": "Béc cắt Plasma",
+      "brand": "OEM",
+      "price": "120000.00",
+      "description": "Phụ kiện tiêu hao cho mỏ cắt plasma, nhiều kích cỡ.",
+      "image_url": "/images/products/plasma-nozzle.jpg",
+      "stock_quantity": 1000,
+      "created_at": "2025-07-28T04:54:00+07:00",
+      "updated_at": "2025-07-28T04:54:00+07:00",
+      "color": [
+        "Copper"
+      ],
+      "size": [
+        "P80",
+        "PT31",
+        "AG60"
+      ]
+    },
+    {
+      "id": "55",
+      "categoryId": 7,
+      "product_name": "Máy khoan và taro CNC",
+      "brand": "Brother",
+      "price": "1300000000.00",
+      "description": "Tích hợp chức năng khoan và taro ren tốc độ cao.",
+      "image_url": "/images/products/brother-speedio.jpg",
+      "stock_quantity": 4,
+      "created_at": "2025-07-29T07:05:00+07:00",
+      "updated_at": "2025-07-29T07:05:00+07:00",
+      "color": [
+        "White"
+      ],
+      "size": [
+        "S700X1"
+      ]
+    },
+    {
+      "id": "56",
+      "categoryId": 8,
+      "product_name": "Camera IP giám sát Hikvision N3",
+      "brand": "Hikvision",
+      "price": "2500000.00",
+      "description": "Camera IP Dome 4MP, hồng ngoại thông minh, chuẩn nén H.265+.",
+      "image_url": "/images/products/hikvision-n3-dome.jpg",
+      "stock_quantity": 250,
+      "created_at": "2025-07-30T09:16:00+07:00",
+      "updated_at": "2025-07-30T09:16:00+07:00",
+      "color": [
+        "White",
+        "Black"
+      ],
+      "size": [
+        "Dome"
+      ]
+    },
+    {
+      "id": "57",
+      "categoryId": 8,
+      "product_name": "Đầu ghi hình Dahua NVR N3 Series",
+      "brand": "Dahua",
+      "price": "3800000.00",
+      "description": "Đầu ghi 16 kênh, hỗ trợ camera IP lên tới 8MP, tích hợp AI.",
+      "image_url": "/images/products/dahua-nvr-n3.jpg",
+      "stock_quantity": 180,
+      "created_at": "2025-07-31T11:27:00+07:00",
+      "updated_at": "2025-07-31T11:27:00+07:00",
+      "color": [
+        "Black"
+      ],
+      "size": [
+        "16 kênh",
+        "32 kênh",
+        "64 kênh"
+      ]
+    },
+    {
+      "id": "58",
+      "categoryId": 8,
+      "product_name": "Camera quay quét PTZ UNV N3",
+      "brand": "UNV",
+      "price": "7500000.00",
+      "description": "Camera Speed Dome, zoom quang 20x, quay 360 độ.",
+      "image_url": "/images/products/unv-ptz-n3.jpg",
+      "stock_quantity": 70,
+      "created_at": "2025-08-01T13:38:00+07:00",
+      "updated_at": "2025-08-01T13:38:00+07:00",
+      "color": [
+        "White",
+        "Black"
+      ],
+      "size": [
+        "Speed Dome"
+      ]
+    },
+    {
+      "id": "59",
+      "categoryId": 8,
+      "product_name": "Camera thân trụ hồng ngoại KBVision N3",
+      "brand": "KBVision",
+      "price": "2800000.00",
+      "description": "Camera ngoài trời, chống nước IP67, tầm xa hồng ngoại 80m.",
+      "image_url": "/images/products/kbvision-bullet-n3.jpg",
+      "stock_quantity": 130,
+      "created_at": "2025-08-02T15:49:00+07:00",
+      "updated_at": "2025-08-02T15:49:00+07:00",
+      "color": [
+        "White"
+      ],
+      "size": [
+        "Thân trụ"
+      ]
+    },
+    {
+      "id": "60",
+      "categoryId": 8,
+      "product_name": "Ổ cứng chuyên dụng Seagate SkyHawk 4TB",
+      "brand": "Seagate",
+      "price": "2900000.00",
+      "description": "Ổ cứng thiết kế để ghi hình giám sát 24/7, độ bền cao.",
+      "image_url": "/images/products/seagate-skyhawk-4tb.jpg",
+      "stock_quantity": 300,
+      "created_at": "2025-08-03T18:00:00+07:00",
+      "updated_at": "2025-08-03T18:00:00+07:00",
+      "color": [
+        "Silver"
+      ],
+      "size": [
+        "1TB",
+        "2TB",
+        "4TB",
+        "6TB",
+        "8TB"
+      ]
+    },
+    {
+      "id": "61",
+      "categoryId": 8,
+      "product_name": "Switch PoE 8 Port N3",
+      "brand": "TP-Link",
+      "price": "1500000.00",
+      "description": "Bộ chia mạng có cấp nguồn qua dây mạng (PoE) cho camera IP.",
+      "image_url": "/images/products/tplink-poe-switch.jpg",
+      "stock_quantity": 220,
+      "created_at": "2025-08-04T20:11:00+07:00",
+      "updated_at": "2025-08-04T20:11:00+07:00",
+      "color": [
+        "Black"
+      ],
+      "size": [
+        "4 Port",
+        "8 Port",
+        "16 Port"
+      ]
+    },
+    {
+      "id": "62",
+      "categoryId": 8,
+      "product_name": "Tủ rack chứa đầu ghi N3",
+      "brand": "Vietrack",
+      "price": "1200000.00",
+      "description": "Tủ chuyên dụng để bảo vệ đầu ghi hình và các thiết bị mạng.",
+      "image_url": "/images/products/server-rack-n3.jpg",
+      "stock_quantity": 90,
+      "created_at": "2025-08-05T22:22:00+07:00",
+      "updated_at": "2025-08-05T22:22:00+07:00",
+      "color": [
+        "Black",
+        "Gray"
+      ],
+      "size": [
+        "6U",
+        "9U",
+        "12U"
+      ]
+    },
+    {
+      "id": "63",
+      "categoryId": 8,
+      "product_name": "Phần mềm quản lý tập trung VMS N3",
+      "brand": "Milestone",
+      "price": "15000000.00",
+      "description": "Phần mềm quản lý hệ thống camera giám sát quy mô lớn.",
+      "image_url": "/images/products/milestone-vms.jpg",
+      "stock_quantity": 45,
+      "created_at": "2025-08-07T00:33:00+07:00",
+      "updated_at": "2025-08-07T00:33:00+07:00",
+      "color": [
+        "Không áp dụng"
+      ],
+      "size": [
+        "Không áp dụng"
+      ]
+    },
+    {
+      "id": "64",
+      "categoryId": 9,
+      "product_name": "Động cơ điện 3 pha Siemens R34C",
+      "brand": "Siemens",
+      "price": "8900000.00",
+      "description": "Motor 3 pha 2.2kW, tiêu chuẩn IE3 tiết kiệm năng lượng.",
+      "image_url": "/images/products/siemens-motor-r34c.jpg",
+      "stock_quantity": 80,
+      "created_at": "2025-08-08T02:44:00+07:00",
+      "updated_at": "2025-08-08T02:44:00+07:00",
+      "color": [
+        "Gray"
+      ],
+      "size": [
+        "2.2kW",
+        "3kW",
+        "5.5kW"
+      ]
+    },
+    {
+      "id": "65",
+      "categoryId": 9,
+      "product_name": "Động cơ giảm tốc Dolin R34C",
+      "brand": "Dolin",
+      "price": "4500000.00",
+      "description": "Motor liền hộp giảm tốc, tỷ số truyền đa dạng, xuất xứ Đài Loan.",
+      "image_url": "/images/products/dolin-gearmotor-r34c.jpg",
+      "stock_quantity": 120,
+      "created_at": "2025-08-09T04:55:00+07:00",
+      "updated_at": "2025-08-09T04:55:00+07:00",
+      "color": [
+        "Light Green"
+      ],
+      "size": [
+        "1:10",
+        "1:20",
+        "1:30",
+        "1:50"
+      ]
+    },
+    {
+      "id": "66",
+      "categoryId": 9,
+      "product_name": "Động cơ bước Leadshine R34C",
+      "brand": "Leadshine",
+      "price": "1200000.00",
+      "description": "Step motor size 86, dùng cho các máy CNC, máy tự động.",
+      "image_url": "/images/products/leadshine-stepper-r34c.jpg",
+      "stock_quantity": 250,
+      "created_at": "2025-08-10T07:06:00+07:00",
+      "updated_at": "2025-08-10T07:06:00+07:00",
+      "color": [
+        "Black"
+      ],
+      "size": [
+        "Size 86",
+        "Size 57",
+        "Size 42"
+      ]
+    },
+    {
+      "id": "67",
+      "categoryId": 9,
+      "product_name": "Động cơ Servo Delta R34C",
+      "brand": "Delta",
+      "price": "7800000.00",
+      "description": "Hệ thống động cơ servo và driver, độ chính xác và tốc độ cao.",
+      "image_url": "/images/products/delta-servo-r34c.jpg",
+      "stock_quantity": 90,
+      "created_at": "2025-08-11T09:17:00+07:00",
+      "updated_at": "2025-08-11T09:17:00+07:00",
+      "color": [
+        "Black",
+        "Gray"
+      ],
+      "size": [
+        "400W",
+        "750W",
+        "1kW"
+      ]
+    },
+    {
+      "id": "68",
+      "categoryId": 9,
+      "product_name": "Biến tần INVT R34C",
+      "brand": "INVT",
+      "price": "3500000.00",
+      "description": "Thiết bị điều khiển tốc độ động cơ điện 3 pha.",
+      "image_url": "/images/products/invt-vfd-r34c.jpg",
+      "stock_quantity": 150,
+      "created_at": "2025-08-12T11:28:00+07:00",
+      "updated_at": "2025-08-12T11:28:00+07:00",
+      "color": [
+        "White",
+        "Black"
+      ],
+      "size": [
+        "2.2kW",
+        "4kW",
+        "7.5kW"
+      ]
+    },
+    {
+      "id": "69",
+      "categoryId": 9,
+      "product_name": "Động cơ DC không chổi than Nidec",
+      "brand": "Nidec",
+      "price": "950000.00",
+      "description": "Motor DC brushless hiệu suất cao, tuổi thọ dài.",
+      "image_url": "/images/products/nidec-bldc.jpg",
+      "stock_quantity": 180,
+      "created_at": "2025-08-13T13:39:00+07:00",
+      "updated_at": "2025-08-13T13:39:00+07:00",
+      "color": [
+        "Silver"
+      ],
+      "size": [
+        "12V",
+        "24V"
+      ]
+    },
+    {
+      "id": "70",
+      "categoryId": 9,
+      "product_name": "Khớp nối trục R34C",
+      "brand": "NBK",
+      "price": "450000.00",
+      "description": "Khớp nối mềm, khớp nối cứng cho trục động cơ.",
+      "image_url": "/images/products/shaft-coupling-r34c.jpg",
+      "stock_quantity": 400,
+      "created_at": "2025-08-14T15:50:00+07:00",
+      "updated_at": "2025-08-14T15:50:00+07:00",
+      "color": [
+        "Silver",
+        "Red",
+        "Blue"
+      ],
+      "size": [
+        "5x8mm",
+        "8x10mm",
+        "10x12mm"
+      ]
+    },
+    {
+      "id": "71",
+      "categoryId": 9,
+      "product_name": "Pully đai răng R34C",
+      "brand": "Gates",
+      "price": "320000.00",
+      "description": "Bánh đai và dây đai răng dùng cho truyền động chính xác.",
+      "image_url": "/images/products/timing-pulley-r34c.jpg",
+      "stock_quantity": 600,
+      "created_at": "2025-08-15T18:01:00+07:00",
+      "updated_at": "2025-08-15T18:01:00+07:00",
+      "color": [
+        "Silver"
+      ],
+      "size": [
+        "20 răng",
+        "40 răng",
+        "60 răng"
+      ]
+    },
+    {
+      "id": "72",
+      "categoryId": 10,
+      "product_name": "Máy in 3D FDM Creality Ender 3 V2",
+      "brand": "Creality",
+      "price": "6500000.00",
+      "description": "Máy in 3D công nghệ FDM phổ biến nhất cho người mới bắt đầu.",
+      "image_url": "/images/products/creality-ender3-v2.jpg",
+      "stock_quantity": 150,
+      "created_at": "2025-08-16T20:12:00+07:00",
+      "updated_at": "2025-08-16T20:12:00+07:00",
+      "color": [
+        "Black"
+      ],
+      "size": [
+        "Khổ in 220x220x250mm"
+      ]
+    },
+    {
+      "id": "73",
+      "categoryId": 10,
+      "product_name": "Máy in 3D Resin SLA Anycubic Photon",
+      "brand": "Anycubic",
+      "price": "8900000.00",
+      "description": "In mẫu vật có độ chi tiết siêu cao bằng nhựa lỏng (resin).",
+      "image_url": "/images/products/anycubic-photon.jpg",
+      "stock_quantity": 90,
+      "created_at": "2025-08-17T22:23:00+07:00",
+      "updated_at": "2025-08-17T22:23:00+07:00",
+      "color": [
+        "Black",
+        "Yellow Cover"
+      ],
+      "size": [
+        "Khổ in 115x65x155mm"
+      ]
+    },
+    {
+      "id": "74",
+      "categoryId": 10,
+      "product_name": "Máy in 3D màu Stratasys J55",
+      "brand": "Stratasys",
+      "price": "2200000000.00",
+      "description": "Công nghệ PolyJet in 3D đa vật liệu và đầy đủ màu sắc.",
+      "image_url": "/images/products/stratasys-j55.jpg",
+      "stock_quantity": 3,
+      "created_at": "2025-08-18T00:34:00+07:00",
+      "updated_at": "2025-08-18T00:34:00+07:00",
+      "color": [
+        "White"
+      ],
+      "size": [
+        "Khổ in 1,174 cm²"
+      ]
+    },
+    {
+      "id": "75",
+      "categoryId": 10,
+      "product_name": "Sợi nhựa in 3D PLA eSun",
+      "brand": "eSun",
+      "price": "350000.00",
+      "description": "Nhựa in PLA+ chất lượng cao, nhiều màu sắc, dễ in.",
+      "image_url": "/images/products/esun-pla.jpg",
+      "stock_quantity": 1000,
+      "created_at": "2025-08-19T02:45:00+07:00",
+      "updated_at": "2025-08-19T02:45:00+07:00",
+      "color": [
+        "Black",
+        "White",
+        "Red",
+        "Blue",
+        "Green",
+        "Yellow"
+      ],
+      "size": [
+        "1.75mm (1kg/cuộn)",
+        "2.85mm (1kg/cuộn)"
+      ]
+    },
+    {
+      "id": "76",
+      "categoryId": 10,
+      "product_name": "Nhựa in 3D Resin an toàn sinh học",
+      "brand": "Siraya Tech",
+      "price": "1200000.00",
+      "description": "Nhựa resin chuyên dụng cho ứng dụng y tế, nha khoa.",
+      "image_url": "/images/products/sirayatech-biocompatible.jpg",
+      "stock_quantity": 80,
+      "created_at": "2025-08-20T04:56:00+07:00",
+      "updated_at": "2025-08-20T04:56:00+07:00",
+      "color": [
+        "Clear",
+        "Light Skin"
+      ],
+      "size": [
+        "500g",
+        "1000g"
+      ]
+    },
+    {
+      "id": "77",
+      "categoryId": 10,
+      "product_name": "Máy in 3D kim loại SLM",
+      "brand": "EOS",
+      "price": "8500000000.00",
+      "description": "In 3D các chi tiết kim loại từ bột bằng công nghệ Selective Laser Melting.",
+      "image_url": "/images/products/eos-slm.jpg",
+      "stock_quantity": 1,
+      "created_at": "2025-08-21T07:07:00+07:00",
+      "updated_at": "2025-08-21T07:07:00+07:00",
+      "color": [
+        "White",
+        "Gray"
+      ],
+      "size": [
+        "Khổ in 250x250x325mm"
+      ]
+    },
+    {
+      "id": "78",
+      "categoryId": 10,
+      "product_name": "Bút vẽ 3D Mynt3D",
+      "brand": "Mynt3D",
+      "price": "1500000.00",
+      "description": "Bút vẽ sáng tạo, biến ý tưởng thành mô hình 3D trong không khí.",
+      "image_url": "/images/products/mynt3d-pen.jpg",
+      "stock_quantity": 200,
+      "created_at": "2025-08-22T09:18:00+07:00",
+      "updated_at": "2025-08-22T09:18:00+07:00",
+      "color": [
+        "Black",
+        "Blue",
+        "Green"
+      ],
+      "size": [
+        "Cầm tay"
+      ]
+    },
+    {
+      "id": "79",
+      "categoryId": 10,
+      "product_name": "Máy quét và in 3D All-in-one",
+      "brand": "XYZprinting",
+      "price": "18000000.00",
+      "description": "Thiết bị tích hợp cả chức năng quét và in 3D tiện lợi.",
+      "image_url": "/images/products/xyzprinting-aio.jpg",
+      "stock_quantity": 15,
+      "created_at": "2025-08-23T11:29:00+07:00",
+      "updated_at": "2025-08-23T11:29:00+07:00",
+      "color": [
+        "Red",
+        "White"
+      ],
+      "size": [
+        "Khổ in 200x200x190mm"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "nguyenvana",
+      "email": "nguyenvana@example.com",
+      "password": "hashed_password_123",
+      "full_name": "Nguyễn Văn An",
+      "phone_number": "0987654321",
+      "address": "Số 10, đường Giải Phóng, Hai Bà Trưng, Hà Nội",
+      "is_active": true,
+      "activation_token": null,
+      "created_at": "2025-08-13T10:00:00+07:00",
+      "updated_at": "2025-08-13T10:00:00+07:00"
+    }
+  ],
+  "shipping_addresses": [
+    {
+      "id": "1",
+      "userId": 1,
+      "full_name": "Nguyễn Văn An",
+      "phone_number": "0987654321",
+      "address": "Số 10, đường Giải Phóng, Hai Bà Trưng, Hà Nội",
+      "is_default": true,
+      "created_at": "2025-08-13T10:05:00+07:00",
+      "updated_at": "2025-08-13T10:05:00+07:00"
+    }
+  ],
+  "vouchers": [
+    {
+      "id": "1",
+      "code": "SALE10",
+      "discount": "10.00",
+      "expiry_date": "2025-12-31",
+      "is_active": true,
+      "created_at": "2025-08-01T09:00:00+07:00",
+      "updated_at": "2025-08-01T09:00:00+07:00"
+    }
+  ],
+  "cart": [
+    {
+      "id": "1",
+      "userId": 1,
+      "productId": 3,
+      "quantity": 1,
+      "added_at": "2025-08-13T18:00:00+07:00",
+      "updated_at": "2025-08-13T18:00:00+07:00"
+    },
+    {
+      "id": "e6ce",
+      "userId": 1,
+      "productId": "60",
+      "quantity": 1
+    },
+    {
+      "id": "d3d8",
+      "userId": 1,
+      "productId": "68",
+      "quantity": 2
+    },
+    {
+      "id": "dd49",
+      "userId": 1,
+      "productId": "33",
+      "quantity": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": null,
+      "order_date": "2025-08-12T11:30:00+07:00",
+      "total_amount": "9500000.00",
+      "status": "Processing",
+      "note": "Giao máy khoan bàn Decameta",
+      "created_at": "2025-08-12T11:30:00+07:00",
+      "updated_at": "2025-08-12T11:35:00+07:00"
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": 1,
+      "order_date": "2025-08-11T14:00:00+07:00",
+      "total_amount": "8280000.00",
+      "status": "Completed",
+      "note": "Giao hàng nhanh, đã áp dụng voucher SALE10.",
+      "created_at": "2025-08-11T14:00:00+07:00",
+      "updated_at": "2025-08-11T14:05:00+07:00"
+    },
+    {
+      "id": "3",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": null,
+      "order_date": "2025-08-10T09:20:00+07:00",
+      "total_amount": "750000.00",
+      "status": "Shipped",
+      "note": "",
+      "created_at": "2025-08-10T09:20:00+07:00",
+      "updated_at": "2025-08-10T09:25:00+07:00"
+    },
+    {
+      "id": "4",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": null,
+      "order_date": "2025-08-09T18:45:00+07:00",
+      "total_amount": "6500000.00",
+      "status": "Completed",
+      "note": "Khách hàng yêu cầu kiểm tra hàng trước khi thanh toán.",
+      "created_at": "2025-08-09T18:45:00+07:00",
+      "updated_at": "2025-08-09T18:50:00+07:00"
+    },
+    {
+      "id": "5",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": null,
+      "order_date": "2025-08-08T12:00:00+07:00",
+      "total_amount": "3200000.00",
+      "status": "Cancelled",
+      "note": "Khách hàng báo hủy do đặt nhầm sản phẩm.",
+      "created_at": "2025-08-08T12:00:00+07:00",
+      "updated_at": "2025-08-08T13:00:00+07:00"
+    },
+    {
+      "id": "6",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": null,
+      "order_date": "2025-08-07T20:10:00+07:00",
+      "total_amount": "5800000.00",
+      "status": "Completed",
+      "note": "",
+      "created_at": "2025-08-07T20:10:00+07:00",
+      "updated_at": "2025-08-07T20:15:00+07:00"
+    },
+    {
+      "id": "7",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": null,
+      "order_date": "2025-08-06T11:05:00+07:00",
+      "total_amount": "8500000.00",
+      "status": "Shipped",
+      "note": "Giao trong giờ hành chính.",
+      "created_at": "2025-08-06T11:05:00+07:00",
+      "updated_at": "2025-08-06T11:10:00+07:00"
+    },
+    {
+      "id": "8",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": null,
+      "order_date": "2025-08-05T16:30:00+07:00",
+      "total_amount": "2800000.00",
+      "status": "Completed",
+      "note": "",
+      "created_at": "2025-08-05T16:30:00+07:00",
+      "updated_at": "2025-08-05T16:35:00+07:00"
+    },
+    {
+      "id": "9",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": null,
+      "order_date": "2025-08-04T08:00:00+07:00",
+      "total_amount": "145000000.00",
+      "status": "Processing",
+      "note": "Đơn hàng giá trị cao, cần xác nhận lại với khách hàng.",
+      "created_at": "2025-08-04T08:00:00+07:00",
+      "updated_at": "2025-08-04T08:05:00+07:00"
+    },
+    {
+      "id": "10",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": 1,
+      "order_date": "2025-08-03T22:15:00+07:00",
+      "total_amount": "5850000.00",
+      "status": "Completed",
+      "note": "",
+      "created_at": "2025-08-03T22:15:00+07:00",
+      "updated_at": "2025-08-03T22:20:00+07:00"
+    },
+    {
+      "id": "11",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": null,
+      "order_date": "2025-08-02T13:40:00+07:00",
+      "total_amount": "12500000.00",
+      "status": "Completed",
+      "note": "",
+      "created_at": "2025-08-02T13:40:00+07:00",
+      "updated_at": "2025-08-02T13:45:00+07:00"
+    },
+    {
+      "id": "12",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": null,
+      "order_date": "2025-08-01T10:00:00+07:00",
+      "total_amount": "25000000.00",
+      "status": "Shipped",
+      "note": "",
+      "created_at": "2025-08-01T10:00:00+07:00",
+      "updated_at": "2025-08-01T10:05:00+07:00"
+    },
+    {
+      "id": "13",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": null,
+      "order_date": "2025-07-31T19:50:00+07:00",
+      "total_amount": "92000000.00",
+      "status": "Completed",
+      "note": "",
+      "created_at": "2025-07-31T19:50:00+07:00",
+      "updated_at": "2025-07-31T19:55:00+07:00"
+    },
+    {
+      "id": "14",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": null,
+      "order_date": "2025-07-30T17:25:00+07:00",
+      "total_amount": "6800000.00",
+      "status": "Completed",
+      "note": "Khách hàng cũ.",
+      "created_at": "2025-07-30T17:25:00+07:00",
+      "updated_at": "2025-07-30T17:30:00+07:00"
+    },
+    {
+      "id": "15",
+      "userId": 1,
+      "addressId": 1,
+      "voucherId": 1,
+      "order_date": "2025-07-29T11:11:00+07:00",
+      "total_amount": "1350000.00",
+      "status": "Processing",
+      "note": "Đã áp dụng voucher SALE10.",
+      "created_at": "2025-07-29T11:11:00+07:00",
+      "updated_at": "2025-07-29T11:16:00+07:00"
+    }
+  ],
+  "order_details": [
+    {
+      "id": "1",
+      "orderId": 1,
+      "productId": 4,
+      "quantity": 1,
+      "unit_price": "9500000.00"
+    },
+    {
+      "id": "2",
+      "orderId": 2,
+      "productId": 22,
+      "quantity": 1,
+      "unit_price": "8500000.00"
+    },
+    {
+      "id": "3",
+      "orderId": 2,
+      "productId": 32,
+      "quantity": 2,
+      "unit_price": "450000.00"
+    },
+    {
+      "id": "4",
+      "orderId": 3,
+      "productId": 6,
+      "quantity": 1,
+      "unit_price": "750000.00"
+    },
+    {
+      "id": "5",
+      "orderId": 4,
+      "productId": 72,
+      "quantity": 1,
+      "unit_price": "6500000.00"
+    },
+    {
+      "id": "6",
+      "orderId": 5,
+      "productId": 33,
+      "quantity": 1,
+      "unit_price": "3200000.00"
+    },
+    {
+      "id": "7",
+      "orderId": 6,
+      "productId": 60,
+      "quantity": 2,
+      "unit_price": "2900000.00"
+    },
+    {
+      "id": "8",
+      "orderId": 7,
+      "productId": 22,
+      "quantity": 1,
+      "unit_price": "8500000.00"
+    },
+    {
+      "id": "9",
+      "orderId": 8,
+      "productId": 21,
+      "quantity": 1,
+      "unit_price": "2800000.00"
+    },
+    {
+      "id": "10",
+      "orderId": 9,
+      "productId": 7,
+      "quantity": 1,
+      "unit_price": "145000000.00"
+    },
+    {
+      "id": "11",
+      "orderId": 10,
+      "productId": 72,
+      "quantity": 1,
+      "unit_price": "6500000.00"
+    },
+    {
+      "id": "12",
+      "orderId": 11,
+      "productId": 28,
+      "quantity": 1,
+      "unit_price": "12500000.00"
+    },
+    {
+      "id": "13",
+      "orderId": 12,
+      "productId": 5,
+      "quantity": 1,
+      "unit_price": "25000000.00"
+    },
+    {
+      "id": "14",
+      "orderId": 13,
+      "productId": 2,
+      "quantity": 1,
+      "unit_price": "92000000.00"
+    },
+    {
+      "id": "15",
+      "orderId": 14,
+      "productId": 3,
+      "quantity": 1,
+      "unit_price": "6800000.00"
+    },
+    {
+      "id": "16",
+      "orderId": 15,
+      "productId": 25,
+      "quantity": 1,
+      "unit_price": "1500000.00"
+    }
+  ],
+  "product_reviews": [
+    {
+      "id": "1",
+      "userId": 1,
+      "productId": 4,
+      "rating": 4,
+      "comment": "Máy chạy tốt, khá nặng và đầm. Nên có hướng dẫn lắp đặt chi tiết hơn.",
+      "review_date": "2025-08-13T15:00:00+07:00",
+      "updated_at": "2025-08-13T15:00:00+07:00"
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "productId": 1,
+      "rating": 5,
+      "comment": "Chất lượng in tuyệt vời, màu sắc trung thực. Rất đáng tiền!",
+      "review_date": "2025-08-14T11:00:00+07:00",
+      "updated_at": "2025-08-14T11:00:00+07:00"
+    },
+    {
+      "id": "3",
+      "userId": 1,
+      "productId": 3,
+      "rating": 4,
+      "comment": "Máy hàn hoạt động ổn định, mối hàn đẹp. Giao hàng nhanh.",
+      "review_date": "2025-08-15T09:30:00+07:00",
+      "updated_at": "2025-08-15T09:30:00+07:00"
+    },
+    {
+      "id": "4",
+      "userId": 1,
+      "productId": 6,
+      "rating": 5,
+      "comment": "Bộ dụng cụ rất tiện lợi cho các công việc nhỏ trong nhà. Máy chạy êm.",
+      "review_date": "2025-08-16T14:00:00+07:00",
+      "updated_at": "2025-08-16T14:00:00+07:00"
+    },
+    {
+      "id": "5",
+      "userId": 1,
+      "productId": 72,
+      "rating": 5,
+      "comment": "Máy in 3D Ender 3 V2 rất dễ sử dụng cho người mới bắt đầu. Chất lượng in tốt trong tầm giá.",
+      "review_date": "2025-08-17T18:45:00+07:00",
+      "updated_at": "2025-08-17T18:45:00+07:00"
+    },
+    {
+      "id": "6",
+      "userId": 1,
+      "productId": 33,
+      "rating": 5,
+      "comment": "Máy khoan pin Bosch rất mạnh, pin dùng được lâu. Hàng chính hãng, chất lượng Đức.",
+      "review_date": "2025-08-18T10:15:00+07:00",
+      "updated_at": "2025-08-18T10:15:00+07:00"
+    },
+    {
+      "id": "7",
+      "userId": 1,
+      "productId": 22,
+      "rating": 4,
+      "comment": "Máy hàn MIG Hồng Ký dùng tốt, mối hàn chắc chắn. Ủng hộ hàng Việt Nam chất lượng cao.",
+      "review_date": "2025-08-19T16:00:00+07:00",
+      "updated_at": "2025-08-19T16:00:00+07:00"
+    },
+    {
+      "id": "8",
+      "userId": 1,
+      "productId": 60,
+      "rating": 5,
+      "comment": "Ổ cứng Seagate SkyHawk chạy êm, tối ưu cho việc ghi hình camera 24/7. Rất yên tâm khi sử dụng.",
+      "review_date": "2025-08-20T11:20:00+07:00",
+      "updated_at": "2025-08-20T11:20:00+07:00"
+    },
+    {
+      "id": "9",
+      "userId": 1,
+      "productId": 4,
+      "rating": 5,
+      "comment": "Shop tư vấn nhiệt tình, giao hàng nhanh. Máy khoan Decameta đúng như mô tả, rất chắc chắn.",
+      "review_date": "2025-08-21T09:00:00+07:00",
+      "updated_at": "2025-08-21T09:00:00+07:00"
+    },
+    {
+      "id": "10",
+      "userId": 1,
+      "productId": 16,
+      "rating": 4,
+      "comment": "Máy quét Revopoint POP 2 quét các chi tiết nhỏ rất nét, tuy nhiên phần mềm cần cải thiện thêm một chút.",
+      "review_date": "2025-08-22T14:30:00+07:00",
+      "updated_at": "2025-08-22T14:30:00+07:00"
+    }
+  ],
+  "email_subscriptions": [
+    {
+      "id": "1",
+      "email": "customer@example.com",
+      "subscribed_at": "2025-08-10T15:00:00+07:00",
+      "is_active": true
+    }
+  ],
+  "product_suggestions": [
+    {
+      "id": "1",
+      "userId": 1,
+      "product_name": "Máy phay CNC 5 trục",
+      "description": "Mong shop nhập thêm dòng máy phay CNC 5 trục để phục vụ gia công phức tạp.",
+      "suggested_at": "2025-08-11T17:45:00+07:00"
+    }
+  ],
+  "statistics": [
+    {
+      "id": "1",
+      "stat_date": "2025-08-12",
+      "total_orders": 25,
+      "total_revenue": "120500000.00",
+      "total_users": 150,
+      "created_at": "2025-08-13T00:00:00+07:00",
+      "updated_at": "2025-08-13T00:00:00+07:00"
+    }
+  ]
 }

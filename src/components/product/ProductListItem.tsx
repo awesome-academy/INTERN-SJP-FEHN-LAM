@@ -5,6 +5,7 @@ import { Product } from "@/types";
 import { Review } from "@/types/review";
 import { Card } from "@/components/ui/card";
 import { formatCurrency } from "@/lib/utils";
+import Link from "next/link";
 interface ProductListItemProps {
     product: Product;
     reviews?: Review[];
@@ -36,22 +37,26 @@ const ProductListItem: React.FC<ProductListItemProps> = ({ product, reviews, siz
             price: "text-xl",
         },
     };
-    const styles = sizeStyles[size];
     return (
         <Card className="p-4 flex flex-col md:flex-row gap-6">
             <div className="relative w-full md:w-1/4 aspect-square flex-shrink-0">
-                <Image
-                    src={product.image_url || '/images/placeholder.png'}
-                    alt={product.product_name}
-                    fill
-                    className="object-contain rounded-md"
-                    sizes="(max-width: 768px) 100vw, 25vw"
-                />
+                <Link href={`/products/${product.id}`} className="absolute inset-0">
+                    <Image
+                        src={product.image_url || '/images/placeholder.png'}
+                        alt={product.product_name}
+                        fill
+                        className="object-contain rounded-md"
+                        sizes="(max-width: 768px) 100vw, 25vw"
+                    />
+                </Link>
             </div>
             <div className="flex flex-col">
-                <h3 className="text-lg font-semibold text-gray-800 uppercase hover:text-amber-600 cursor-pointer">
-                    {product.product_name}
-                </h3>
+
+                <Link href={`/products/${product.id}`}>
+                    <h3 className="text-lg font-semibold text-gray-800 uppercase hover:text-amber-600 cursor-pointer">
+                        {product.product_name}
+                    </h3>
+                </Link>
                 {showRating && (<div className="flex items-center text-xs text-gray-500 my-2">
                     <div className="flex text-yellow-400 mr-2">
                         {[...Array(5)].map((_, i) => (
@@ -67,7 +72,7 @@ const ProductListItem: React.FC<ProductListItemProps> = ({ product, reviews, siz
                     {formattedPrice}
                 </p>
             </div>
-        </Card>
+        </Card >
     );
 };
 

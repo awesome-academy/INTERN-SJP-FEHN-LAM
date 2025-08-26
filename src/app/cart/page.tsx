@@ -1,0 +1,221 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { Trash2 } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from '@/components/ui/table';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+
+import { getCartByUser, removeCartItem } from '@/services/api';
+import { CartItem } from '@/types/cart';
+import { Product } from '@/types/product';
+import { getProductById } from '@/services/api';
+import { toast } from 'react-toastify';
+import { ConfirmDialog } from '@/components/dialog/ConfirmDialog';
+import { formatCurrency } from '@/lib/utils';
+export interface CartItemWithProduct extends CartItem {
+    product: Product;
+}
+export default function CartPage() {
+    const [cartItems, setCartItems] = useState<CartItemWithProduct[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+    const [confirmOpen, setConfirmOpen] = useState(false);
+    const [itemToDelete, setItemToDelete] = useState<number | string | null>(null);
+    useEffect(() => {
+        const fetchCart = async () => {
+            try {
+                const userId = 1;
+                const cartItems: CartItem[] = await getCartByUser(userId);
+
+
+                const productPromises = cartItems.map(item =>
+                    getProductById(item.productId)
+                );
+
+                const products = await Promise.all(productPromises);
+                const itemsWithProduct: CartItemWithProduct[] = cartItems.map((item, index) => ({
+                    ...item,
+                    product: products[index],
+                }));
+
+                setCartItems(itemsWithProduct);
+            } catch (err) {
+                setError("Không thể tải giỏ hàng.");
+                console.error(err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchCart();
+    }, []);
+
+    const handleQuantityChange = (id: number | string, newQuantity: number) => {
+        setCartItems((currentItems) =>
+            currentItems.map((item) =>
+                item.id === id ? { ...item, quantity: Math.max(1, newQuantity) } : item
+            )
+        );
+    };
+
+    const handleRemoveItem = async (id: number | string) => {
+        setItemToDelete(id);
+        setConfirmOpen(true);
+    };
+
+    const handleConfirmRemove = async () => {
+        if (!itemToDelete) return;
+
+        try {
+            await removeCartItem(itemToDelete);
+            setCartItems((current) => current.filter((item) => item.id !== itemToDelete));
+            toast.success('Đã xóa sản phẩm khỏi giỏ hàng');
+        } catch (err) {
+            toast.error('Không thể xóa sản phẩm');
+        } finally {
+            setItemToDelete(null);
+            setConfirmOpen(false);
+        }
+    };
+    const totalAmount = cartItems.reduce(
+        (acc, item) => acc + item.product.price * item.quantity,
+        0
+    );
+    const vat = totalAmount * 0.1;
+    const finalAmount = totalAmount + vat;
+
+    if (loading)
+        return (
+            <div className="container mx-auto py-12 px-4 text-center">
+                Đang tải giỏ hàng...
+            </div>
+        );
+
+    if (error)
+        return (
+            <div className="container mx-auto py-12 px-4 text-center text-red-600">
+                {error}
+            </div>
+        );
+
+    return (
+        <div className="font-sans antialiased text-gray-800">
+            <main className="container mx-auto py-12 px-4">
+                <h1 className="text-2xl font-bold mb-8">Giỏ hàng của bạn</h1>
+
+                {cartItems.length === 0 ? (
+                    <Card className="p-6 text-center">
+                        <p className="text-gray-500">Giỏ hàng của bạn đang trống.</p>
+                    </Card>
+                ) : (
+                    <Card className="mb-8">
+                        <Table>
+                            <TableHeader>
+                                <TableRow className="bg-gray-50">
+                                    <TableHead className="text-center">#</TableHead>
+                                    <TableHead>Ảnh</TableHead>
+                                    <TableHead>Tên sản phẩm</TableHead>
+                                    <TableHead>Đơn giá</TableHead>
+                                    <TableHead>Số lượng</TableHead>
+                                    <TableHead>Thành tiền</TableHead>
+                                    <TableHead className="text-center">Xóa</TableHead>
+                                </TableRow>
+                            </TableHeader>
+                            <TableBody>
+                                {cartItems.map((item, index) => (
+                                    <TableRow key={item.id} className="border-b border-gray-200">
+                                        <TableCell className="py-4 px-4 text-center">{index + 1}</TableCell>
+                                        <TableCell className="py-4 px-4">
+                                            <Image
+                                                src={item.product.image_url}
+                                                alt={item.product.product_name}
+                                                width={80}
+                                                height={80}
+                                                className="object-contain"
+                                            />
+                                        </TableCell>
+                                        <TableCell className="py-4 px-4 font-semibold">
+                                            {item.product.product_name}
+                                        </TableCell>
+                                        <TableCell className="py-4 px-4 text-red-600">
+                                            {formatCurrency(item.product.price)} Đ
+                                        </TableCell>
+                                        <TableCell className="py-4 px-4">
+                                            <Input
+                                                type="number"
+                                                value={item.quantity}
+                                                min="1"
+                                                className="w-20 text-center"
+                                                onChange={(e) =>
+                                                    handleQuantityChange(item.id, parseInt(e.target.value, 10))
+                                                }
+                                            />
+                                        </TableCell>
+                                        <TableCell className="py-4 px-4 font-bold text-red-600">
+                                            {formatCurrency(item.product.price * item.quantity)} Đ
+                                        </TableCell>
+                                        <TableCell className="py-4 px-4 text-center">
+                                            <Button
+                                                variant="ghost"
+                                                size="icon"
+                                                onClick={() => handleRemoveItem(item.id)}
+                                            >
+                                                <Trash2 className="h-5 w-5 text-red-500 hover:text-red-700" />
+                                            </Button>
+                                        </TableCell>
+                                    </TableRow>
+                                ))}
+                            </TableBody>
+                        </Table>
+                    </Card>
+                )}
+
+                {cartItems.length > 0 && (
+                    <div className="flex justify-end">
+                        <Card className="w-full md:w-1/2 lg:w-1/3 p-6">
+                            <CardContent className="p-0">
+                                <div className="flex justify-between items-center py-2 border-b">
+                                    <span>Tổng tiền:</span>
+                                    <span>{formatCurrency(totalAmount)} Đ</span>
+                                </div>
+                                <div className="flex justify-between items-center py-2 border-b">
+                                    <span>Thuế (VAT):</span>
+                                    <span>{formatCurrency(vat)} Đ</span>
+                                </div>
+                                <div className="flex justify-between items-center py-2 font-bold text-lg">
+                                    <span className="uppercase">Thanh toán:</span>
+                                    <span className="text-red-600">{formatCurrency(finalAmount)} Đ</span>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                )}
+
+                {cartItems.length > 0 && (
+                    <div className="flex justify-end mt-6">
+                        <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
+                            Tiến hành đặt hàng
+                        </Button>
+                    </div>
+                )}
+            </main>
+            <ConfirmDialog
+                isOpen={confirmOpen}
+                onClose={() => setConfirmOpen(false)}
+                onConfirm={handleConfirmRemove}
+                title="Xác nhận xóa sản phẩm"
+                description="Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng? Hành động này không thể hoàn tác."
+            />
+        </div>
+    );
+}

@@ -9,7 +9,8 @@ import { Product } from '@/types';
 import ProductCard from '@/components/product/ProductCard';
 import Link from 'next/link';
 import ProductOverview from '@/components/product/ProductOverview';
-import { getCategories, getProductById, getProductReviews, getRelatedProducts } from '@/services/api';
+import { getProductById, getProductReviews, getRelatedProducts } from '@/services/products';
+import { getCategories, } from '@/services/categories';
 import OwnBreadcrumb from '@/components/breadcumb/OwnBreadcrumb';
 
 export default function ProductDetailPage({ params }: { params: { id: string } }) {

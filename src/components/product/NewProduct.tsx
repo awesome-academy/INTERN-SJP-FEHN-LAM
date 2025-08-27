@@ -4,7 +4,7 @@ import { HiArrowRight } from 'react-icons/hi2';
 import ProductCard from './ProductCard';
 import { Product } from "@/types"
 import { Review } from "@/types/review";
-import { getNewProducts, getProductReviews } from '@/services/api';
+import { getProductReviews, getNewProducts } from '@/services/products';
 const NewProducts = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const [reviews, setReviews] = useState<Review[]>([]);
@@ -34,12 +34,13 @@ const NewProducts = () => {
     if (loading) {
         return (
             <section className="py-12">
-                <div className="flex justify-between items-center mb-4">
-                    <h2 className="text-2xl font-bold uppercase ml-[200px]"  >Sản phẩm mới</h2>
-                    <a href="/products?sort=newest" className="flex items-center gap-2 text-sm text-gray-600 hover:text-amber-600">
+                <div className="flex justify-start items-center mb-4">
+                    <h2 className="text-2xl font-bold uppercase ml-[200px]">Sản phẩm mới</h2>
+                    <a href="/products?sort=newest" className="ml-auto flex items-center gap-2 text-sm text-gray-600 hover:text-amber-600">
                         Xem tất cả <HiArrowRight />
                     </a>
                 </div>
+
                 <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {[1, 2, 3].map(i => (
                         <div key={i} className="bg-gray-200 animate-pulse h-64 rounded-lg"></div>

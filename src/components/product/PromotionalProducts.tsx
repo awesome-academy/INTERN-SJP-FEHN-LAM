@@ -3,7 +3,7 @@ import { Product } from '@/types';
 import ProductListItem from './ProductListItem';
 import { TagIcon } from '@heroicons/react/24/outline';
 import { get } from 'http';
-import { getLimitProduct } from '@/services/api';
+import { getLimitProduct } from '@/services/products';
 
 const PromotionalProducts = () => {
     const [promoProducts, setPromoProducts] = useState<Product[]>([]);

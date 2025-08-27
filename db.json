@@ -67,7 +67,7 @@
     {
       "id": "9",
       "parentCategoryId": null,
-      "category_name": "Motor R34C đa dụng",
+      "category_name": "Motor R34 đa dụng",
       "description": "Động cơ điện R34C công suất cao, ứng dụng đa dạng.",
       "created_at": "2025-08-13T16:28:00+07:00",
       "updated_at": "2025-08-13T16:28:00+07:00"
@@ -253,82 +253,6 @@
       "size": [
         "Khổ 1.6m",
         "Khổ 1.3m"
-      ]
-    },
-    {
-      "id": "10",
-      "categoryId": 1,
-      "product_name": "Máy in Hiflex Taimes T5",
-      "brand": "Taimes",
-      "price": "115000000.00",
-      "description": "Đầu phun Konica 512i, tốc độ in nhanh, chuyên in bạt Hiflex.",
-      "image_url": "/images/products/taimes-t5.jpg",
-      "stock_quantity": 20,
-      "created_at": "2025-06-10T04:50:00+07:00",
-      "updated_at": "2025-06-10T04:50:00+07:00",
-      "color": [
-        "Gray",
-        "Black"
-      ],
-      "size": [
-        "Khổ 3.2m"
-      ]
-    },
-    {
-      "id": "11",
-      "categoryId": 1,
-      "product_name": "Máy in Pet chuyển nhiệt Audley",
-      "brand": "Audley",
-      "price": "98000000.00",
-      "description": "Công nghệ in Pet film chuyển nhiệt lên vải, áo thun.",
-      "image_url": "/images/products/audley-pet.jpg",
-      "stock_quantity": 18,
-      "created_at": "2025-06-11T07:01:00+07:00",
-      "updated_at": "2025-06-11T07:01:00+07:00",
-      "color": [
-        "White",
-        "Green"
-      ],
-      "size": [
-        "Khổ 60cm",
-        "Khổ 30cm"
-      ]
-    },
-    {
-      "id": "12",
-      "categoryId": 1,
-      "product_name": "Máy in Canvas Roland VersaEXPRESS",
-      "brand": "Roland",
-      "price": "165000000.00",
-      "description": "Chất lượng in ảnh nghệ thuật trên vải canvas vượt trội.",
-      "image_url": "/images/products/roland-versaexpress.jpg",
-      "stock_quantity": 9,
-      "created_at": "2025-06-12T09:12:00+07:00",
-      "updated_at": "2025-06-12T09:12:00+07:00",
-      "color": [
-        "White"
-      ],
-      "size": [
-        "Khổ 1.6m"
-      ]
-    },
-    {
-      "id": "13",
-      "categoryId": 1,
-      "product_name": "Máy in backlit film Crystaljet",
-      "brand": "Crystaljet",
-      "price": "130000000.00",
-      "description": "Chuyên in các sản phẩm hộp đèn quảng cáo, tranh điện.",
-      "image_url": "/images/products/crystaljet-backlit.jpg",
-      "stock_quantity": 14,
-      "created_at": "2025-06-13T11:23:00+07:00",
-      "updated_at": "2025-06-13T11:23:00+07:00",
-      "color": [
-        "Blue",
-        "Gray"
-      ],
-      "size": [
-        "Khổ 1.8m"
       ]
     },
     {
@@ -1613,254 +1537,208 @@
       "size": [
         "Khổ in 200x200x190mm"
       ]
+    },
+    {
+      "id": "b168",
+      "product_name": "Máy ép kính",
+      "price": 200000,
+      "stock_quantity": 5,
+      "categoryId": 3,
+      "description": "rất xịn",
+      "imageFile": {}
     }
   ],
   "users": [
     {
-      "id": "1",
-      "username": "nguyenvana",
-      "email": "nguyenvana@example.com",
-      "password": "hashed_password_123",
-      "full_name": "Nguyễn Văn An",
-      "phone_number": "0987654321",
-      "address": "Số 10, đường Giải Phóng, Hai Bà Trưng, Hà Nội",
+      "id": "3",
+      "username": "lethic",
+      "email": "lethic@example.com",
+      "password": "$2b$12$Xy7eW1jP6dG3H5f8L9m7uO3R0qT2N1B8vC6pF4yQzA2kH5nY8L0uK",
+      "full_name": "Lê Thị Cẩm",
+      "phone_number": "0923456789",
+      "address": "Số 12, phố Lý Thường Kiệt, Hoàn Kiếm, Hà Nội",
       "is_active": true,
       "activation_token": null,
-      "created_at": "2025-08-13T10:00:00+07:00",
-      "updated_at": "2025-08-13T10:00:00+07:00"
-    }
-  ],
-  "shipping_addresses": [
-    {
-      "id": "1",
-      "userId": 1,
-      "full_name": "Nguyễn Văn An",
-      "phone_number": "0987654321",
-      "address": "Số 10, đường Giải Phóng, Hai Bà Trưng, Hà Nội",
-      "is_default": true,
-      "created_at": "2025-08-13T10:05:00+07:00",
-      "updated_at": "2025-08-13T10:05:00+07:00"
-    }
-  ],
-  "vouchers": [
-    {
-      "id": "1",
-      "code": "SALE10",
-      "discount": "10.00",
-      "expiry_date": "2025-12-31",
-      "is_active": true,
-      "created_at": "2025-08-01T09:00:00+07:00",
-      "updated_at": "2025-08-01T09:00:00+07:00"
-    }
-  ],
-  "cart": [
-    {
-      "id": "1",
-      "userId": 1,
-      "productId": 3,
-      "quantity": 1,
-      "added_at": "2025-08-13T18:00:00+07:00",
-      "updated_at": "2025-08-13T18:00:00+07:00"
-    },
-    {
-      "id": "e6ce",
-      "userId": 1,
-      "productId": "60",
-      "quantity": 1
-    },
-    {
-      "id": "d3d8",
-      "userId": 1,
-      "productId": "68",
-      "quantity": 2
-    },
-    {
-      "id": "dd49",
-      "userId": 1,
-      "productId": "33",
-      "quantity": 1
-    }
-  ],
-  "orders": [
-    {
-      "id": "1",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": null,
-      "order_date": "2025-08-12T11:30:00+07:00",
-      "total_amount": "9500000.00",
-      "status": "Processing",
-      "note": "Giao máy khoan bàn Decameta",
-      "created_at": "2025-08-12T11:30:00+07:00",
-      "updated_at": "2025-08-12T11:35:00+07:00"
-    },
-    {
-      "id": "2",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": 1,
-      "order_date": "2025-08-11T14:00:00+07:00",
-      "total_amount": "8280000.00",
-      "status": "Completed",
-      "note": "Giao hàng nhanh, đã áp dụng voucher SALE10.",
-      "created_at": "2025-08-11T14:00:00+07:00",
-      "updated_at": "2025-08-11T14:05:00+07:00"
-    },
-    {
-      "id": "3",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": null,
-      "order_date": "2025-08-10T09:20:00+07:00",
-      "total_amount": "750000.00",
-      "status": "Shipped",
-      "note": "",
-      "created_at": "2025-08-10T09:20:00+07:00",
-      "updated_at": "2025-08-10T09:25:00+07:00"
+      "status": "active",
+      "created_at": "2025-08-14T11:15:00+07:00",
+      "updated_at": "2025-08-14T11:15:00+07:00",
+      "role": "customer"
     },
     {
       "id": "4",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": null,
-      "order_date": "2025-08-09T18:45:00+07:00",
-      "total_amount": "6500000.00",
-      "status": "Completed",
-      "note": "Khách hàng yêu cầu kiểm tra hàng trước khi thanh toán.",
-      "created_at": "2025-08-09T18:45:00+07:00",
-      "updated_at": "2025-08-09T18:50:00+07:00"
+      "username": "phamvan_d",
+      "email": "phamvanda@example.com",
+      "password": "$2b$12$F1dH3jK8sL0mN5pR7vQ3eO4yZ2tG1U6jC9wV0aB8xY7kL4nP2dS",
+      "full_name": "Phạm Văn Dũng",
+      "phone_number": "0934567890",
+      "address": "Số 20, đường Nguyễn Trãi, Thanh Xuân, Hà Nội",
+      "is_active": true,
+      "activation_token": null,
+      "status": "active",
+      "created_at": "2025-08-15T08:00:00+07:00",
+      "updated_at": "2025-08-15T08:00:00+07:00",
+      "role": "customer"
     },
     {
       "id": "5",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": null,
-      "order_date": "2025-08-08T12:00:00+07:00",
-      "total_amount": "3200000.00",
-      "status": "Cancelled",
-      "note": "Khách hàng báo hủy do đặt nhầm sản phẩm.",
-      "created_at": "2025-08-08T12:00:00+07:00",
-      "updated_at": "2025-08-08T13:00:00+07:00"
+      "username": "nguyenvanth",
+      "email": "nguyenvanth@example.com",
+      "password": "$2b$12$M7yR2vQ5uL3kH1jF9pT8xO0bC6nG4zD2aS5vE3mH8yL7kP1qR0u",
+      "full_name": "Nguyễn Văn Thắng",
+      "phone_number": "0945678901",
+      "address": "Số 25, phố Trần Hưng Đạo, Hoàn Kiếm, Hà Nội",
+      "is_active": true,
+      "activation_token": null,
+      "status": "active",
+      "created_at": "2025-08-15T14:45:00+07:00",
+      "updated_at": "2025-08-15T14:45:00+07:00",
+      "role": "customer"
     },
     {
       "id": "6",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": null,
-      "order_date": "2025-08-07T20:10:00+07:00",
-      "total_amount": "5800000.00",
-      "status": "Completed",
-      "note": "",
-      "created_at": "2025-08-07T20:10:00+07:00",
-      "updated_at": "2025-08-07T20:15:00+07:00"
+      "username": "hoangthik",
+      "email": "hoangthik@example.com",
+      "password": "$2b$12$V8yJ3mK9xL1pF4qR6tN2vO7cS5hG0yZ3bX6wD1aP9kL8uM2rQ7e",
+      "full_name": "Hoàng Thị Kiều",
+      "phone_number": "0956789012",
+      "address": "Số 7, phố Phan Chu Trinh, Hoàn Kiếm, Hà Nội",
+      "is_active": true,
+      "activation_token": null,
+      "status": "active",
+      "created_at": "2025-08-16T10:20:00+07:00",
+      "updated_at": "2025-08-16T10:20:00+07:00",
+      "role": "customer"
     },
     {
       "id": "7",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": null,
-      "order_date": "2025-08-06T11:05:00+07:00",
-      "total_amount": "8500000.00",
-      "status": "Shipped",
-      "note": "Giao trong giờ hành chính.",
-      "created_at": "2025-08-06T11:05:00+07:00",
-      "updated_at": "2025-08-06T11:10:00+07:00"
+      "username": "dinhvane",
+      "email": "dinhvane@example.com",
+      "password": "$2b$12$K9hV1pL3xN4rG8tM6yQ2eO5bC7fJ0zD3aS1wP6kL4uR8mN9yT3e",
+      "full_name": "Đinh Văn Em",
+      "phone_number": "0967890123",
+      "address": "Số 3, đường Lê Lai, Hà Đông, Hà Nội",
+      "is_active": true,
+      "activation_token": null,
+      "status": "active",
+      "created_at": "2025-08-16T16:10:00+07:00",
+      "updated_at": "2025-08-16T16:10:00+07:00",
+      "role": "customer"
     },
     {
       "id": "8",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": null,
-      "order_date": "2025-08-05T16:30:00+07:00",
-      "total_amount": "2800000.00",
-      "status": "Completed",
-      "note": "",
-      "created_at": "2025-08-05T16:30:00+07:00",
-      "updated_at": "2025-08-05T16:35:00+07:00"
+      "username": "leminhf",
+      "email": "leminhf@example.com",
+      "password": "$2b$12$Q1wE3rT5yU7iO0pK2lM4nB6cV8xJ9aS1dF3gH5kL7pR0uZ2yX6m",
+      "full_name": "Lê Minh F",
+      "phone_number": "0978901234",
+      "address": "Số 15, phố Xuân Thủy, Cầu Giấy, Hà Nội",
+      "is_active": true,
+      "activation_token": null,
+      "status": "active",
+      "created_at": "2025-08-17T09:50:00+07:00",
+      "updated_at": "2025-08-17T09:50:00+07:00",
+      "role": "customer"
     },
     {
       "id": "9",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": null,
-      "order_date": "2025-08-04T08:00:00+07:00",
-      "total_amount": "145000000.00",
-      "status": "Processing",
-      "note": "Đơn hàng giá trị cao, cần xác nhận lại với khách hàng.",
-      "created_at": "2025-08-04T08:00:00+07:00",
-      "updated_at": "2025-08-04T08:05:00+07:00"
+      "username": "vuhoanggiang",
+      "email": "vuhoanggiang@example.com",
+      "password": "$2b$12$Z9yX2vC5rT1kL7mN3pF4uQ6wG8hB0dS2jK5nM1yL8qP3eR6vT4o",
+      "full_name": "Vũ Hoàng Giang",
+      "phone_number": "0989012345",
+      "address": "Số 8, đường Kim Mã, Ba Đình, Hà Nội",
+      "is_active": true,
+      "activation_token": null,
+      "status": "active",
+      "created_at": "2025-08-17T14:30:00+07:00",
+      "updated_at": "2025-08-17T14:30:00+07:00",
+      "role": "customer"
     },
     {
       "id": "10",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": 1,
-      "order_date": "2025-08-03T22:15:00+07:00",
-      "total_amount": "5850000.00",
-      "status": "Completed",
-      "note": "",
-      "created_at": "2025-08-03T22:15:00+07:00",
-      "updated_at": "2025-08-03T22:20:00+07:00"
+      "username": "nguyenthikim",
+      "email": "nguyenthikim@example.com",
+      "password": "$2b$12$L4kP9rV2yM6nJ8tC0xF3eO5wB7qH1zD4aS9uK6pL3rG0mY7vQ2e",
+      "full_name": "Nguyễn Thị Kim",
+      "phone_number": "0990123456",
+      "address": "Số 11, phố Hoàng Hoa Thám, Ba Đình, Hà Nội",
+      "is_active": true,
+      "activation_token": null,
+      "status": "active",
+      "created_at": "2025-08-18T08:40:00+07:00",
+      "updated_at": "2025-08-18T08:40:00+07:00",
+      "role": "admin"
     },
     {
       "id": "11",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": null,
-      "order_date": "2025-08-02T13:40:00+07:00",
-      "total_amount": "12500000.00",
-      "status": "Completed",
-      "note": "",
-      "created_at": "2025-08-02T13:40:00+07:00",
-      "updated_at": "2025-08-02T13:45:00+07:00"
+      "username": "tranvanl",
+      "email": "tranvanl@example.com",
+      "password": "$2b$12$P7rK3vM1yN4lJ8tF0xQ5uO6bC2hG9dS3kL1nM7yL0pR4eV8wT6o",
+      "full_name": "Trần Văn Lâm",
+      "phone_number": "0901234567",
+      "address": "Số 9, đường Tây Sơn, Đống Đa, Hà Nội",
+      "is_active": true,
+      "activation_token": null,
+      "status": "active",
+      "created_at": "2025-08-18T12:15:00+07:00",
+      "updated_at": "2025-08-18T12:15:00+07:00",
+      "role": "admin"
     },
     {
-      "id": "12",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": null,
-      "order_date": "2025-08-01T10:00:00+07:00",
-      "total_amount": "25000000.00",
-      "status": "Shipped",
-      "note": "",
-      "created_at": "2025-08-01T10:00:00+07:00",
-      "updated_at": "2025-08-01T10:05:00+07:00"
+      "id": "4f2c",
+      "username": "example@railstutorial.org",
+      "email": "vuquanghoanglam@gmail.com",
+      "role": "Admin",
+      "status": "active",
+      "password": "123456"
     },
     {
-      "id": "13",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": null,
-      "order_date": "2025-07-31T19:50:00+07:00",
-      "total_amount": "92000000.00",
-      "status": "Completed",
-      "note": "",
-      "created_at": "2025-07-31T19:50:00+07:00",
-      "updated_at": "2025-07-31T19:55:00+07:00"
+      "id": "85ca",
+      "username": "example@railstutorial.org",
+      "email": "vuquanghoanglam@gmail.com",
+      "role": "User",
+      "status": "active",
+      "password": "foobar"
     },
     {
-      "id": "14",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": null,
-      "order_date": "2025-07-30T17:25:00+07:00",
-      "total_amount": "6800000.00",
-      "status": "Completed",
-      "note": "Khách hàng cũ.",
-      "created_at": "2025-07-30T17:25:00+07:00",
-      "updated_at": "2025-07-30T17:30:00+07:00"
+      "id": "301e",
+      "username": "example@railstutorial.org",
+      "email": "vuquanghoanglam@gmail.com",
+      "role": "CUSTOMER",
+      "status": "active",
+      "password": "foobar"
     },
     {
-      "id": "15",
-      "userId": 1,
-      "addressId": 1,
-      "voucherId": 1,
-      "order_date": "2025-07-29T11:11:00+07:00",
-      "total_amount": "1350000.00",
-      "status": "Processing",
-      "note": "Đã áp dụng voucher SALE10.",
-      "created_at": "2025-07-29T11:11:00+07:00",
-      "updated_at": "2025-07-29T11:16:00+07:00"
+      "id": "5f46",
+      "username": "example@railstutorial.org",
+      "email": "vuquanghoanglam@gmail.com",
+      "role": "CUSTOMER",
+      "status": "active",
+      "password": "foobar"
+    },
+    {
+      "id": "fcba",
+      "username": "example@railstutorial.org",
+      "email": "vuquanghoanglam@gmail.com",
+      "role": "CUSTOMER",
+      "status": "active",
+      "password": "foobar"
+    },
+    {
+      "id": "52ac",
+      "username": "example@railstutorial.org",
+      "email": "example@railstutorial.org",
+      "role": "CUSTOMER",
+      "status": "active",
+      "password": "foobar"
+    },
+    {
+      "id": "c732",
+      "username": "example@railstutorial.org",
+      "email": "example@railstutorial.org",
+      "role": "CUSTOMER",
+      "status": "active",
+      "password": "foobar"
     }
   ],
   "order_details": [
@@ -2084,6 +1962,181 @@
       "product_name": "Máy phay CNC 5 trục",
       "description": "Mong shop nhập thêm dòng máy phay CNC 5 trục để phục vụ gia công phức tạp.",
       "suggested_at": "2025-08-11T17:45:00+07:00"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": 2,
+      "items": [
+        {
+          "productId": 4,
+          "quantity": 1,
+          "price": 9500000
+        }
+      ],
+      "total": 9500000,
+      "status": "Completed",
+      "createdAt": "2025-01-15T10:30:00Z"
+    },
+    {
+      "id": "2",
+      "userId": 3,
+      "items": [
+        {
+          "productId": 22,
+          "quantity": 1,
+          "price": 8500000
+        },
+        {
+          "productId": 32,
+          "quantity": 2,
+          "price": 450000
+        }
+      ],
+      "total": 9400000,
+      "status": "Processing",
+      "createdAt": "2025-02-20T14:15:00Z"
+    },
+    {
+      "id": "3",
+      "userId": 4,
+      "items": [
+        {
+          "productId": 11,
+          "quantity": 2,
+          "price": 1500000
+        }
+      ],
+      "total": 3000000,
+      "status": "Completed",
+      "createdAt": "2025-03-10T09:00:00Z"
+    },
+    {
+      "id": "4",
+      "userId": 5,
+      "items": [
+        {
+          "productId": 18,
+          "quantity": 1,
+          "price": 12000000
+        }
+      ],
+      "total": 12000000,
+      "status": "Completed",
+      "createdAt": "2025-04-18T11:45:00Z"
+    },
+    {
+      "id": "5",
+      "userId": 6,
+      "items": [
+        {
+          "productId": 25,
+          "quantity": 1,
+          "price": 7200000
+        }
+      ],
+      "total": 7200000,
+      "status": "Completed",
+      "createdAt": "2025-05-22T15:30:00Z"
+    },
+    {
+      "id": "6",
+      "userId": 7,
+      "items": [
+        {
+          "productId": 30,
+          "quantity": 3,
+          "price": 2500000
+        }
+      ],
+      "total": 7500000,
+      "status": "Completed",
+      "createdAt": "2025-06-12T16:20:00Z"
+    },
+    {
+      "id": "7",
+      "userId": 8,
+      "items": [
+        {
+          "productId": 40,
+          "quantity": 1,
+          "price": 5000000
+        }
+      ],
+      "total": 5000000,
+      "status": "Completed",
+      "createdAt": "2025-07-05T13:00:00Z"
+    },
+    {
+      "id": "8",
+      "userId": 9,
+      "items": [
+        {
+          "productId": 45,
+          "quantity": 2,
+          "price": 4000000
+        }
+      ],
+      "total": 8000000,
+      "status": "Processing",
+      "createdAt": "2025-08-25T10:30:00Z"
+    },
+    {
+      "id": "9",
+      "userId": 10,
+      "items": [
+        {
+          "productId": 50,
+          "quantity": 1,
+          "price": 11000000
+        }
+      ],
+      "total": 11000000,
+      "status": "Completed",
+      "createdAt": "2025-09-14T08:10:00Z"
+    },
+    {
+      "id": "10",
+      "userId": 11,
+      "items": [
+        {
+          "productId": 55,
+          "quantity": 2,
+          "price": 6000000
+        }
+      ],
+      "total": 12000000,
+      "status": "Completed",
+      "createdAt": "2025-10-29T18:40:00Z"
+    },
+    {
+      "id": "11",
+      "userId": 12,
+      "items": [
+        {
+          "productId": 60,
+          "quantity": 1,
+          "price": 9500000
+        }
+      ],
+      "total": 9500000,
+      "status": "Completed",
+      "createdAt": "2025-11-11T12:25:00Z"
+    },
+    {
+      "id": "12",
+      "userId": 13,
+      "items": [
+        {
+          "productId": 65,
+          "quantity": 1,
+          "price": 13500000
+        }
+      ],
+      "total": 13500000,
+      "status": "Completed",
+      "createdAt": "2025-12-19T20:15:00Z"
     }
   ],
   "statistics": [

@@ -8,13 +8,9 @@ import { Order } from '@/types/order';
 import { OrderDetail } from '@/types/order_detail';
 import { Button } from '@/components/ui/button';
 import { DEVICE_TABS, OrderStatus, ProductTab } from '@/lib/constants';
-import {
-    getProducts,
-    getProductReviews,
-    getCategories,
-    getOrders,
-    getOrderDetails
-} from '@/services/api';
+import { getProductReviews, getProducts } from '@/services/products';
+import { getCategories } from '@/services/categories';
+import { getOrders, getOrderDetails } from '@/services/orders';
 import { DeviceTab } from '@/lib/constants';
 interface ProductWithSales extends Product {
     totalSold: number;

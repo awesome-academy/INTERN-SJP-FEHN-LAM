@@ -6,11 +6,8 @@ import { Review } from '@/types/review';
 import { Category } from '@/types/category';
 import { useState, useEffect, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
-import {
-    getProducts,
-    getProductReviews,
-    getCategories,
-} from '@/services/api';
+import { getProductReviews, getProducts } from '@/services/products';
+import { getCategories } from '@/services/categories';
 interface ProductWithRating extends Product {
     reviewCount: number;
     avgRating: number;

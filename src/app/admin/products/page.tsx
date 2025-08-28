@@ -97,8 +97,6 @@ export default function ProductsPage() {
             setProductToDelete(null);
         }
     };
-
-    // ✅ Hàm xử lý khi người dùng đổi trang
     const handlePageChange = (page: number) => {
         router.push(`?page=${page}`);
     };
@@ -159,7 +157,6 @@ export default function ProductsPage() {
                 </Table>
             </div>
 
-            {/* ✅ Dùng component mới thay cho đoạn phân trang cũ */}
             {totalPages > 1 && (
                 <CustomPagination
                     total={totalPages}

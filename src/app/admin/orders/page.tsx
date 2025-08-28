@@ -18,7 +18,6 @@ import { formatCurrency } from "@/lib/utils";
 
 type OrderWithCustomerName = Order & { username: string };
 
-// ✅ Bước 1: Định nghĩa cấu hình trạng thái đơn hàng (object lookup)
 export const ORDER_STATUS_CONFIG = {
     Processing: {
         label: "Đang xử lý",
@@ -38,12 +37,11 @@ export const ORDER_STATUS_CONFIG = {
     },
 } as const;
 
-// ✅ Bước 2: Tạo component riêng để hiển thị trạng thái đơn hàng
 export const OrderStatusBadge = ({ status }: { status: string }) => {
     const config = ORDER_STATUS_CONFIG[status as keyof typeof ORDER_STATUS_CONFIG];
 
     if (!config) {
-        return <Badge>{status}</Badge>; // fallback nếu không tìm thấy
+        return <Badge>{status}</Badge>;
     }
 
     return (

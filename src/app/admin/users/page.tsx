@@ -117,7 +117,6 @@ export default function UsersPage() {
             <div className="overflow-x-auto rounded-lg border">
                 <Table className="min-w-[900px]">
                     <TableHeader>
-                        {/* Thêm tiêu đề bảng nếu cần */}
                     </TableHeader>
                     <TableBody>
                         {currentUsers.map((user) => (
@@ -144,7 +143,6 @@ export default function UsersPage() {
                 </Table>
             </div>
 
-            {/* ✅ Sử dụng component Pagination mới */}
             {totalPages > 1 && (
                 <CustomPagination
                     total={totalPages}

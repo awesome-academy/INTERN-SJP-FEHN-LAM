@@ -28,6 +28,7 @@ export default function RegisterPage() {
 
         try {
             const result = await register({
+                id: 0,
                 name: fullname,
                 email,
                 password,

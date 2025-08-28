@@ -224,7 +224,7 @@
       "price": "210000000.00",
       "description": "In trực tiếp lên các vật liệu phẳng như kính, gỗ, mica với mực UV.",
       "image_url": "/images/products/fortune-yf-2513.jpg",
-      "stock_quantity": 5,
+      "stock_quantity": 6,
       "created_at": "2025-06-08T00:28:00+07:00",
       "updated_at": "2025-06-08T00:28:00+07:00",
       "color": [
@@ -233,7 +233,8 @@
       ],
       "size": [
         "Bàn in 2.5m x 1.3m"
-      ]
+      ],
+      "imageFile": null
     },
     {
       "id": "9",
@@ -253,98 +254,6 @@
       "size": [
         "Khổ 1.6m",
         "Khổ 1.3m"
-      ]
-    },
-    {
-      "id": "14",
-      "categoryId": 2,
-      "product_name": "Máy quét 3D cầm tay EinScan H",
-      "brand": "Shining 3D",
-      "price": "110000000.00",
-      "description": "Máy quét 3D cầm tay linh hoạt, tích hợp đèn LED và hồng ngoại.",
-      "image_url": "/images/products/einscan-h.jpg",
-      "stock_quantity": 15,
-      "created_at": "2025-06-14T13:34:00+07:00",
-      "updated_at": "2025-06-14T13:34:00+07:00",
-      "color": [
-        "Gray",
-        "Black"
-      ],
-      "size": [
-        "Cầm tay"
-      ]
-    },
-    {
-      "id": "15",
-      "categoryId": 2,
-      "product_name": "Máy quét 3D laser Artec Leo",
-      "brand": "Artec 3D",
-      "price": "650000000.00",
-      "description": "Tốc độ quét siêu nhanh, xử lý trên bo mạch, không cần kết nối máy tính.",
-      "image_url": "/images/products/artec-leo.jpg",
-      "stock_quantity": 4,
-      "created_at": "2025-06-15T15:45:00+07:00",
-      "updated_at": "2025-06-15T15:45:00+07:00",
-      "color": [
-        "White"
-      ],
-      "size": [
-        "Cầm tay không dây"
-      ]
-    },
-    {
-      "id": "16",
-      "categoryId": 2,
-      "product_name": "Máy quét 3D để bàn Revopoint POP 2",
-      "brand": "Revopoint",
-      "price": "18500000.00",
-      "description": "Độ chính xác cao cho các vật thể nhỏ, giá cả phải chăng.",
-      "image_url": "/images/products/revopoint-pop2.jpg",
-      "stock_quantity": 30,
-      "created_at": "2025-06-16T17:56:00+07:00",
-      "updated_at": "2025-06-16T17:56:00+07:00",
-      "color": [
-        "Black",
-        "White"
-      ],
-      "size": [
-        "Để bàn"
-      ]
-    },
-    {
-      "id": "17",
-      "categoryId": 2,
-      "product_name": "Máy quét nha khoa Medit i700",
-      "brand": "Medit",
-      "price": "450000000.00",
-      "description": "Chuyên dụng cho ngành nha khoa, quét mẫu răng và hàm.",
-      "image_url": "/images/products/medit-i700.jpg",
-      "stock_quantity": 7,
-      "created_at": "2025-06-17T20:07:00+07:00",
-      "updated_at": "2025-06-17T20:07:00+07:00",
-      "color": [
-        "White"
-      ],
-      "size": [
-        "Cầm tay y tế"
-      ]
-    },
-    {
-      "id": "18",
-      "categoryId": 2,
-      "product_name": "Phần mềm quét và xử lý Geomagic",
-      "brand": "3D Systems",
-      "price": "75000000.00",
-      "description": "Bộ phần mềm chuyên nghiệp cho thiết kế ngược và kiểm tra 3D.",
-      "image_url": "/images/products/geomagic-software.jpg",
-      "stock_quantity": 50,
-      "created_at": "2025-06-18T22:18:00+07:00",
-      "updated_at": "2025-06-18T22:18:00+07:00",
-      "color": [
-        "Không áp dụng"
-      ],
-      "size": [
-        "Không áp dụng"
       ]
     },
     {
@@ -1685,36 +1594,22 @@
       "role": "ADMIN"
     },
     {
-      "id": "4f2c",
-      "username": "example@railstutorial.org",
-      "email": "vuquanghoanglam@gmail.com",
-      "role": "ADMIN",
-      "status": "active",
-      "password": "123456"
-    },
-    {
-      "id": "85ca",
-      "username": "example@railstutorial.org",
-      "email": "vuquanghoanglam@gmail.com",
-      "role": "User",
-      "status": "active",
-      "password": "foobar"
-    },
-    {
-      "id": "301e",
-      "username": "example@railstutorial.org",
-      "email": "vuquanghoanglam@gmail.com",
+      "username": "tranvanl1@example.com",
+      "email": "tranvanl1@example.com",
       "role": "CUSTOMER",
       "status": "active",
-      "password": "foobar"
+      "password": "123456",
+      "id": 13
     },
     {
-      "id": "5f46",
-      "username": "example@railstutorial.org",
-      "email": "vuquanghoanglam@gmail.com",
+      "id": 14,
+      "email": "tranvanl2@example.com",
+      "password": "123456",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "Ha noi",
       "role": "CUSTOMER",
-      "status": "active",
-      "password": "foobar"
+      "status": "active"
     },
     {
       "id": "fcba",
@@ -1966,13 +1861,6 @@
   ],
   "order_details": [
     {
-      "id": "1",
-      "orderId": 1,
-      "productId": 4,
-      "quantity": 1,
-      "unit_price": "9500000.00"
-    },
-    {
       "id": "2",
       "orderId": 2,
       "productId": 22,
@@ -2041,133 +1929,22 @@
       "productId": 72,
       "quantity": 1,
       "unit_price": "6500000.00"
-    },
-    {
-      "id": "12",
-      "orderId": 11,
-      "productId": 28,
-      "quantity": 1,
-      "unit_price": "12500000.00"
-    },
-    {
-      "id": "13",
-      "orderId": 12,
-      "productId": 5,
-      "quantity": 1,
-      "unit_price": "25000000.00"
-    },
-    {
-      "id": "14",
-      "orderId": 13,
-      "productId": 2,
-      "quantity": 1,
-      "unit_price": "92000000.00"
-    },
-    {
-      "id": "15",
-      "orderId": 14,
-      "productId": 3,
-      "quantity": 1,
-      "unit_price": "6800000.00"
-    },
-    {
-      "id": "16",
-      "orderId": 15,
-      "productId": 25,
-      "quantity": 1,
-      "unit_price": "1500000.00"
     }
   ],
   "product_reviews": [
     {
-      "id": "1",
-      "userId": 1,
-      "productId": 4,
-      "rating": 4,
-      "comment": "Máy chạy tốt, khá nặng và đầm. Nên có hướng dẫn lắp đặt chi tiết hơn.",
-      "review_date": "2025-08-13T15:00:00+07:00",
-      "updated_at": "2025-08-13T15:00:00+07:00"
-    },
-    {
-      "id": "2",
-      "userId": 1,
-      "productId": 1,
+      "productId": "68",
+      "userId": "11",
       "rating": 5,
-      "comment": "Chất lượng in tuyệt vời, màu sắc trung thực. Rất đáng tiền!",
-      "review_date": "2025-08-14T11:00:00+07:00",
-      "updated_at": "2025-08-14T11:00:00+07:00"
+      "comment": "rat tot",
+      "id": 1
     },
     {
-      "id": "3",
-      "userId": 1,
-      "productId": 3,
-      "rating": 4,
-      "comment": "Máy hàn hoạt động ổn định, mối hàn đẹp. Giao hàng nhanh.",
-      "review_date": "2025-08-15T09:30:00+07:00",
-      "updated_at": "2025-08-15T09:30:00+07:00"
-    },
-    {
-      "id": "4",
-      "userId": 1,
-      "productId": 6,
-      "rating": 5,
-      "comment": "Bộ dụng cụ rất tiện lợi cho các công việc nhỏ trong nhà. Máy chạy êm.",
-      "review_date": "2025-08-16T14:00:00+07:00",
-      "updated_at": "2025-08-16T14:00:00+07:00"
-    },
-    {
-      "id": "5",
-      "userId": 1,
-      "productId": 72,
-      "rating": 5,
-      "comment": "Máy in 3D Ender 3 V2 rất dễ sử dụng cho người mới bắt đầu. Chất lượng in tốt trong tầm giá.",
-      "review_date": "2025-08-17T18:45:00+07:00",
-      "updated_at": "2025-08-17T18:45:00+07:00"
-    },
-    {
-      "id": "6",
-      "userId": 1,
-      "productId": 33,
-      "rating": 5,
-      "comment": "Máy khoan pin Bosch rất mạnh, pin dùng được lâu. Hàng chính hãng, chất lượng Đức.",
-      "review_date": "2025-08-18T10:15:00+07:00",
-      "updated_at": "2025-08-18T10:15:00+07:00"
-    },
-    {
-      "id": "7",
-      "userId": 1,
-      "productId": 22,
-      "rating": 4,
-      "comment": "Máy hàn MIG Hồng Ký dùng tốt, mối hàn chắc chắn. Ủng hộ hàng Việt Nam chất lượng cao.",
-      "review_date": "2025-08-19T16:00:00+07:00",
-      "updated_at": "2025-08-19T16:00:00+07:00"
-    },
-    {
-      "id": "8",
-      "userId": 1,
-      "productId": 60,
-      "rating": 5,
-      "comment": "Ổ cứng Seagate SkyHawk chạy êm, tối ưu cho việc ghi hình camera 24/7. Rất yên tâm khi sử dụng.",
-      "review_date": "2025-08-20T11:20:00+07:00",
-      "updated_at": "2025-08-20T11:20:00+07:00"
-    },
-    {
-      "id": "9",
-      "userId": 1,
-      "productId": 4,
-      "rating": 5,
-      "comment": "Shop tư vấn nhiệt tình, giao hàng nhanh. Máy khoan Decameta đúng như mô tả, rất chắc chắn.",
-      "review_date": "2025-08-21T09:00:00+07:00",
-      "updated_at": "2025-08-21T09:00:00+07:00"
-    },
-    {
-      "id": "10",
-      "userId": 1,
-      "productId": 16,
-      "rating": 4,
-      "comment": "Máy quét Revopoint POP 2 quét các chi tiết nhỏ rất nét, tuy nhiên phần mềm cần cải thiện thêm một chút.",
-      "review_date": "2025-08-22T14:30:00+07:00",
-      "updated_at": "2025-08-22T14:30:00+07:00"
+      "productId": "68",
+      "userId": "11",
+      "rating": 2,
+      "comment": "binh thuong",
+      "id": 2
     }
   ],
   "email_subscriptions": [
@@ -2178,30 +1955,8 @@
       "isActivate": true
     }
   ],
-  "product_suggestions": [
-    {
-      "id": "1",
-      "userId": 1,
-      "product_name": "Máy phay CNC 5 trục",
-      "description": "Mong shop nhập thêm dòng máy phay CNC 5 trục để phục vụ gia công phức tạp.",
-      "suggested_at": "2025-08-11T17:45:00+07:00"
-    }
-  ],
+  "product_suggestions": [],
   "orders": [
-    {
-      "id": "1",
-      "userId": 2,
-      "items": [
-        {
-          "productId": 4,
-          "quantity": 1,
-          "price": 9500000
-        }
-      ],
-      "total": 9500000,
-      "status": "Completed",
-      "createdAt": "2025-01-15T10:30:00Z"
-    },
     {
       "id": "2",
       "userId": 3,
@@ -2334,32 +2089,157 @@
       "createdAt": "2025-10-29T18:40:00Z"
     },
     {
-      "id": "11",
-      "userId": 12,
-      "items": [
-        {
-          "productId": 60,
-          "quantity": 1,
-          "price": 9500000
-        }
-      ],
-      "total": 9500000,
+      "id": "20250829102732",
+      "amount": 10450000,
       "status": "Completed",
-      "createdAt": "2025-11-11T12:25:00Z"
+      "createdAt": "2025-08-29T03:27:32.023Z",
+      "paymentMethod": "VNPay",
+      "transactionNo": "15153885",
+      "updatedAt": "2025-08-29T03:34:32.267Z"
     },
     {
-      "id": "12",
-      "userId": 13,
+      "id": "20250829103441",
+      "amount": 10450000,
+      "status": "Failed",
+      "createdAt": "2025-08-29T03:34:41.915Z",
+      "paymentMethod": "VNPay",
+      "updatedAt": "2025-08-29T03:35:08.962Z"
+    },
+    {
+      "id": "20250829103610",
       "items": [
         {
-          "productId": 65,
+          "productId": "4",
           "quantity": 1,
-          "price": 13500000
+          "price": "9500000.00"
         }
       ],
-      "total": 13500000,
+      "total": 10450000,
+      "status": "Pending",
+      "createdAt": "2025-08-29T03:36:10.936Z",
+      "paymentMethod": "VNPay"
+    },
+    {
+      "id": "20250829103948",
+      "items": [
+        {
+          "productId": "4",
+          "quantity": 1,
+          "price": "9500000.00"
+        }
+      ],
+      "total": 10450000,
+      "status": "Pending",
+      "createdAt": "2025-08-29T03:39:48.649Z",
+      "paymentMethod": "VNPay"
+    },
+    {
+      "id": "20250829104029",
+      "items": [
+        {
+          "productId": "4",
+          "quantity": 1,
+          "price": "9500000.00"
+        }
+      ],
+      "total": 10450000,
+      "status": "Pending",
+      "createdAt": "2025-08-29T03:40:29.257Z",
+      "paymentMethod": "VNPay"
+    },
+    {
+      "id": "20250829104623",
+      "items": [
+        {
+          "productId": "4",
+          "quantity": 1,
+          "price": "9500000.00"
+        }
+      ],
+      "total": 10450000,
       "status": "Completed",
-      "createdAt": "2025-12-19T20:15:00Z"
+      "createdAt": "2025-08-29T03:46:23.729Z",
+      "paymentMethod": "VNPay",
+      "transactionNo": "15153922",
+      "updatedAt": "2025-08-29T04:02:05.219Z"
+    },
+    {
+      "id": "20250829110222",
+      "items": [
+        {
+          "productId": "4",
+          "quantity": 3,
+          "price": "9500000.00"
+        }
+      ],
+      "total": 31350000,
+      "status": "Completed",
+      "createdAt": "2025-08-29T04:02:22.821Z",
+      "paymentMethod": "VNPay",
+      "transactionNo": "15153945",
+      "updatedAt": "2025-08-29T04:02:55.841Z"
+    },
+    {
+      "id": "20250829110310",
+      "items": [
+        {
+          "productId": "4",
+          "quantity": 1,
+          "price": "9500000.00"
+        }
+      ],
+      "total": 10450000,
+      "status": "Completed",
+      "createdAt": "2025-08-29T04:03:10.054Z",
+      "paymentMethod": "VNPay",
+      "transactionNo": "15153949",
+      "updatedAt": "2025-08-29T04:06:27.025Z"
+    }
+  ],
+  "carts": [
+    {
+      "id": "1",
+      "userId": 3,
+      "created_at": "2025-08-25T10:00:00+07:00",
+      "updated_at": "2025-08-25T10:00:00+07:00"
+    },
+    {
+      "id": "2",
+      "userId": 4,
+      "created_at": "2025-08-25T11:00:00+07:00",
+      "updated_at": "2025-08-25T11:00:00+07:00"
+    }
+  ],
+  "cart_items": [
+    {
+      "id": "1",
+      "cartId": "1",
+      "productId": 4,
+      "quantity": 1,
+      "created_at": "2025-08-25T10:00:00+07:00",
+      "updated_at": "2025-08-25T10:00:00+07:00"
+    },
+    {
+      "id": "2",
+      "cartId": "1",
+      "productId": 22,
+      "quantity": 2,
+      "created_at": "2025-08-25T10:05:00+07:00",
+      "updated_at": "2025-08-25T10:05:00+07:00"
+    },
+    {
+      "id": "3",
+      "cartId": "2",
+      "productId": 6,
+      "quantity": 1,
+      "created_at": "2025-08-25T11:00:00+07:00",
+      "updated_at": "2025-08-25T11:00:00+07:00"
+    },
+    {
+      "cartId": "vB02rSK",
+      "productId": "4",
+      "quantity": 1,
+      "id": "vZxyK4E"
     }
   ],
   "statistics": [

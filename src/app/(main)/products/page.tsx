@@ -11,7 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 import { List, LayoutGrid } from 'lucide-react';
 import Sidebar from '@/components/product/Sidebar';
-import { getProductReviews, getProducts } from '@/services/products';
+import { getReviewsByProductId, getProducts } from '@/services/products';
 import { getCategories } from '@/services/categories';
 import OwnBreadcrumb from '@/components/breadcumb/OwnBreadcrumb';
 
@@ -54,7 +54,7 @@ const ProductsPage = () => {
             try {
                 const [productResponse, reviewResponse, categoriesRespose] = await Promise.all([
                     getProducts(),
-                    getProductReviews(),
+                    getReviewsByProductId(''),
                     getCategories(),
                 ]);
                 setProducts(productResponse);

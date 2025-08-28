@@ -17,4 +17,5 @@ export const DEVICE_TABS = [
     'Máy quét',
 ] as const;
 
-export type DeviceTab = typeof DEVICE_TABS[number]; 
+export type DeviceTab = typeof DEVICE_TABS[number];
+export const DATE_FORMAT = 'dd/MM/yyyy';

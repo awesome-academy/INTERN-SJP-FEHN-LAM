@@ -1,44 +1,57 @@
-import { Product } from "@/types";
-import { API_BASE, fetcher } from "./api";
+import { apiClient } from './api';
+import { Product } from '@/types/product';
+import { Review } from '@/types/review';
 
-export const getProducts = () => fetcher("/api/products");
-export const getProductReviews = () => fetcher("/api/product_reviews");
-export const getNewProducts = () =>
-    fetcher("/api/products?_sort=created_at&_order=desc&_limit=3");
-export const getProductById = (productId: number | string) =>
-    fetcher(`/api/products/${productId}`);
-export const getRelatedProducts = (productId: number | string) =>
-    fetcher(`/api/products?related=${productId}&_limit=3`);
-export const getLimitProduct = (limit: number) =>
-    fetcher(`/api/products?_limit=${limit}`);
-
-export const createProduct = async (productData: Omit<Product, "id">) => {
-    const response = await fetch(`${API_BASE}/products`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(productData),
-    });
-    if (!response.ok) throw new Error("Không thể tạo sản phẩm");
-    return response.json();
+export const getProducts = (params: string = "") => {
+    return apiClient<Product[]>(`/products${params}`);
 };
 
-export const updateProduct = async (
-    id: string | number,
-    productData: Partial<Product>
-) => {
-    const response = await fetch(`${API_BASE}/products/${id}`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(productData),
-    });
-    if (!response.ok) throw new Error("Không thể cập nhật sản phẩm");
-    return response.json();
+
+export const getNewProducts = () => {
+    return getProducts("?_sort=created_at&_order=desc&_limit=8");
 };
 
-export const deleteProduct = async (id: string | number) => {
-    const response = await fetch(`${API_BASE}/products/${id}`, {
-        method: "DELETE",
+
+export const getProductById = (productId: string) => {
+    return apiClient<Product>(`/products/${productId}`);
+};
+
+
+export const getRelatedProducts = (productId: number | string) => {
+    return apiClient<Product[]>(`/products?related=${productId}&_limit=4`);
+};
+
+export const getLimitProduct = (limit: number) => {
+    return getProducts(`?_limit=${limit}`);
+};
+
+export const createProduct = (productData: Omit<Product, "id">) => {
+    return apiClient<Product>('/products', {
+        method: 'POST',
+        body: productData,
     });
-    if (!response.ok) throw new Error("Không thể xóa sản phẩm");
-    return response.json();
+};
+
+export const updateProduct = (id: string | number, productData: Partial<Product>) => {
+    return apiClient<Product>(`/products/${id}`, {
+        method: 'PATCH',
+        body: productData,
+    });
+};
+
+
+export const deleteProduct = (id: string | number) => {
+    return apiClient(`/products/${id.toString()}`, {
+        method: 'DELETE',
+    });
+};
+
+
+export const getProductReviews = () => {
+    return apiClient<Review[]>('/product_reviews');
+};
+
+
+export const getReviewsByProductId = (productId: number | string) => {
+    return apiClient<Review[]>(`/product_reviews?productId=${productId}`);
 };

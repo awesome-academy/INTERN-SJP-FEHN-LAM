@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function NotFound() {
     return (
         <div className="flex min-h-screen items-center justify-center bg-white px-4 sm:px-6 lg:px-8">
-            <div className="container mx-auto max-w-6xl">
+            <div className="container mx-auto max-w-6xl mb-[300px]">
                 <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
                     <div className="text-center md:text-left">
                         <p className="text-sm font-semibold uppercase tracking-wide text-gray-500">
@@ -19,7 +19,7 @@ export default function NotFound() {
                         <div className="mt-8">
                             <Link
                                 href="/"
-                                className="inline-block rounded-md bg-yellow-400 px-6 py-3 text-base font-semibold text-black shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
+                                className="inline-block rounded-md bg-yellow-400 px-6 py-3 text-base font-semibold text-black shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400 cusor-pointer"
                             >
                                 Trở về trang chủ
                             </Link>

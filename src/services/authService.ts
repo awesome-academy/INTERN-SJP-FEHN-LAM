@@ -1,6 +1,7 @@
 import { API_BASE } from "../../env";
 
 interface RegistrationData {
+    id?: number;
     name: string;
     email: string;
     password: string;

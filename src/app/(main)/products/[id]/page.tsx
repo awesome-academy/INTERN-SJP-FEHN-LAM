@@ -9,20 +9,23 @@ import { Product } from '@/types';
 import ProductCard from '@/components/product/ProductCard';
 import Link from 'next/link';
 import ProductOverview from '@/components/product/ProductOverview';
-import { getProductById, getProductReviews, getRelatedProducts } from '@/services/products';
+import { getProductById, getRelatedProducts, getReviewsByProductId } from '@/services/products';
 import { getCategories, } from '@/services/categories';
 import OwnBreadcrumb from '@/components/breadcumb/OwnBreadcrumb';
+import ReviewList from '@/components/product/ReviewList';
+import { Review } from '@/types/review';
 
-export default function ProductDetailPage({ params }: { params: { id: string } }) {
-    const { id } = params;
-    const productId = parseInt(id, 10);
+export default function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
+    const paramsData = React.use(params);
+    const { id } = paramsData;
+    const productId = id
 
     const [product, setProduct] = useState<Product | null>(null);
     const [categories, setCategories] = useState<Category[]>([]);
     const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-    const [reviews, setReview] = useState([]);
+    const [reviews, setReviews] = useState<Review[]>([]);
     const [quantity, setQuantity] = useState(1);
     const [activeTab, setActiveTab] = useState('details');
     const breadcrumbItems = [
@@ -30,27 +33,23 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
         { label: 'Danh mục sản phẩm', href: '/products' },
     ];
     useEffect(() => {
-        if (isNaN(productId)) {
-            setError("ID sản phẩm không hợp lệ.");
-            setLoading(false);
-            return;
-        }
+
 
         const fetchData = async () => {
             setLoading(true);
             setError(null);
             try {
-                const [productRes, categoriesRes, relatedRes, reviewRes] = await Promise.all([
+                const [productRes, categoriesRes, relatedRes, reviewRes,] = await Promise.all([
                     getProductById(productId),
                     getCategories(),
                     getRelatedProducts(productId),
-                    getProductReviews(),
+                    getReviewsByProductId(productId),
                 ]);
 
                 setProduct(productRes);
                 setCategories(categoriesRes);
                 setRelatedProducts(relatedRes);
-                setReview(reviewRes);
+                setReviews(reviewRes);
 
             } catch (err: any) {
                 setError(err.message);
@@ -119,7 +118,9 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                         </div>
                         <div className="mt-4 text-sm text-gray-700 leading-loose border p-6 rounded-b-md">
                             {activeTab === 'details' && <div>{product.description}</div>}
-                            {activeTab === 'reviews' && <div>Chưa có đánh giá nào cho sản phẩm này.</div>}
+                            {activeTab === 'reviews' && (
+                                <ReviewList reviews={reviews} />
+                            )}
                         </div>
                     </div>
 
@@ -127,9 +128,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                         <h2 className="text-xl font-bold mb-6">SẢN PHẨM TƯƠNG TỰ</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                             {relatedProducts.map(item => (
-                                <Link key={item.id} href={`/products/${item.id}`}>
-                                    <ProductCard product={item} reviews={reviews} size="medium" />
-                                </Link>
+                                <ProductCard product={item} reviews={reviews} size="medium" key={item.id} />
                             ))}
                         </div>
                     </div>

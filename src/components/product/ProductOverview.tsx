@@ -9,7 +9,7 @@ import { Review } from '@/types/review';
 import { useEffect, useState } from 'react';
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaShareAlt } from 'react-icons/fa';
 import { Input } from '../ui/input';
-import { addToCart } from '@/services/api';
+import { addToCart } from '@/services/cart';
 import { toast } from 'react-toastify';
 interface ProductOverviewProps {
     product: Product;

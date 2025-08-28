@@ -5,6 +5,7 @@ export interface User {
     fullName?: string;
     phone?: string;
     address?: string;
-    isActive: boolean;
-    role: 'user' | 'admin';
+    role: 'CUSTOMER' | 'ADMIN';
+    status: 'active' | 'block';
+    password?: string;
 }

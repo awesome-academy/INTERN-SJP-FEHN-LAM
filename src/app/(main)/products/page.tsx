@@ -11,7 +11,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 import { List, LayoutGrid } from 'lucide-react';
 import Sidebar from '@/components/product/Sidebar';
-import { getCategories, getProductReviews, getProducts } from '@/services/api';
+import { getProductReviews, getProducts } from '@/services/products';
+import { getCategories } from '@/services/categories';
 import OwnBreadcrumb from '@/components/breadcumb/OwnBreadcrumb';
 
 const ProductsPage = () => {

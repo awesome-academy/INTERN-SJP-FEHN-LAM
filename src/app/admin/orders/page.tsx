@@ -78,7 +78,7 @@ const OrdersTable = ({ orders }: { orders: OrderWithCustomerName[] }) => {
                             <TableCell className="font-medium">
                                 ORD{order.id.toString().padStart(3, "0")}
                             </TableCell>
-                            <TableCell>{order.username || "Không xác định"}</TableCell>
+                            <TableCell>{order.user.username || "Không xác định"}</TableCell>
                             <TableCell>{formatDate(order.createdAt)}</TableCell>
                             <TableCell>
                                 <OrderStatusBadge status={order.status} />

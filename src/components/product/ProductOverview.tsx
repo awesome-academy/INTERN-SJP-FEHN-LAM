@@ -9,16 +9,21 @@ import { Review } from '@/types/review';
 import { useEffect, useState } from 'react';
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaShareAlt } from 'react-icons/fa';
 import { Input } from '../ui/input';
-import { addToCart } from '@/services/cart';
+import { addProductToCart } from '@/services/cart';
 import { toast } from 'react-toastify';
+import { useAuth } from '@/context/AuthContext';
+import ReviewDialog from './ReviewDialog';
+import { submitReview } from '@/services/review';
 interface ProductOverviewProps {
     product: Product;
     reviews?: Review[];
 }
 
 export default function ProductOverview({ product, reviews }: ProductOverviewProps) {
+    const { userId, isLoggedIn } = useAuth();
     const [quantity, setQuantity] = useState(1);
     const [rating, setRating] = useState(0);
+    const [isReviewDialogOpen, setIsReviewDialogOpen] = useState(false);
     const productReviews = reviews?.filter(r =>
         r.productId == product.id
     ) || [];
@@ -28,16 +33,35 @@ export default function ProductOverview({ product, reviews }: ProductOverviewPro
         : 0;
     const handleAddtoCart = async () => {
         try {
-            await addToCart({
-                userId: 1,
-                productId: product.id,
-                quantity,
-            });
+            if (!userId) {
+                toast.error("Bạn cần đăng nhập để thêm vào giỏ hàng!");
+                return;
+            }
+            await addProductToCart(userId, product.id, quantity);
             toast.success('Đã thêm vào giỏ hàng!')
         } catch (error) {
             toast.error(' Thêm vào giỏ hàng thất bại!')
         }
     }
+    const handleReviewSubmit = async (review: { rating: number; comment: string }) => {
+        if (!userId) {
+            toast.error("Vui lòng đăng nhập để gửi bình luận.");
+            return;
+        }
+
+        try {
+            await submitReview({
+                productId: product.id,
+                userId,
+                rating: review.rating,
+                comment: review.comment,
+            });
+            toast.success("Cảm ơn bạn đã gửi bình luận!");
+            setIsReviewDialogOpen(false);
+        } catch (error) {
+            toast.error("Không thể gửi bình luận.");
+        }
+    };
     return (
         <div className="flex flex-col md:flex-row gap-8 mb-12">
             <div className="w-full md:w-1/2">
@@ -65,7 +89,16 @@ export default function ProductOverview({ product, reviews }: ProductOverviewPro
                     </span>
                     <span className="text-gray-600 ml-1">({reviewCount} Đánh giá)</span>
                     <span className="mx-2">|</span>
-                    <button className="text-gray-600 hover:text-gray-800 text-xs underline cursor-pointer">
+                    <button
+                        onClick={() => {
+                            if (!isLoggedIn) {
+                                toast.error("Vui lòng đăng nhập để gửi bình luận.");
+                                return;
+                            }
+                            setIsReviewDialogOpen(true);
+                        }}
+                        className="text-gray-600 hover:text-gray-800 text-xs underline cursor-pointer"
+                    >
                         Gửi bình luận của bạn
                     </button>
                 </div>
@@ -153,6 +186,12 @@ export default function ProductOverview({ product, reviews }: ProductOverviewPro
                     </button>
                 </div>
             </div>
+            <ReviewDialog
+                isOpen={isReviewDialogOpen}
+                onOpenChange={setIsReviewDialogOpen}
+                productId={product.id}
+                onSubmit={handleReviewSubmit}
+            />
         </div>
     );
 };

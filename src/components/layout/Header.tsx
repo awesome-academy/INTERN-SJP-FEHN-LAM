@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 
-import { FaGooglePlusG, FaTwitter } from 'react-icons/fa';
+import { FaGooglePlusG, FaTwitter, FaShoppingCart, FaUser } from 'react-icons/fa';
 import { FiSearch } from 'react-icons/fi';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -46,7 +46,6 @@ const HeaderTop: React.FC<HeaderTopProps> = ({ isLoggedIn, onLogout }) => {
     );
 };
 
-
 const HeaderMain: React.FC = () => {
     return (
         <div className="flex justify-between items-center py-3">
@@ -74,24 +73,40 @@ const HeaderMain: React.FC = () => {
                     <span>(04).9530 0850</span>
                 </div>
             </div>
-            <div className="relative w-64">
-                <Input
-                    type="search"
-                    placeholder="Tìm kiếm sản phẩm..."
-                    className="pr-10"
-                />
-                <Button variant="ghost" size="icon" className="absolute top-1/2 right-1 -translate-y-1/2 h-8 w-8">
-                    <FiSearch size={18} />
-                </Button>
+            <div className="flex items-center gap-4">
+                <div className="relative w-64">
+                    <Input
+                        type="search"
+                        placeholder="Tìm kiếm sản phẩm..."
+                        className="pr-10"
+                    />
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        className="absolute top-1/2 right-1 -translate-y-1/2 h-8 w-8"
+                    >
+                        <FiSearch size={18} />
+                    </Button>
+                </div>
+                <div className="flex items-center gap-4">
+
+                    <Link href="/cart" className="relative text-gray-700 hover:text-yellow-600">
+                        <FaShoppingCart size={22} />
+                        <span className="absolute -top-2 -right-2 bg-yellow-600 text-white text-xs rounded-full px-1.5">
+                            3
+                        </span>
+                    </Link>
+                    <Link href="/profile" className="text-gray-700 hover:text-yellow-600">
+                        <FaUser size={22} />
+                    </Link>
+                </div>
             </div>
         </div>
     );
-}
-
+};
 
 const Header = () => {
     const router = useRouter();
-
     const { isLoggedIn, logout } = useAuth();
 
     const handleLogout = () => {
@@ -101,7 +116,7 @@ const Header = () => {
     };
 
     return (
-        <header className="bg-white shadow-sm  top-0 z-50">
+        <header className="bg-white shadow-sm sticky top-0 z-50">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <HeaderTop isLoggedIn={isLoggedIn} onLogout={handleLogout} />
                 <HeaderMain />

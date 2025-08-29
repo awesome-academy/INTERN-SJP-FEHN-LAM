@@ -1,26 +1,56 @@
-import { API_BASE } from "./api";
+import { apiClient } from "./api";
+import { Cart, CartItem } from '@/types/cart';
 
-export const removeCartItem = async (itemId: number | string) => {
-    const response = await fetch(`${API_BASE}/cart/${itemId}`, {
-        method: "DELETE",
-    });
-    if (!response.ok) throw new Error("Không thể xóa sản phẩm");
-    return response.json();
+export const getCartByUserId = async (userId: number | string): Promise<Cart | null> => {
+    const carts = await apiClient<Cart[]>(`/carts?userId=${userId}`);
+    return carts[0] || null;
 };
 
-export const addToCart = async (cartItem: {
-    userId: number;
-    productId: number;
-    quantity: number;
-}) => {
-    const response = await fetch(`${API_BASE}/cart`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(cartItem),
-    });
-    if (!response.ok) throw new Error("Không thể thêm vào giỏ hàng");
-    return response.json();
+export const getCartItemsByCartId = (cartId: number | string): Promise<CartItem[]> => {
+    return apiClient(`/cart_items?cartId=${cartId}`);
 };
 
-export const getCartByUser = (userId: number) =>
-    fetch(`${API_BASE}/cart?userId=${userId}`).then((res) => res.json());
+export const removeCartItem = (cartItemId: number | string) => {
+    return apiClient(`/cart_items/${cartItemId}`, {
+        method: 'DELETE',
+    });
+};
+
+export const updateCartItemQuantity = (cartItemId: number | string, quantity: number) => {
+    return apiClient<CartItem>(`/cart_items/${cartItemId}`, {
+        method: 'PATCH',
+        body: { quantity },
+    });
+};
+
+export const addProductToCart = async (userId: number | string, productId: number, quantity: number) => {
+    let cart = await getCartByUserId(userId);
+
+    if (!cart) {
+        cart = await apiClient<Cart>('/carts', {
+            method: 'POST',
+            body: {
+                userId: Number(userId),
+                created_at: new Date().toISOString(),
+                updated_at: new Date().toISOString(),
+            },
+        });
+    }
+
+    const existingItems = await apiClient<CartItem[]>(`/cart_items?cartId=${cart.id}&productId=${productId}`);
+
+    if (existingItems.length > 0) {
+        const existingItem = existingItems[0];
+        const newQuantity = existingItem.quantity + quantity;
+        return updateCartItemQuantity(existingItem.id, newQuantity);
+    } else {
+        return apiClient<CartItem>('/cart_items', {
+            method: 'POST',
+            body: {
+                cartId: cart.id,
+                productId,
+                quantity,
+            },
+        });
+    }
+};

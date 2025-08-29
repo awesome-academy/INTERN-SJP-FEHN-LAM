@@ -38,7 +38,6 @@ export default function RouteGuard({ children }: { children: React.ReactNode }) 
         if (isLoggedIn === null) return;
 
         const userRole: Role = isLoggedIn ? (role as Role) : Role.GUEST;
-
         const matchedGroup = Object.values(protectedRoutes).find((group) =>
             group.paths.some((path) => pathname.startsWith(path))
         );

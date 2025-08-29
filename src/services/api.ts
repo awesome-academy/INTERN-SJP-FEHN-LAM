@@ -1,11 +1,52 @@
-import { User, Order, Product } from "@/types";
-import { Category } from "@/types/category";
-const API_BASE = 'http://localhost:3001';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
-const fetcher = async (endpoint: string) => {
-    const response = await fetch(endpoint);
-    if (!response.ok) throw new Error(`Lỗi khi gọi API: ${endpoint}`);
-    return await response.json();
+if (!API_BASE_URL) {
+    throw new Error('Biến môi trường NEXT_PUBLIC_API_BASE_URL chưa được cấu hình.');
+}
+
+const handleResponseError = async (response: Response) => {
+    if (!response.ok) {
+        let errorMessage = `Yêu cầu thất bại với mã trạng thái ${response.status}`;
+        try {
+
+            const errorData = await response.json();
+            errorMessage = errorData.message || errorMessage;
+        } catch {
+
+        }
+        throw new Error(errorMessage);
+    }
 };
 
-export { API_BASE, fetcher };
+interface ApiClientOptions extends RequestInit {
+    body?: any;
+}
+
+export const apiClient = async <T>(endpoint: string, options: ApiClientOptions = {}): Promise<T> => {
+    const { body, ...customConfig } = options;
+
+    const headers: HeadersInit = {
+        'Content-Type': 'application/json',
+        ...options.headers,
+    };
+
+    const config: RequestInit = {
+        method: body ? 'POST' : 'GET',
+        ...customConfig,
+        headers,
+    };
+
+    if (body) {
+        config.body = JSON.stringify(body);
+    }
+
+    try {
+        const response = await fetch(`${API_BASE_URL}${endpoint}`, config);
+        await handleResponseError(response);
+        return await response.json();
+
+    } catch (err: any) {
+
+        throw new Error(err.message || 'Lỗi không xác định từ API client');
+    }
+};

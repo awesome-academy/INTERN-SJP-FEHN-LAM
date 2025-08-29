@@ -20,7 +20,7 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import { User } from '@/types';
-import { updateUser } from '@/services/api';
+import { updateUser } from '@/services/users';
 
 interface UserEditDialogProps {
     user: User | null;

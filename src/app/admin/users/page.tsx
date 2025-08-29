@@ -117,6 +117,13 @@ export default function UsersPage() {
             <div className="overflow-x-auto rounded-lg border">
                 <Table className="min-w-[900px]">
                     <TableHeader>
+                        <TableRow>
+                            <TableHead>Tên khách hàng</TableHead>
+                            <TableHead>Email</TableHead>
+                            <TableHead>Role</TableHead>
+                            <TableHead>TRạng thái</TableHead>
+                            <TableHead className="text-right">Actions</TableHead>
+                        </TableRow>
                     </TableHeader>
                     <TableBody>
                         {currentUsers.map((user) => (
@@ -142,14 +149,15 @@ export default function UsersPage() {
                     </TableBody>
                 </Table>
             </div>
-
-            {totalPages > 1 && (
-                <CustomPagination
-                    total={totalPages}
-                    currentPage={currentPage}
-                    onPageChange={setCurrentPage}
-                />
-            )}
+            {
+                totalPages > 1 && (
+                    <CustomPagination
+                        total={totalPages}
+                        currentPage={currentPage}
+                        onPageChange={setCurrentPage}
+                    />
+                )
+            }
 
             <UserCreateDialog
                 isOpen={creatingUser}
@@ -168,6 +176,6 @@ export default function UsersPage() {
                 title="Xác nhận xóa Người dùng"
                 description="Bạn có chắc muốn xóa người dùng này?"
             />
-        </div>
+        </div >
     );
 }

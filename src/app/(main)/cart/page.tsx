@@ -14,61 +14,92 @@ import {
 } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { toast } from 'react-toastify';
 
-import { getCartByUser, removeCartItem } from '@/services/api';
+import { useAuth } from '@/context/AuthContext';
 import { CartItem } from '@/types/cart';
 import { Product } from '@/types/product';
-import { getProductById } from '@/services/api';
-import { toast } from 'react-toastify';
 import { ConfirmDialog } from '@/components/dialog/ConfirmDialog';
 import { formatCurrency } from '@/lib/utils';
+import { getProductById } from '@/services/products';
+import {
+    getCartByUserId,
+    getCartItemsByCartId,
+    removeCartItem,
+    updateCartItemQuantity,
+} from '@/services/cart';
+import { createPaymentUrl } from '@/services/payment';
+
 export interface CartItemWithProduct extends CartItem {
     product: Product;
 }
+
 export default function CartPage() {
     const [cartItems, setCartItems] = useState<CartItemWithProduct[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [confirmOpen, setConfirmOpen] = useState(false);
-    const [itemToDelete, setItemToDelete] = useState<number | string | null>(null);
+    const [itemToDelete, setItemToDelete] = useState<string | number | null>(null);
+    const { userId } = useAuth();
+    const [isRedirecting, setIsRedirecting] = useState(false);
     useEffect(() => {
-        const fetchCart = async () => {
+        if (!userId) {
+            setLoading(false);
+            setError("Vui lòng đăng nhập để xem giỏ hàng.");
+            return;
+        }
+
+        const fetchCartData = async () => {
+            setLoading(true);
+            setError(null);
             try {
-                const userId = 1;
-                const cartItems: CartItem[] = await getCartByUser(userId);
-
-
-                const productPromises = cartItems.map(item =>
-                    getProductById(item.productId)
-                );
-
+                const userCart = await getCartByUserId(userId);
+                if (!userCart) {
+                    setCartItems([]);
+                    return;
+                }
+                const itemsFromApi = await getCartItemsByCartId(userCart.id);
+                if (itemsFromApi.length === 0) {
+                    setCartItems([]);
+                    return;
+                }
+                const productPromises = itemsFromApi.map(item => getProductById(item.productId));
                 const products = await Promise.all(productPromises);
-                const itemsWithProduct: CartItemWithProduct[] = cartItems.map((item, index) => ({
+
+
+                const combinedItems = itemsFromApi.map((item, index) => ({
                     ...item,
                     product: products[index],
                 }));
 
-                setCartItems(itemsWithProduct);
-            } catch (err) {
-                setError("Không thể tải giỏ hàng.");
+                setCartItems(combinedItems);
+            } catch (err: any) {
+                setError(err.message || "Không thể tải giỏ hàng.");
                 console.error(err);
             } finally {
                 setLoading(false);
             }
         };
 
-        fetchCart();
-    }, []);
+        fetchCartData();
+    }, [userId]);
 
-    const handleQuantityChange = (id: number | string, newQuantity: number) => {
-        setCartItems((currentItems) =>
-            currentItems.map((item) =>
-                item.id === id ? { ...item, quantity: Math.max(1, newQuantity) } : item
+    const handleQuantityChange = async (itemId: string | number, newQuantity: number) => {
+        const quantity = Math.max(1, newQuantity);
+
+        setCartItems(currentItems =>
+            currentItems.map(item =>
+                item.id === itemId ? { ...item, quantity } : item
             )
         );
+        try {
+            await updateCartItemQuantity(itemId, quantity);
+        } catch (err) {
+            toast.error("Lỗi cập nhật số lượng.");
+        }
     };
 
-    const handleRemoveItem = async (id: number | string) => {
+    const handleRemoveItem = (id: string | number) => {
         setItemToDelete(id);
         setConfirmOpen(true);
     };
@@ -78,7 +109,7 @@ export default function CartPage() {
 
         try {
             await removeCartItem(itemToDelete);
-            setCartItems((current) => current.filter((item) => item.id !== itemToDelete));
+            setCartItems(current => current.filter(item => item.id !== itemToDelete));
             toast.success('Đã xóa sản phẩm khỏi giỏ hàng');
         } catch (err) {
             toast.error('Không thể xóa sản phẩm');
@@ -87,26 +118,44 @@ export default function CartPage() {
             setConfirmOpen(false);
         }
     };
+
     const totalAmount = cartItems.reduce(
-        (acc, item) => acc + item.product.price * item.quantity,
+        (acc, item) => acc + (item.product?.price || 0) * item.quantity,
         0
     );
     const vat = totalAmount * 0.1;
     const finalAmount = totalAmount + vat;
 
-    if (loading)
-        return (
-            <div className="container mx-auto py-12 px-4 text-center">
-                Đang tải giỏ hàng...
-            </div>
-        );
+    if (loading) return <div className="container text-center py-12">Đang tải giỏ hàng...</div>;
+    if (error) return <div className="container text-center text-red-600 py-12">{error}</div>;
 
-    if (error)
-        return (
-            <div className="container mx-auto py-12 px-4 text-center text-red-600">
-                {error}
-            </div>
-        );
+    const handleProceedToCheckout = async () => {
+        setIsRedirecting(true);
+        try {
+            const orderItems = cartItems.map(item => ({
+                productId: item.product.id,
+                quantity: item.quantity,
+                price: item.product.price
+            }));
+
+            const paymentData = {
+                amount: finalAmount,
+                orderItems: orderItems
+            };
+
+            const { paymentUrl, orderId } = await createPaymentUrl(paymentData);
+            if (paymentUrl) {
+                localStorage.setItem('currentOrderId', orderId);
+                window.location.href = paymentUrl;
+            } else {
+                toast.error("Không thể tạo yêu cầu thanh toán");
+            }
+        } catch (error: any) {
+            toast.error(error.message || "Đã có lỗi xảy ra");
+        } finally {
+            setIsRedirecting(false);
+        }
+    };
 
     return (
         <div className="font-sans antialiased text-gray-800">
@@ -203,8 +252,13 @@ export default function CartPage() {
 
                 {cartItems.length > 0 && (
                     <div className="flex justify-end mt-6">
-                        <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
-                            Tiến hành đặt hàng
+                        <Button
+                            size="lg"
+                            className="bg-red-600 hover:bg-red-700 text-white"
+                            onClick={handleProceedToCheckout}
+                            disabled={isRedirecting}
+                        >
+                            {isRedirecting ? 'Đang xử lý...' : 'Tiến hành đặt hàng'}
                         </Button>
                     </div>
                 )}

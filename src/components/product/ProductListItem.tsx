@@ -40,13 +40,13 @@ const ProductListItem: React.FC<ProductListItemProps> = ({ product, reviews, siz
     return (
         <Card className="p-4 flex flex-col md:flex-row gap-6">
             <div className="relative w-full md:w-1/4 aspect-square flex-shrink-0">
-                <Link href={`/products/${product.id}`} className="absolute inset-0">
+                <Link href={`/products/${product.id}`} className="absolute inset-0 z-10">
                     <Image
                         src={product.image_url || '/images/placeholder.png'}
                         alt={product.product_name}
-                        fill
-                        className="object-contain rounded-md"
-                        sizes="(max-width: 768px) 100vw, 25vw"
+                        width={400}
+                        height={400}
+                        className="object-cover w-full h-full"
                     />
                 </Link>
             </div>

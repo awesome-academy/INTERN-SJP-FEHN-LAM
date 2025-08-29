@@ -10,8 +10,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function AdminLayout({
     children,
@@ -25,13 +24,14 @@ export default function AdminLayout({
         { name: 'Đơn hàng', href: '/admin/orders', icon: ShoppingCart },
         { name: 'Người dùng', href: '/admin/users', icon: Users },
     ];
+    const avatarSrc = "https://github.com/shadcn.png";
 
     return (
         <div className="flex min-h-screen w-full bg-muted/40">
             <aside className="fixed inset-y-0 left-0 z-10 hidden w-64 flex-col border-r bg-background sm:flex">
                 <nav className="flex flex-col gap-4 p-4">
                     <Link href="#" className="mb-4 flex items-center gap-2 text-lg font-semibold">
-                        <span className="">Admin Panel</span>
+                        <span>Admin Panel</span>
                     </Link>
 
                     {menuItems.map((item) => (
@@ -58,7 +58,7 @@ export default function AdminLayout({
                         <Bell className="h-5 w-5" />
                     </Button>
                     <Avatar>
-                        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                        <AvatarImage src={avatarSrc} alt="@shadcn" />
                         <AvatarFallback>AD</AvatarFallback>
                     </Avatar>
                 </header>

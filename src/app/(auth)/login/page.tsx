@@ -29,7 +29,8 @@ export default function LoginPage() {
             const data = await loginService(email, password);
             updateAuthState({
                 token: data.accessToken,
-                role: data.user.role
+                role: data.user.role,
+                id: data.user.id,
             });
             toast.success('Đăng nhập thành công!');
 
@@ -55,7 +56,7 @@ export default function LoginPage() {
 
                     ]}
                 />
-            </div>
+            </div >
 
             <main className="pb-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-24 lg:gap-32">
@@ -111,7 +112,7 @@ export default function LoginPage() {
                                 >
                                     Bạn quên mật khẩu?
                                 </Link>
-                            </div>
+                            </div >
 
                             <Button
                                 type="submit"
@@ -120,8 +121,8 @@ export default function LoginPage() {
                             >
                                 {loading ? 'Đang đăng nhập...' : 'Đăng nhập'}
                             </Button>
-                        </form>
-                    </div>
+                        </form >
+                    </div >
                     <div>
                         <h2 className="text-base font-bold uppercase tracking-wider mb-8">
                             BẠN CHƯA CÓ TÀI KHOẢN?
@@ -137,8 +138,8 @@ export default function LoginPage() {
                             → Đăng ký ngay
                         </Link>
                     </div>
-                </div>
-            </main>
-        </div>
+                </div >
+            </main >
+        </div >
     );
 }

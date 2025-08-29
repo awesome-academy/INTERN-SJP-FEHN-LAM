@@ -16,7 +16,6 @@ interface PaginationProps {
 }
 
 export const CustomPagination = ({ total, currentPage, onPageChange }: PaginationProps) => {
-    // Logic hiển thị trang (có thể thêm "..." nếu nhiều trang)
     const pageNumbers = [];
 
     if (total <= 5) {

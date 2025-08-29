@@ -28,7 +28,6 @@ export default function AdminLayout({
 
     return (
         <div className="flex min-h-screen w-full bg-muted/40">
-            {/* Sidebar */}
             <aside className="fixed inset-y-0 left-0 z-10 hidden w-64 flex-col border-r bg-background sm:flex">
                 <nav className="flex flex-col gap-4 p-4">
                     <Link href="#" className="mb-4 flex items-center gap-2 text-lg font-semibold">
@@ -45,8 +44,6 @@ export default function AdminLayout({
                     ))}
                 </nav>
             </aside>
-
-            {/* Main Content */}
             <div className="flex flex-1 flex-col sm:ml-64">
                 <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-6">
                     <div className="relative flex-1">

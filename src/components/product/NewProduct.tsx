@@ -35,15 +35,15 @@ const NewProducts = () => {
         return (
             <section className="py-12">
                 <div className="flex justify-start items-center mb-4">
-                    <h2 className="text-2xl font-bold uppercase ml-[200px]">Sản phẩm mới</h2>
+                    <h2 className="text-2xl font-bold uppercase ml-[250px] ">Sản phẩm mới</h2>
                     <a href="/products?sort=newest" className="ml-auto flex items-center gap-2 text-sm text-gray-600 hover:text-amber-600">
                         Xem tất cả <HiArrowRight />
                     </a>
                 </div>
 
-                <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 ">
                     {[1, 2, 3].map(i => (
-                        <div key={i} className="bg-gray-200 animate-pulse h-64 rounded-lg"></div>
+                        <div key={i} className="bg-gray-200 animate-pulse h-64 rounded-lg "></div>
                     ))}
                 </div>
             </section>
@@ -69,13 +69,13 @@ const NewProducts = () => {
     return (
         <section className="py-12">
             <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-bold uppercase ml-[160px]">Sản phẩm mới</h2>
+                <h2 className="text-xl font-bold uppercase ml-[180px]">Sản phẩm mới</h2>
                 <a href="/products?sort=newest" className="flex items-center gap-2 text-sm text-gray-600 hover:text-amber-600">
                     Xem tất cả <HiArrowRight />
                 </a>
             </div>
 
-            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
                 {Array.isArray(products) && products.length > 0 ? (
                     products.map((product) => (
                         <ProductCard

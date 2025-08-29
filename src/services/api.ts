@@ -1,3 +1,5 @@
+import { User, Order, Product } from "@/types";
+import { Category } from "@/types/category";
 const API_BASE = 'http://localhost:3001';
 
 const fetcher = async (endpoint: string) => {

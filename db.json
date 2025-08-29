@@ -1557,12 +1557,12 @@
       "full_name": "Lê Thị Cẩm",
       "phone_number": "0923456789",
       "address": "Số 12, phố Lý Thường Kiệt, Hoàn Kiếm, Hà Nội",
-      "is_active": true,
+      "isActivate": true,
       "activation_token": null,
       "status": "active",
       "created_at": "2025-08-14T11:15:00+07:00",
       "updated_at": "2025-08-14T11:15:00+07:00",
-      "role": "customer"
+      "role": "CUSTOMER"
     },
     {
       "id": "4",
@@ -1572,12 +1572,12 @@
       "full_name": "Phạm Văn Dũng",
       "phone_number": "0934567890",
       "address": "Số 20, đường Nguyễn Trãi, Thanh Xuân, Hà Nội",
-      "is_active": true,
+      "isActivate": true,
       "activation_token": null,
       "status": "active",
       "created_at": "2025-08-15T08:00:00+07:00",
       "updated_at": "2025-08-15T08:00:00+07:00",
-      "role": "customer"
+      "role": "CUSTOMER"
     },
     {
       "id": "5",
@@ -1587,12 +1587,12 @@
       "full_name": "Nguyễn Văn Thắng",
       "phone_number": "0945678901",
       "address": "Số 25, phố Trần Hưng Đạo, Hoàn Kiếm, Hà Nội",
-      "is_active": true,
+      "isActivate": true,
       "activation_token": null,
       "status": "active",
       "created_at": "2025-08-15T14:45:00+07:00",
       "updated_at": "2025-08-15T14:45:00+07:00",
-      "role": "customer"
+      "role": "CUSTOMER"
     },
     {
       "id": "6",
@@ -1602,12 +1602,12 @@
       "full_name": "Hoàng Thị Kiều",
       "phone_number": "0956789012",
       "address": "Số 7, phố Phan Chu Trinh, Hoàn Kiếm, Hà Nội",
-      "is_active": true,
+      "isActivate": true,
       "activation_token": null,
       "status": "active",
       "created_at": "2025-08-16T10:20:00+07:00",
       "updated_at": "2025-08-16T10:20:00+07:00",
-      "role": "customer"
+      "role": "CUSTOMER"
     },
     {
       "id": "7",
@@ -1617,12 +1617,12 @@
       "full_name": "Đinh Văn Em",
       "phone_number": "0967890123",
       "address": "Số 3, đường Lê Lai, Hà Đông, Hà Nội",
-      "is_active": true,
+      "isActivate": true,
       "activation_token": null,
       "status": "active",
       "created_at": "2025-08-16T16:10:00+07:00",
       "updated_at": "2025-08-16T16:10:00+07:00",
-      "role": "customer"
+      "role": "CUSTOMER"
     },
     {
       "id": "8",
@@ -1632,12 +1632,12 @@
       "full_name": "Lê Minh F",
       "phone_number": "0978901234",
       "address": "Số 15, phố Xuân Thủy, Cầu Giấy, Hà Nội",
-      "is_active": true,
+      "isActivate": true,
       "activation_token": null,
       "status": "active",
       "created_at": "2025-08-17T09:50:00+07:00",
       "updated_at": "2025-08-17T09:50:00+07:00",
-      "role": "customer"
+      "role": "CUSTOMER"
     },
     {
       "id": "9",
@@ -1647,12 +1647,12 @@
       "full_name": "Vũ Hoàng Giang",
       "phone_number": "0989012345",
       "address": "Số 8, đường Kim Mã, Ba Đình, Hà Nội",
-      "is_active": true,
+      "isActivate": true,
       "activation_token": null,
       "status": "active",
       "created_at": "2025-08-17T14:30:00+07:00",
       "updated_at": "2025-08-17T14:30:00+07:00",
-      "role": "customer"
+      "role": "CUSTOMER"
     },
     {
       "id": "10",
@@ -1662,33 +1662,33 @@
       "full_name": "Nguyễn Thị Kim",
       "phone_number": "0990123456",
       "address": "Số 11, phố Hoàng Hoa Thám, Ba Đình, Hà Nội",
-      "is_active": true,
+      "isActivate": true,
       "activation_token": null,
       "status": "active",
       "created_at": "2025-08-18T08:40:00+07:00",
       "updated_at": "2025-08-18T08:40:00+07:00",
-      "role": "admin"
+      "role": "ADMIN"
     },
     {
       "id": "11",
       "username": "tranvanl",
       "email": "tranvanl@example.com",
-      "password": "$2b$12$P7rK3vM1yN4lJ8tF0xQ5uO6bC2hG9dS3kL1nM7yL0pR4eV8wT6o",
+      "password": "123456",
       "full_name": "Trần Văn Lâm",
       "phone_number": "0901234567",
       "address": "Số 9, đường Tây Sơn, Đống Đa, Hà Nội",
-      "is_active": true,
+      "isActivate": true,
       "activation_token": null,
       "status": "active",
       "created_at": "2025-08-18T12:15:00+07:00",
       "updated_at": "2025-08-18T12:15:00+07:00",
-      "role": "admin"
+      "role": "ADMIN"
     },
     {
       "id": "4f2c",
       "username": "example@railstutorial.org",
       "email": "vuquanghoanglam@gmail.com",
-      "role": "Admin",
+      "role": "ADMIN",
       "status": "active",
       "password": "123456"
     },
@@ -1739,6 +1739,229 @@
       "role": "CUSTOMER",
       "status": "active",
       "password": "foobar"
+    },
+    {
+      "email": "example1@railstutorial.org",
+      "password": "$2a$10$bPzzxn0HYzlWQxFVGB7qvOn0777gmM5nETjlDj8KaaDTxrp/frrQm",
+      "name": "Lam",
+      "id": "8dQneGM"
+    },
+    {
+      "email": "example2@railstutorial.org",
+      "password": "$2a$10$hLgSI4prUl8f9zkgxThh7uzn5J.R0sFTOPwaZAEpM6d4qijOJfcxi",
+      "name": "Lam",
+      "id": "EpOziV2"
+    },
+    {
+      "email": "lam@gmail.com",
+      "password": "$2a$10$jMQdZMNA3VhUZLVU2e9QvuEwLrZUnWoWWPPflF1BXBOEUImosRC.2",
+      "name": "chubebanso",
+      "id": "4dfJETe"
+    },
+    {
+      "email": "lam1@gmail.com",
+      "password": "$2a$10$4r5oZJwA2LhGM4mTPluocOcIHLBXZbo52Ih.eP8BVjpZxxdAECMea",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "Ha noi",
+      "id": "DfRWm0j"
+    },
+    {
+      "email": "lam2@gmail.com",
+      "password": "$2a$10$dHCycYev6/oIdNE04R.0a.z1IFqq4.llMJxuxjhDzmarjl61VBev6",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "Ha noi",
+      "role": "CUSTOMER",
+      "id": "jE7dy5C"
+    },
+    {
+      "email": "lam3@gmail.com",
+      "password": "$2a$10$KNkiJoapc2afqwVEdaXkV.swsVmFU9f8iDLikux/bpvYi1qNqX5yG",
+      "name": "chubebanso",
+      "phone": "0378164258",
+      "address": "Ha noi",
+      "role": "CUSTOMER",
+      "id": "flCrn9Z"
+    },
+    {
+      "email": "lam4@gmail.com",
+      "password": "$2a$10$gdZZ4S/DHcmUj504Hs2XSOFkaCTKHPfY/gYu3idzXKRhq88TFHkSi",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "Ha noi",
+      "role": "CUSTOMER",
+      "id": "dpfxHdf"
+    },
+    {
+      "email": "lam5@gmail.com",
+      "password": "$2a$10$1zugF6PHfv7urqFiM9LYoOceRqk1nodSzV8AbFAltsmDL4.s.yFUe",
+      "name": "chubebanso",
+      "phone": "0378164258",
+      "address": "Ha noi",
+      "role": "CUSTOMER",
+      "id": "Vufan6O"
+    },
+    {
+      "email": "lam6@gmail.com",
+      "password": "$2a$10$Md.tJ4Q9x6QOOqpyR8pKgeugjO0Ue5L.WIoSdpOnDL6lhnMOhuLqC",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "Ha noi",
+      "role": "CUSTOMER",
+      "id": "0sstWgU"
+    },
+    {
+      "email": "lam9@gmail.com",
+      "password": "123456",
+      "name": "chubebanso",
+      "phone": "0378164258",
+      "address": "Ha noi",
+      "role": "CUSTOMER",
+      "id": "C49I3Cd"
+    },
+    {
+      "email": "lam12@gmail.com",
+      "password": "123456",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "Ha noi",
+      "role": "CUSTOMER",
+      "isActivate": true,
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhbTEyQGdtYWlsLmNvbSIsImlhdCI6MTc1NjM0NjQzNCwiZXhwIjoxNzU2MzUwMDM0fQ.Sj9JeadKrRFpi3jVSHvbT1GkgWXoe5LrjRpyBFsegbg",
+      "createdAt": "2025-08-28T02:00:34.717Z"
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "123456",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "Ha noi",
+      "role": "CUSTOMER",
+      "isActivate": false,
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiaWF0IjoxNzU2MzQ3NDQyLCJleHAiOjE3NTYzNTEwNDJ9.F3j5Rpd6vBu4Ee8mBJ61MuYmfRqbAUey6fX4twkw6TM",
+      "createdAt": "2025-08-28T02:17:23.002Z"
+    },
+    {
+      "email": "test1@gmail.com",
+      "password": "123456",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "Ha noi",
+      "role": "CUSTOMER",
+      "isActivate": false,
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsImlhdCI6MTc1NjM0NzUwMSwiZXhwIjoxNzU2MzUxMTAxfQ.N2g__KDagDjWVZq6flhcWGDn_9UMRj95Rw_JHbdLzr8",
+      "createdAt": "2025-08-28T02:18:21.150Z"
+    },
+    {
+      "email": "test2@gmail.com",
+      "password": "123456",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "Ha noi",
+      "role": "CUSTOMER",
+      "isActivate": true,
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyQGdtYWlsLmNvbSIsImlhdCI6MTc1NjM0Nzg0NiwiZXhwIjoxNzU2MzUxNDQ2fQ.BNntq_HAYHWC-IM0xbXc0VmSQ-zN7UwE1WtcT3UnF3Y",
+      "createdAt": "2025-08-28T02:24:06.116Z"
+    },
+    {
+      "email": "lam8@gmail.com",
+      "password": "123456",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "Ha noi",
+      "role": "CUSTOMER",
+      "isActivate": false,
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhbThAZ21haWwuY29tIiwiaWF0IjoxNzU2MzQ5ODI1LCJleHAiOjE3NTYzNTM0MjV9.EYNZwKWwTToZt_8XXwI9Uydak6-iskFPU4St1BkuhYk",
+      "createdAt": "2025-08-28T02:57:05.591Z"
+    },
+    {
+      "email": "test7@gmail.com",
+      "password": "123456",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "Ha noi",
+      "role": "CUSTOMER",
+      "isActivate": true,
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q3QGdtYWlsLmNvbSIsImlhdCI6MTc1NjM1MjkzNywiZXhwIjoxNzU2MzU2NTM3fQ.HatvzJS5ObaX6Me34dbtycULvXGvNybsfdiSdrZ517E",
+      "createdAt": "2025-08-28T03:48:57.047Z"
+    },
+    {
+      "email": "lam13@gmail.com",
+      "password": "123456",
+      "name": "chubebanso",
+      "phone": "0378164258",
+      "address": "Ha noi",
+      "role": "CUSTOMER",
+      "isActivate": true,
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhbTEzQGdtYWlsLmNvbSIsImlhdCI6MTc1NjM1MzAxMSwiZXhwIjoxNzU2MzU2NjExfQ.9t7Vu7_6jGjoYVNv_4rXtYjd3D5ajKIE7TuYZs1uG8Y",
+      "createdAt": "2025-08-28T03:50:11.894Z"
+    },
+    {
+      "email": "test71@gmail.com",
+      "password": "123456",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "1212",
+      "role": "CUSTOMER",
+      "isActivate": false,
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q3MUBnbWFpbC5jb20iLCJpYXQiOjE3NTYzNjM4ODgsImV4cCI6MTc1NjM2NzQ4OH0.oAp9NUovxOiVu7U14kdqczYfggFqWpNvWjFO-tmfdUE",
+      "createdAt": "2025-08-28T06:51:28.588Z"
+    },
+    {
+      "email": "test72@gmail.com",
+      "password": "123456",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "1212",
+      "role": "CUSTOMER",
+      "isActivate": false,
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q3MkBnbWFpbC5jb20iLCJpYXQiOjE3NTYzNjQwODcsImV4cCI6MTc1NjM2NzY4N30.Ql0lz9ZWj24vh1I6n4nIIo5l9Qt4G-UwAY7wi1-R178",
+      "createdAt": "2025-08-28T06:54:47.721Z"
+    },
+    {
+      "email": "test73@gmail.com",
+      "password": "123456",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "1212",
+      "role": "CUSTOMER",
+      "isActivate": false,
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q3M0BnbWFpbC5jb20iLCJpYXQiOjE3NTYzNjQxNDEsImV4cCI6MTc1NjM2Nzc0MX0.sAX875qrUQBpqznSEiCh2yPiQ2xrPn2evlrtY0FWkFQ",
+      "createdAt": "2025-08-28T06:55:41.068Z"
+    },
+    {
+      "email": "test74@gmail.com",
+      "password": "123456",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "1212",
+      "role": "CUSTOMER",
+      "isActivate": false,
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q3NEBnbWFpbC5jb20iLCJpYXQiOjE3NTYzNjQxNTUsImV4cCI6MTc1NjM2Nzc1NX0.cBp-90D6TSvP8dLB1Kj5-ce298q7CrP02_Zx5fuuxic",
+      "createdAt": "2025-08-28T06:55:55.796Z"
+    },
+    {
+      "email": "test76@gmail.com",
+      "password": "123456",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "1212",
+      "role": "CUSTOMER",
+      "isActivate": true,
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q3NkBnbWFpbC5jb20iLCJpYXQiOjE3NTYzNjQyMTgsImV4cCI6MTc1NjM2NzgxOH0.G83ObPX_FsS5os9wANm5InZCDUSJwmwYPu7j9orsQXc",
+      "createdAt": "2025-08-28T06:56:58.641Z"
+    },
+    {
+      "email": "test36@gmail.com",
+      "password": "123456",
+      "name": "Lam",
+      "phone": "0378164258",
+      "address": "1212",
+      "role": "CUSTOMER",
+      "isActivate": true,
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzNkBnbWFpbC5jb20iLCJpYXQiOjE3NTYzNjQ1MTgsImV4cCI6MTc1NjM2ODExOH0.MNlWqTyWpCXCt2HuC0OpVgz149F0X1J15hNhxjg2G_s",
+      "createdAt": "2025-08-28T07:01:58.174Z"
     }
   ],
   "order_details": [
@@ -1952,7 +2175,7 @@
       "id": "1",
       "email": "customer@example.com",
       "subscribed_at": "2025-08-10T15:00:00+07:00",
-      "is_active": true
+      "isActivate": true
     }
   ],
   "product_suggestions": [

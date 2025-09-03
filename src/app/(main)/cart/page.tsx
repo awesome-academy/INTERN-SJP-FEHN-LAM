@@ -125,13 +125,17 @@ export default function CartPage() {
     );
     const vat = totalAmount * 0.1;
     const finalAmount = totalAmount + vat;
-
     if (loading) return <div className="container text-center py-12">Đang tải giỏ hàng...</div>;
     if (error) return <div className="container text-center text-red-600 py-12">{error}</div>;
 
     const handleProceedToCheckout = async () => {
         setIsRedirecting(true);
         try {
+            if (!userId) {
+                toast.error("Vui lòng đăng nhập để tiếp tục.");
+                setIsRedirecting(false);
+                return;
+            }
             const orderItems = cartItems.map(item => ({
                 productId: item.product.id,
                 quantity: item.quantity,
@@ -140,9 +144,9 @@ export default function CartPage() {
 
             const paymentData = {
                 amount: finalAmount,
-                orderItems: orderItems
+                orderItems: orderItems,
+                userId: parseInt(String(userId), 10),
             };
-
             const { paymentUrl, orderId } = await createPaymentUrl(paymentData);
             if (paymentUrl) {
                 localStorage.setItem('currentOrderId', orderId);

@@ -1,4 +1,5 @@
 import { API_BASE } from "../../env";
+import { getAllUsers } from "./users";
 
 interface RegistrationData {
     id?: number;
@@ -58,6 +59,10 @@ export const register = async (userData: RegistrationData) => {
     }
 
     try {
+        const userList = await getAllUsers();
+        const maxId = userList.reduce((max: number, user: any) =>
+            user.id > max ? user.id : max, 0);
+        const newId = maxId + 1;
         const response = await fetch(`${API_BASE}/register`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

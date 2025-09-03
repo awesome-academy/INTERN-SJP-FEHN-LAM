@@ -14,6 +14,7 @@ import Sidebar from '@/components/product/Sidebar';
 import { getReviewsByProductId, getProducts } from '@/services/products';
 import { getCategories } from '@/services/categories';
 import OwnBreadcrumb from '@/components/breadcumb/OwnBreadcrumb';
+import { useSearchParams } from 'next/navigation';
 
 const ProductsPage = () => {
     const [products, setProducts] = useState<Product[]>([]);
@@ -26,6 +27,8 @@ const ProductsPage = () => {
     const [itemsPerPage, setItemsPerPage] = useState(9);
     const [selectedCategoryId, setSelectedCategoryId] = useState<number | null>(null);
     const [selectedPriceRange, setSelectedPriceRange] = useState<string | null>(null);
+    const searchParams = useSearchParams();
+    const searchQuery = searchParams.get('search');
     const PRICE_RANGES_CONFIG = [
         { label: '0 - 200.000 Đ', value: '0-200000' },
         { label: '200.000 Đ - 500.000 Đ', value: '200000-500000' },
@@ -77,7 +80,11 @@ const ProductsPage = () => {
     const { displayedProducts, totalPages } = useMemo(() => {
         let filtered = [...products];
 
-
+        if (searchQuery) {
+            filtered = filtered.filter(p =>
+                p.product_name.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+        }
         if (selectedCategoryId !== null) {
             filtered = filtered.filter(p => p.categoryId == selectedCategoryId);
         }
@@ -103,7 +110,7 @@ const ProductsPage = () => {
         const paginated = filtered.slice(startIndex, startIndex + itemsPerPage);
 
         return { displayedProducts: paginated, totalPages: newTotalPages };
-    }, [products, selectedCategoryId, selectedPriceRange, sortBy, currentPage, itemsPerPage]);
+    }, [products, searchQuery, selectedCategoryId, selectedPriceRange, sortBy, currentPage, itemsPerPage]);
 
     const priceRangesWithCount = useMemo(() => {
         if (products.length === 0) {

@@ -7,6 +7,7 @@ interface PaymentData {
         quantity: number;
         price: number;
     }>;
+    userId: number;
 }
 
 interface PaymentResponse {

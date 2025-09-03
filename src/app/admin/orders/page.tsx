@@ -13,10 +13,10 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getOrdersWithUserInfo } from "@/services/orders";
-import { Order } from "@/types";
+import { Order, User } from "@/types";
 import { formatCurrency } from "@/lib/utils";
 
-type OrderWithCustomerName = Order & { username: string };
+type OrderWithCustomerName = Order & { user: User };
 
 export const ORDER_STATUS_CONFIG = {
     Processing: {
@@ -78,7 +78,7 @@ const OrdersTable = ({ orders }: { orders: OrderWithCustomerName[] }) => {
                             <TableCell className="font-medium">
                                 ORD{order.id.toString().padStart(3, "0")}
                             </TableCell>
-                            <TableCell>{order.user.username || "Không xác định"}</TableCell>
+                            <TableCell>{order.user.name || "Không xác định"}</TableCell>
                             <TableCell>{formatDate(order.createdAt)}</TableCell>
                             <TableCell>
                                 <OrderStatusBadge status={order.status} />
@@ -102,7 +102,7 @@ const OrdersTable = ({ orders }: { orders: OrderWithCustomerName[] }) => {
 export default function OrdersPage() {
     const [orders, setOrders] = useState<OrderWithCustomerName[]>([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+    const [error, setError] = useState<null>(null);
 
     useEffect(() => {
         const fetchOrders = async () => {

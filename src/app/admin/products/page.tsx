@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
+import { uploadImage } from '@/services/upload';
+
 import {
     Table,
     TableBody,
@@ -60,30 +62,45 @@ export default function ProductsPage() {
         refreshData();
     }, []);
 
-    const handleCreate = async (productData: Partial<Product>) => {
+    const handleSave = async (data: Partial<Product> & { imageFile?: File | null }) => {
         try {
-            await createProduct(productData as Omit<Product, 'id'>);
-            toast.success('Thêm sản phẩm thành công!');
+
+            let imageUrl = editingProduct?.image_url || '';
+
+            if (data.imageFile) {
+                const result = await uploadImage(data.imageFile);
+
+                if (!result.success || !result.url) {
+                    toast.error('Tải ảnh lên thất bại!');
+                    throw new Error(result.error || 'Image upload failed');
+                }
+
+                imageUrl = result.url;
+            }
+            const finalProductData = {
+                ...data,
+                image_url: imageUrl,
+            };
+            delete finalProductData.imageFile;
+            if (editingProduct) {
+                await updateProduct(editingProduct.id, finalProductData);
+                toast.success('Cập nhật sản phẩm thành công!');
+            } else {
+                await createProduct(finalProductData as Omit<Product, 'id'>);
+                toast.success('Thêm sản phẩm thành công!');
+            }
+
             refreshData();
         } catch (error) {
-            toast.error('Không thể thêm sản phẩm.');
+            const action = editingProduct ? 'cập nhật' : 'thêm';
+            toast.error(`Không thể ${action} sản phẩm.`);
+            console.error(error);
         } finally {
             setIsCreating(false);
-        }
-    };
-
-    const handleUpdate = async (productData: Partial<Product>) => {
-        if (!editingProduct) return;
-        try {
-            await updateProduct(editingProduct.id, productData);
-            toast.success('Cập nhật sản phẩm thành công!');
-            refreshData();
-        } catch (error) {
-            toast.error('Không thể cập nhật sản phẩm.');
-        } finally {
             setEditingProduct(null);
         }
     };
+
 
     const handleConfirmDelete = async () => {
         if (!productToDelete) return;
@@ -97,8 +114,9 @@ export default function ProductsPage() {
             setProductToDelete(null);
         }
     };
+
     const handlePageChange = (page: number) => {
-        router.push(`?page=${page}`);
+        router.push(`/admin/products?page=${page}`);
     };
 
     if (isLoading) {
@@ -109,7 +127,7 @@ export default function ProductsPage() {
         <div>
             <div className="flex items-center justify-between mb-6">
                 <h1 className="text-3xl font-bold">Quản lý Sản phẩm</h1>
-                <Button onClick={() => setIsCreating(true)}>
+                <Button onClick={() => { setIsCreating(true); setEditingProduct(null); }}>
                     <PlusCircle className="mr-2 h-4 w-4" /> Thêm sản phẩm
                 </Button>
             </div>
@@ -137,9 +155,9 @@ export default function ProductsPage() {
                                     />
                                 </TableCell>
                                 <TableCell className="font-medium">{product.product_name}</TableCell>
-                                <TableCell>{formatCurrency(product.price)}</TableCell>
+                                <TableCell>{formatCurrency(Number(product.price))}</TableCell>
                                 <TableCell>
-                                    <Badge variant={product.stock_quantity > 0 ? 'outline' : 'destructive'}>
+                                    <Badge variant={product.stock_quantity > 0 ? 'default' : 'destructive'}>
                                         {product.stock_quantity}
                                     </Badge>
                                 </TableCell>
@@ -147,7 +165,7 @@ export default function ProductsPage() {
                                     <Button variant="ghost" size="icon" onClick={() => setEditingProduct(product)}>
                                         <Edit className="h-4 w-4" />
                                     </Button>
-                                    <Button variant="ghost" size="icon" className="text-destructive" onClick={() => setProductToDelete(product.id)}>
+                                    <Button variant="ghost" size="icon" className="text-destructive hover:text-destructive" onClick={() => setProductToDelete(product.id)}>
                                         <Trash2 className="h-4 w-4" />
                                     </Button>
                                 </TableCell>
@@ -168,7 +186,7 @@ export default function ProductsPage() {
             <ProductFormDialog
                 isOpen={isCreating || !!editingProduct}
                 onClose={() => { setIsCreating(false); setEditingProduct(null); }}
-                onSave={editingProduct ? handleUpdate : handleCreate}
+                onSave={handleSave}
                 product={editingProduct}
                 categories={categories}
             />

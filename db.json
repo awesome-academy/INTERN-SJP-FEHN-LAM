@@ -217,26 +217,6 @@
       ]
     },
     {
-      "id": "8",
-      "categoryId": 1,
-      "product_name": "Máy in UV phẳng Fortune YF-2513",
-      "brand": "Fortune",
-      "price": "210000000.00",
-      "description": "In trực tiếp lên các vật liệu phẳng như kính, gỗ, mica với mực UV.",
-      "image_url": "/images/products/fortune-yf-2513.jpg",
-      "stock_quantity": 6,
-      "created_at": "2025-06-08T00:28:00+07:00",
-      "updated_at": "2025-06-08T00:28:00+07:00",
-      "color": [
-        "Blue",
-        "White"
-      ],
-      "size": [
-        "Bàn in 2.5m x 1.3m"
-      ],
-      "imageFile": null
-    },
-    {
       "id": "9",
       "categoryId": 1,
       "product_name": "Máy in Decal Mimaki CJV150",
@@ -1454,7 +1434,34 @@
       "stock_quantity": 5,
       "categoryId": 3,
       "description": "rất xịn",
-      "imageFile": {}
+      "image_url": "/images/products/pen.jpg"
+    },
+    {
+      "product_name": "Máy ép kính",
+      "price": 11111111,
+      "stock_quantity": 1,
+      "categoryId": 10,
+      "description": "1",
+      "image_url": "/images/products/1756452264078-esun-pla.jpg",
+      "id": "Oby5ORC"
+    },
+    {
+      "product_name": "Máy ép kính",
+      "price": 1000000,
+      "stock_quantity": 5,
+      "categoryId": 4,
+      "description": "san pham dung tot",
+      "image_url": "/images/products/1756454069191-fortune-yf-2513.jpg",
+      "id": "NuS3-N8"
+    },
+    {
+      "product_name": "Máy ép kính",
+      "price": 1000000,
+      "stock_quantity": 5,
+      "categoryId": 4,
+      "description": "san pham dung tot",
+      "image_url": "/images/products/1756454069319-fortune-yf-2513.jpg",
+      "id": "ruXjDAv"
     }
   ],
   "users": [
@@ -1612,251 +1619,28 @@
       "status": "active"
     },
     {
-      "id": "fcba",
-      "username": "example@railstutorial.org",
-      "email": "vuquanghoanglam@gmail.com",
-      "role": "CUSTOMER",
-      "status": "active",
-      "password": "foobar"
-    },
-    {
-      "id": "52ac",
-      "username": "example@railstutorial.org",
-      "email": "example@railstutorial.org",
-      "role": "CUSTOMER",
-      "status": "active",
-      "password": "foobar"
-    },
-    {
-      "id": "c732",
-      "username": "example@railstutorial.org",
-      "email": "example@railstutorial.org",
-      "role": "CUSTOMER",
-      "status": "active",
-      "password": "foobar"
-    },
-    {
-      "email": "example1@railstutorial.org",
-      "password": "$2a$10$bPzzxn0HYzlWQxFVGB7qvOn0777gmM5nETjlDj8KaaDTxrp/frrQm",
-      "name": "Lam",
-      "id": "8dQneGM"
-    },
-    {
-      "email": "example2@railstutorial.org",
-      "password": "$2a$10$hLgSI4prUl8f9zkgxThh7uzn5J.R0sFTOPwaZAEpM6d4qijOJfcxi",
-      "name": "Lam",
-      "id": "EpOziV2"
-    },
-    {
-      "email": "lam@gmail.com",
-      "password": "$2a$10$jMQdZMNA3VhUZLVU2e9QvuEwLrZUnWoWWPPflF1BXBOEUImosRC.2",
-      "name": "chubebanso",
-      "id": "4dfJETe"
-    },
-    {
-      "email": "lam1@gmail.com",
-      "password": "$2a$10$4r5oZJwA2LhGM4mTPluocOcIHLBXZbo52Ih.eP8BVjpZxxdAECMea",
-      "name": "Lam",
-      "phone": "0378164258",
-      "address": "Ha noi",
-      "id": "DfRWm0j"
-    },
-    {
-      "email": "lam2@gmail.com",
-      "password": "$2a$10$dHCycYev6/oIdNE04R.0a.z1IFqq4.llMJxuxjhDzmarjl61VBev6",
-      "name": "Lam",
-      "phone": "0378164258",
-      "address": "Ha noi",
-      "role": "CUSTOMER",
-      "id": "jE7dy5C"
-    },
-    {
-      "email": "lam3@gmail.com",
-      "password": "$2a$10$KNkiJoapc2afqwVEdaXkV.swsVmFU9f8iDLikux/bpvYi1qNqX5yG",
-      "name": "chubebanso",
-      "phone": "0378164258",
-      "address": "Ha noi",
-      "role": "CUSTOMER",
-      "id": "flCrn9Z"
-    },
-    {
-      "email": "lam4@gmail.com",
-      "password": "$2a$10$gdZZ4S/DHcmUj504Hs2XSOFkaCTKHPfY/gYu3idzXKRhq88TFHkSi",
-      "name": "Lam",
-      "phone": "0378164258",
-      "address": "Ha noi",
-      "role": "CUSTOMER",
-      "id": "dpfxHdf"
-    },
-    {
-      "email": "lam5@gmail.com",
-      "password": "$2a$10$1zugF6PHfv7urqFiM9LYoOceRqk1nodSzV8AbFAltsmDL4.s.yFUe",
-      "name": "chubebanso",
-      "phone": "0378164258",
-      "address": "Ha noi",
-      "role": "CUSTOMER",
-      "id": "Vufan6O"
-    },
-    {
-      "email": "lam6@gmail.com",
-      "password": "$2a$10$Md.tJ4Q9x6QOOqpyR8pKgeugjO0Ue5L.WIoSdpOnDL6lhnMOhuLqC",
-      "name": "Lam",
-      "phone": "0378164258",
-      "address": "Ha noi",
-      "role": "CUSTOMER",
-      "id": "0sstWgU"
-    },
-    {
-      "email": "lam9@gmail.com",
-      "password": "123456",
-      "name": "chubebanso",
-      "phone": "0378164258",
-      "address": "Ha noi",
-      "role": "CUSTOMER",
-      "id": "C49I3Cd"
-    },
-    {
-      "email": "lam12@gmail.com",
+      "id": 15,
+      "email": "tranvanl3@example.com",
       "password": "123456",
       "name": "Lam",
       "phone": "0378164258",
       "address": "Ha noi",
       "role": "CUSTOMER",
       "isActivate": true,
-      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhbTEyQGdtYWlsLmNvbSIsImlhdCI6MTc1NjM0NjQzNCwiZXhwIjoxNzU2MzUwMDM0fQ.Sj9JeadKrRFpi3jVSHvbT1GkgWXoe5LrjRpyBFsegbg",
-      "createdAt": "2025-08-28T02:00:34.717Z"
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRyYW52YW5sM0BleGFtcGxlLmNvbSIsImlhdCI6MTc1NjQ0MzM5MSwiZXhwIjoxNzU2NDQ2OTkxfQ.NX7CrjvnL80bbAw40r2J0I85Q2xjcLuu1Atqk__nOzA",
+      "createdAt": "2025-08-29T04:56:31.478Z"
     },
     {
-      "email": "test@gmail.com",
-      "password": "123456",
-      "name": "Lam",
-      "phone": "0378164258",
-      "address": "Ha noi",
-      "role": "CUSTOMER",
-      "isActivate": false,
-      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiaWF0IjoxNzU2MzQ3NDQyLCJleHAiOjE3NTYzNTEwNDJ9.F3j5Rpd6vBu4Ee8mBJ61MuYmfRqbAUey6fX4twkw6TM",
-      "createdAt": "2025-08-28T02:17:23.002Z"
-    },
-    {
-      "email": "test1@gmail.com",
-      "password": "123456",
-      "name": "Lam",
-      "phone": "0378164258",
-      "address": "Ha noi",
-      "role": "CUSTOMER",
-      "isActivate": false,
-      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsImlhdCI6MTc1NjM0NzUwMSwiZXhwIjoxNzU2MzUxMTAxfQ.N2g__KDagDjWVZq6flhcWGDn_9UMRj95Rw_JHbdLzr8",
-      "createdAt": "2025-08-28T02:18:21.150Z"
-    },
-    {
-      "email": "test2@gmail.com",
+      "id": 16,
+      "email": "tranvanle@xample.com",
       "password": "123456",
       "name": "Lam",
       "phone": "0378164258",
       "address": "Ha noi",
       "role": "CUSTOMER",
       "isActivate": true,
-      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyQGdtYWlsLmNvbSIsImlhdCI6MTc1NjM0Nzg0NiwiZXhwIjoxNzU2MzUxNDQ2fQ.BNntq_HAYHWC-IM0xbXc0VmSQ-zN7UwE1WtcT3UnF3Y",
-      "createdAt": "2025-08-28T02:24:06.116Z"
-    },
-    {
-      "email": "lam8@gmail.com",
-      "password": "123456",
-      "name": "Lam",
-      "phone": "0378164258",
-      "address": "Ha noi",
-      "role": "CUSTOMER",
-      "isActivate": false,
-      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhbThAZ21haWwuY29tIiwiaWF0IjoxNzU2MzQ5ODI1LCJleHAiOjE3NTYzNTM0MjV9.EYNZwKWwTToZt_8XXwI9Uydak6-iskFPU4St1BkuhYk",
-      "createdAt": "2025-08-28T02:57:05.591Z"
-    },
-    {
-      "email": "test7@gmail.com",
-      "password": "123456",
-      "name": "Lam",
-      "phone": "0378164258",
-      "address": "Ha noi",
-      "role": "CUSTOMER",
-      "isActivate": true,
-      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q3QGdtYWlsLmNvbSIsImlhdCI6MTc1NjM1MjkzNywiZXhwIjoxNzU2MzU2NTM3fQ.HatvzJS5ObaX6Me34dbtycULvXGvNybsfdiSdrZ517E",
-      "createdAt": "2025-08-28T03:48:57.047Z"
-    },
-    {
-      "email": "lam13@gmail.com",
-      "password": "123456",
-      "name": "chubebanso",
-      "phone": "0378164258",
-      "address": "Ha noi",
-      "role": "CUSTOMER",
-      "isActivate": true,
-      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhbTEzQGdtYWlsLmNvbSIsImlhdCI6MTc1NjM1MzAxMSwiZXhwIjoxNzU2MzU2NjExfQ.9t7Vu7_6jGjoYVNv_4rXtYjd3D5ajKIE7TuYZs1uG8Y",
-      "createdAt": "2025-08-28T03:50:11.894Z"
-    },
-    {
-      "email": "test71@gmail.com",
-      "password": "123456",
-      "name": "Lam",
-      "phone": "0378164258",
-      "address": "1212",
-      "role": "CUSTOMER",
-      "isActivate": false,
-      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q3MUBnbWFpbC5jb20iLCJpYXQiOjE3NTYzNjM4ODgsImV4cCI6MTc1NjM2NzQ4OH0.oAp9NUovxOiVu7U14kdqczYfggFqWpNvWjFO-tmfdUE",
-      "createdAt": "2025-08-28T06:51:28.588Z"
-    },
-    {
-      "email": "test72@gmail.com",
-      "password": "123456",
-      "name": "Lam",
-      "phone": "0378164258",
-      "address": "1212",
-      "role": "CUSTOMER",
-      "isActivate": false,
-      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q3MkBnbWFpbC5jb20iLCJpYXQiOjE3NTYzNjQwODcsImV4cCI6MTc1NjM2NzY4N30.Ql0lz9ZWj24vh1I6n4nIIo5l9Qt4G-UwAY7wi1-R178",
-      "createdAt": "2025-08-28T06:54:47.721Z"
-    },
-    {
-      "email": "test73@gmail.com",
-      "password": "123456",
-      "name": "Lam",
-      "phone": "0378164258",
-      "address": "1212",
-      "role": "CUSTOMER",
-      "isActivate": false,
-      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q3M0BnbWFpbC5jb20iLCJpYXQiOjE3NTYzNjQxNDEsImV4cCI6MTc1NjM2Nzc0MX0.sAX875qrUQBpqznSEiCh2yPiQ2xrPn2evlrtY0FWkFQ",
-      "createdAt": "2025-08-28T06:55:41.068Z"
-    },
-    {
-      "email": "test74@gmail.com",
-      "password": "123456",
-      "name": "Lam",
-      "phone": "0378164258",
-      "address": "1212",
-      "role": "CUSTOMER",
-      "isActivate": false,
-      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q3NEBnbWFpbC5jb20iLCJpYXQiOjE3NTYzNjQxNTUsImV4cCI6MTc1NjM2Nzc1NX0.cBp-90D6TSvP8dLB1Kj5-ce298q7CrP02_Zx5fuuxic",
-      "createdAt": "2025-08-28T06:55:55.796Z"
-    },
-    {
-      "email": "test76@gmail.com",
-      "password": "123456",
-      "name": "Lam",
-      "phone": "0378164258",
-      "address": "1212",
-      "role": "CUSTOMER",
-      "isActivate": true,
-      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q3NkBnbWFpbC5jb20iLCJpYXQiOjE3NTYzNjQyMTgsImV4cCI6MTc1NjM2NzgxOH0.G83ObPX_FsS5os9wANm5InZCDUSJwmwYPu7j9orsQXc",
-      "createdAt": "2025-08-28T06:56:58.641Z"
-    },
-    {
-      "email": "test36@gmail.com",
-      "password": "123456",
-      "name": "Lam",
-      "phone": "0378164258",
-      "address": "1212",
-      "role": "CUSTOMER",
-      "isActivate": true,
-      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzNkBnbWFpbC5jb20iLCJpYXQiOjE3NTYzNjQ1MTgsImV4cCI6MTc1NjM2ODExOH0.MNlWqTyWpCXCt2HuC0OpVgz149F0X1J15hNhxjg2G_s",
-      "createdAt": "2025-08-28T07:01:58.174Z"
+      "activateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRyYW52YW5sZUB4YW1wbGUuY29tIiwiaWF0IjoxNzU2NDUzMzE4LCJleHAiOjE3NTY0NTY5MTh9.HGxB09oOzOTWrmLjtagA3kCF2k7DmC_vJ9v4r1N7dKw",
+      "createdAt": "2025-08-29T07:41:58.533Z"
     }
   ],
   "order_details": [
@@ -2089,111 +1873,67 @@
       "createdAt": "2025-10-29T18:40:00Z"
     },
     {
-      "id": "20250829102732",
-      "amount": 10450000,
-      "status": "Completed",
-      "createdAt": "2025-08-29T03:27:32.023Z",
-      "paymentMethod": "VNPay",
-      "transactionNo": "15153885",
-      "updatedAt": "2025-08-29T03:34:32.267Z"
-    },
-    {
-      "id": "20250829103441",
-      "amount": 10450000,
-      "status": "Failed",
-      "createdAt": "2025-08-29T03:34:41.915Z",
-      "paymentMethod": "VNPay",
-      "updatedAt": "2025-08-29T03:35:08.962Z"
-    },
-    {
-      "id": "20250829103610",
+      "id": "20250829135909",
       "items": [
         {
-          "productId": "4",
-          "quantity": 1,
-          "price": "9500000.00"
+          "productId": "76",
+          "quantity": 2,
+          "price": "1200000.00"
         }
       ],
-      "total": 10450000,
+      "total": 2640000,
+      "status": "Completed",
+      "createdAt": "2025-08-29T06:59:09.062Z",
+      "paymentMethod": "VNPay",
+      "transactionNo": "15154130",
+      "updatedAt": "2025-08-29T07:23:53.965Z"
+    },
+    {
+      "id": "20250829144922",
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": "85500000.00"
+        }
+      ],
+      "total": 94050000,
       "status": "Pending",
-      "createdAt": "2025-08-29T03:36:10.936Z",
+      "createdAt": "2025-08-29T07:49:22.600Z",
       "paymentMethod": "VNPay"
     },
     {
-      "id": "20250829103948",
+      "id": "20250829144953",
       "items": [
         {
-          "productId": "4",
-          "quantity": 1,
-          "price": "9500000.00"
+          "productId": "76",
+          "quantity": 2,
+          "price": "1200000.00"
         }
       ],
-      "total": 10450000,
-      "status": "Pending",
-      "createdAt": "2025-08-29T03:39:48.649Z",
-      "paymentMethod": "VNPay"
-    },
-    {
-      "id": "20250829104029",
-      "items": [
-        {
-          "productId": "4",
-          "quantity": 1,
-          "price": "9500000.00"
-        }
-      ],
-      "total": 10450000,
-      "status": "Pending",
-      "createdAt": "2025-08-29T03:40:29.257Z",
-      "paymentMethod": "VNPay"
-    },
-    {
-      "id": "20250829104623",
-      "items": [
-        {
-          "productId": "4",
-          "quantity": 1,
-          "price": "9500000.00"
-        }
-      ],
-      "total": 10450000,
+      "total": 2640000,
       "status": "Completed",
-      "createdAt": "2025-08-29T03:46:23.729Z",
+      "createdAt": "2025-08-29T07:49:53.707Z",
       "paymentMethod": "VNPay",
-      "transactionNo": "15153922",
-      "updatedAt": "2025-08-29T04:02:05.219Z"
+      "transactionNo": "15154219",
+      "updatedAt": "2025-08-29T07:51:02.130Z"
     },
     {
-      "id": "20250829110222",
+      "id": "20250903103153",
       "items": [
         {
-          "productId": "4",
-          "quantity": 3,
-          "price": "9500000.00"
+          "productId": "76",
+          "quantity": 2,
+          "price": "1200000.00"
         }
       ],
-      "total": 31350000,
+      "total": 2640000,
+      "userId": 15,
       "status": "Completed",
-      "createdAt": "2025-08-29T04:02:22.821Z",
+      "createdAt": "2025-09-03T03:31:53.127Z",
       "paymentMethod": "VNPay",
-      "transactionNo": "15153945",
-      "updatedAt": "2025-08-29T04:02:55.841Z"
-    },
-    {
-      "id": "20250829110310",
-      "items": [
-        {
-          "productId": "4",
-          "quantity": 1,
-          "price": "9500000.00"
-        }
-      ],
-      "total": 10450000,
-      "status": "Completed",
-      "createdAt": "2025-08-29T04:03:10.054Z",
-      "paymentMethod": "VNPay",
-      "transactionNo": "15153949",
-      "updatedAt": "2025-08-29T04:06:27.025Z"
+      "transactionNo": "15156277",
+      "updatedAt": "2025-09-03T03:32:39.921Z"
     }
   ],
   "carts": [
@@ -2208,6 +1948,12 @@
       "userId": 4,
       "created_at": "2025-08-25T11:00:00+07:00",
       "updated_at": "2025-08-25T11:00:00+07:00"
+    },
+    {
+      "userId": 15,
+      "created_at": "2025-08-29T06:57:09.529Z",
+      "updated_at": "2025-08-29T06:57:09.529Z",
+      "id": "CbXAwP0"
     }
   ],
   "cart_items": [
@@ -2236,10 +1982,10 @@
       "updated_at": "2025-08-25T11:00:00+07:00"
     },
     {
-      "cartId": "vB02rSK",
-      "productId": "4",
-      "quantity": 1,
-      "id": "vZxyK4E"
+      "cartId": "CbXAwP0",
+      "productId": "76",
+      "quantity": 2,
+      "id": "3OawB06"
     }
   ],
   "statistics": [

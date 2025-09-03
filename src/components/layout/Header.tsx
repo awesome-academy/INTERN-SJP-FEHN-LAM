@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -13,6 +13,11 @@ import { Button } from "@/components/ui/button";
 
 import { useAuth } from '@/context/AuthContext';
 import logo from "@/assets/images/logo-thanh-cong.png";
+import { Product } from '@/types';
+import SearchResults from '../search/SearchResults';
+import { searchProducts } from '@/services/products';
+import { Router } from 'next/router';
+
 interface HeaderTopProps {
     isLoggedIn: boolean | null;
     onLogout: () => void;
@@ -47,6 +52,92 @@ const HeaderTop: React.FC<HeaderTopProps> = ({ isLoggedIn, onLogout }) => {
 };
 
 const HeaderMain: React.FC = () => {
+    const [searchQuery, setSearchQuery] = useState('');
+    const [searchResults, setSearchResults] = useState<Product[]>([]);
+    const [showResults, setShowResults] = useState(false);
+    const searchRef = useRef<HTMLDivElement>(null);
+    const router = useRouter();
+    useEffect(() => {
+        if (searchQuery.length < 2) {
+            setSearchResults([]);
+            setShowResults(false);
+            return;
+        }
+
+        const handler = setTimeout(() => {
+            const fetchResults = async () => {
+                try {
+
+                    const data = await searchProducts(searchQuery);
+                    setSearchResults(data);
+                    setShowResults(true);
+                } catch (error) {
+                    console.error('Search error:', error);
+                    setSearchResults([]);
+                }
+            };
+
+            fetchResults();
+        }, 300);
+        return () => {
+            clearTimeout(handler);
+        };
+    }, [searchQuery]);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+                setShowResults(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    const handleSearchChange = (value: string) => {
+        setSearchQuery(value);
+    };
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+                setShowResults(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    const handleSearch = async (value: string) => {
+        setSearchQuery(value);
+        if (value.length >= 2) {
+            try {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products?q=${value}&limit=5`);
+                const data = await response.json();
+                setSearchResults(data);
+                setShowResults(true);
+            } catch (error) {
+                console.error('Search error:', error);
+                setSearchResults([]);
+            }
+        } else {
+            setSearchResults([]);
+            setShowResults(false);
+        }
+    };
+    const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const trimmedQuery = searchQuery.trim();
+
+        if (trimmedQuery) {
+            router.push(`/products?search=${encodeURIComponent(trimmedQuery)}`);
+        } else {
+            router.push('/products');
+        }
+        setShowResults(false);
+    };
     return (
         <div className="flex justify-between items-center py-3">
             <div className="flex-shrink-0">
@@ -74,19 +165,29 @@ const HeaderMain: React.FC = () => {
                 </div>
             </div>
             <div className="flex items-center gap-4">
-                <div className="relative w-64">
-                    <Input
-                        type="search"
-                        placeholder="Tìm kiếm sản phẩm..."
-                        className="pr-10"
-                    />
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        className="absolute top-1/2 right-1 -translate-y-1/2 h-8 w-8"
-                    >
-                        <FiSearch size={18} />
-                    </Button>
+                <div className="relative w-64" ref={searchRef}>
+                    <form onSubmit={handleSearchSubmit} className="relative w-64" >
+                        <Input
+                            type="search"
+                            placeholder="Tìm kiếm sản phẩm..."
+                            className="pr-10"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                        />
+                        <Button
+                            type="submit"
+                            variant="ghost"
+                            size="icon"
+                            className="absolute top-1/2 right-1 -translate-y-1/2 h-8 w-8"
+                        >
+                            <FiSearch size={18} />
+                        </Button>
+                        <SearchResults
+                            products={searchResults}
+                            visible={showResults}
+                            onClose={() => setShowResults(false)}
+                        />
+                    </form>
                 </div>
                 <div className="flex items-center gap-4">
 

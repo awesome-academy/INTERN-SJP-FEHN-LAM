@@ -6,7 +6,7 @@ import { format } from 'date-fns';
 import { useEffect, useState } from 'react';
 import { DATE_FORMAT } from '@/lib/constants';
 import StarRating from '../StarRating';
-import { getUserById } from '@/services/users'; // ✅ import service
+import { getUserById } from '@/services/users';
 
 interface ReviewItemProps {
     review: Review;

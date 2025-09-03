@@ -55,3 +55,7 @@ export const getProductReviews = () => {
 export const getReviewsByProductId = (productId: number | string) => {
     return apiClient<Review[]>(`/product_reviews?productId=${productId}`);
 };
+
+export const searchProducts = (query: string, limit: number = 5) => {
+    return apiClient<Product[]>(`/products?q=${query}&_limit=${limit}`);
+};

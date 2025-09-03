@@ -9,7 +9,7 @@ import Link from "next/link";
 interface ProductListItemProps {
     product: Product;
     reviews?: Review[];
-    size?: 'small' | 'medium' | 'large';
+    size?: 'very_small' | 'small' | 'medium' | 'large';
     showRating?: boolean;
     showDescription?: boolean;
 }
@@ -24,6 +24,13 @@ const ProductListItem: React.FC<ProductListItemProps> = ({ product, reviews, siz
         : 0;
     const formattedPrice = formatCurrency(product.price);
     const sizeStyles = {
+        very_small: {
+            card: "p-2 flex-col gap-1",
+            imageContainer: "w-12 h-12 flex-shrink-0",
+            title: "text-xs font-medium text-gray-800 uppercase tracking-wide",
+            price: "text-xs text-red-600 font-bold",
+            description: "text-xs text-gray-600 line-clamp-1"
+        },
         small: {
             card: "p-2 flex-row gap-3 pl-3 pr-3",
             imageContainer: "w-16 h-16 flex-shrink-0",
@@ -37,6 +44,7 @@ const ProductListItem: React.FC<ProductListItemProps> = ({ product, reviews, siz
             price: "text-xl",
         },
     };
+
     return (
         <Card className="p-4 flex flex-col md:flex-row gap-6">
             <div className="relative w-full md:w-1/4 aspect-square flex-shrink-0">

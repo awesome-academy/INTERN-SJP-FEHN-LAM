@@ -139,7 +139,7 @@ server.post('/login', (req, res) => {
 });
 server.post('/create-payment-url', (req, res) => {
     try {
-        const { amount, orderItems } = req.body;
+        const { amount, orderItems, userId } = req.body;
         const date = new Date();
         const createDate = dateFormat(date, "yyyymmddHHMMss");
         const orderId = createDate;
@@ -149,6 +149,7 @@ server.post('/create-payment-url', (req, res) => {
             id: orderId,
             items: orderItems || [],
             total: amount,
+            userId: userId,
             status: 'Pending',
             createdAt: new Date().toISOString(),
             paymentMethod: 'VNPay'

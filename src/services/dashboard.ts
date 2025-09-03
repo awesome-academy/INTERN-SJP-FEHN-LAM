@@ -5,17 +5,24 @@ import { User } from '@/types/user';
 
 export const getDashboardStats = async () => {
     try {
-
         const [orders, users] = await Promise.all([
             apiClient<Order[]>('/orders'),
             apiClient<User[]>('/users'),
         ]);
 
-        const totalRevenue = orders.reduce((sum, order) => sum + order.total, 0);
+        // Kiểm tra và xử lý dữ liệu hợp lệ
+        const validOrders = orders.filter(order =>
+            order.total !== null &&
+            order.total !== undefined &&
+            typeof order.total === 'number' &&
+            !isNaN(order.total)
+        );
+
+        const totalRevenue = validOrders.reduce((sum, order) => sum + order.total, 0);
 
         return {
             totalRevenue,
-            totalOrders: orders.length,
+            totalOrders: validOrders.length,
             totalUsers: users.length,
         };
     } catch (error) {

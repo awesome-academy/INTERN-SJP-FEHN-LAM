@@ -33,7 +33,7 @@ server.use(cors({
 
 server.use(jsonServer.bodyParser);
 server.post('/register', async (req, res) => {
-    const { email, password, name, phone, address } = req.body;
+    const { email, password, username, phone, address } = req.body;
     const db = router.db;
 
     const existingUser = db.get('users').find({ email }).value();
@@ -50,7 +50,7 @@ server.post('/register', async (req, res) => {
         id: newId,
         email,
         password,
-        name,
+        username,
         phone,
         address,
         role: 'CUSTOMER',
@@ -61,7 +61,7 @@ server.post('/register', async (req, res) => {
 
     try {
 
-        const emailHtml = activateEmailTemplate(name, activateUrl);
+        const emailHtml = activateEmailTemplate(username, activateUrl);
         await transporter.sendMail({
             from: `"My App" <no-reply@myapp.com>`,
             to: email,

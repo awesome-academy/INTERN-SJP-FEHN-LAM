@@ -78,7 +78,7 @@ const OrdersTable = ({ orders }: { orders: OrderWithCustomerName[] }) => {
                             <TableCell className="font-medium">
                                 ORD{order.id.toString().padStart(3, "0")}
                             </TableCell>
-                            <TableCell>{order.user.name || "Không xác định"}</TableCell>
+                            <TableCell>{order.user.username || "Không xác định"}</TableCell>
                             <TableCell>{formatDate(order.createdAt)}</TableCell>
                             <TableCell>
                                 <OrderStatusBadge status={order.status} />
@@ -112,7 +112,6 @@ export default function OrdersPage() {
                 setOrders(data);
             } catch (err) {
                 console.error("Error fetching orders:", err);
-                setError("Không thể tải danh sách đơn hàng");
             } finally {
                 setLoading(false);
             }

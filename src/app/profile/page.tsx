@@ -10,17 +10,36 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuth } from '@/context/AuthContext';
-import { getUserById } from '@/services/users';
+import { getUserById, updateUser } from '@/services/users';
+import * as z from 'zod';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+
+const profileSchema = z.object({
+    username: z.string().min(2, "Họ và tên phải ít nhất 2 ký tự"),
+    phone: z.string().min(10, "Số điện thoại phải ít nhất 10 ký tự"),
+    address: z.string().min(5, "Địa chỉ phải ít nhất 5 ký tự")
+});
+
+type ProfileFormData = z.infer<typeof profileSchema>;
+
 const ProfilePage = () => {
     const router = useRouter();
     const { isLoggedIn, userId, logout } = useAuth();
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState<any>(null);
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        address: ''
+    const {
+        register,
+        handleSubmit,
+        formState: { errors, isSubmitting },
+        reset
+    } = useForm<ProfileFormData>({
+        resolver: zodResolver(profileSchema),
+        defaultValues: {
+            username: '',
+            phone: '',
+            address: ''
+        }
     });
 
     useEffect(() => {
@@ -34,9 +53,8 @@ const ProfilePage = () => {
                 try {
                     const userData = await getUserById(userId);
                     setUser(userData);
-                    setFormData({
-                        name: userData.name || '',
-                        email: userData.email || '',
+                    reset({
+                        username: userData.username || '',
                         phone: userData.phone || '',
                         address: userData.address || ''
                     });
@@ -51,27 +69,16 @@ const ProfilePage = () => {
         fetchUserData();
     }, [isLoggedIn, userId, router]);
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
+    const onSubmit = async (data: ProfileFormData) => {
         try {
-            toast.success('Cập nhật thông tin thành công!');
+            if (userId) {
+                await updateUser(userId, data);
+                toast.success('Cập nhật thông tin thành công!');
+                reset(data);
+            }
         } catch (error) {
             toast.error('Có lỗi xảy ra khi cập nhật thông tin');
         }
-    };
-
-    const handleLogout = () => {
-        logout();
-        toast.success("Đăng xuất thành công");
-        router.push('/');
     };
 
     if (loading) {
@@ -103,10 +110,10 @@ const ProfilePage = () => {
                                     <div className="text-center">
                                         <div className="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
                                             <span className="text-2xl font-bold text-gray-600">
-                                                {user?.name?.charAt(0).toUpperCase() || 'U'}
+                                                {user?.username?.charAt(0).toUpperCase() || 'U'}
                                             </span>
                                         </div>
-                                        <h3 className="font-semibold">{user?.name || 'Người dùng'}</h3>
+                                        <h3 className="font-semibold">{user?.username || 'Người dùng'}</h3>
                                         <p className="text-sm text-gray-500">{user?.email || 'email@example.com'}</p>
                                     </div>
 
@@ -143,16 +150,17 @@ const ProfilePage = () => {
                                 </CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <form onSubmit={handleSubmit} className="space-y-6">
+                                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
-                                            <Label htmlFor="name">Họ và tên</Label>
+                                            {errors.username && (
+                                                <span className="text-sm text-red-500 mt-1">{errors.username.message}</span>
+                                            )}
+                                            <Label htmlFor="username">Họ và tên</Label>
                                             <Input
-                                                id="name"
-                                                name="name"
-                                                value={formData.name}
-                                                onChange={handleInputChange}
-                                                required
+                                                id="username"
+                                                {...register('username')}
+                                                className={errors.username ? 'border-red-500' : ''}
                                             />
                                         </div>
 
@@ -162,33 +170,33 @@ const ProfilePage = () => {
                                                 id="email"
                                                 name="email"
                                                 type="email"
-                                                value={formData.email}
-                                                onChange={handleInputChange}
-                                                required
+                                                value={user?.email}
                                                 disabled
                                             />
                                             <p className="text-xs text-gray-500">Email không thể thay đổi</p>
                                         </div>
 
                                         <div className="space-y-2">
+                                            {errors.phone && (
+                                                <span className="text-sm text-red-500 mt-1">{errors.phone.message}</span>
+                                            )}
                                             <Label htmlFor="phone">Số điện thoại</Label>
                                             <Input
                                                 id="phone"
-                                                name="phone"
-                                                value={formData.phone}
-                                                onChange={handleInputChange}
-                                                required
+                                                {...register('phone')}
+                                                className={errors.phone ? 'border-red-500' : ''}
                                             />
                                         </div>
 
                                         <div className="space-y-2">
+                                            {errors.address && (
+                                                <span className="text-sm text-red-500 mt-1">{errors.address.message}</span>
+                                            )}
                                             <Label htmlFor="address">Địa chỉ</Label>
                                             <Input
                                                 id="address"
-                                                name="address"
-                                                value={formData.address}
-                                                onChange={handleInputChange}
-                                                required
+                                                {...register('address')}
+                                                className={errors.address ? 'border-red-500' : ''}
                                             />
                                         </div>
                                     </div>
@@ -197,8 +205,8 @@ const ProfilePage = () => {
                                         <Button type="button" variant="outline">
                                             Hủy
                                         </Button>
-                                        <Button type="submit">
-                                            Lưu thay đổi
+                                        <Button type="submit" disabled={isSubmitting}>
+                                            {isSubmitting ? 'Đang lưu...' : 'Lưu thay đổi'}
                                         </Button>
                                     </div>
                                 </form>

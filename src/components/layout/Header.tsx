@@ -16,7 +16,6 @@ import logo from "@/assets/images/logo-thanh-cong.png";
 import { Product } from '@/types';
 import SearchResults from '../search/SearchResults';
 import { searchProducts } from '@/services/products';
-import { Router } from 'next/router';
 
 interface HeaderTopProps {
     isLoggedIn: boolean | null;

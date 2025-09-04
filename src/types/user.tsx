@@ -1,3 +1,6 @@
+import { Role } from "./role";
+import { Status } from "./status";
+
 export interface User {
     id: number;
     username: string;
@@ -5,7 +8,7 @@ export interface User {
     fullName?: string;
     phone?: string;
     address?: string;
-    role: 'CUSTOMER' | 'ADMIN';
-    status: 'active' | 'block';
+    role: Role;
+    status: Status;
     password?: string;
 }

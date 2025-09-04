@@ -1,5 +1,5 @@
 
-export function activateEmailTemplate(name, activateUrl) {
+export function activateEmailTemplate(username, activateUrl) {
     return `
     <!DOCTYPE html>
     <html lang="vi">
@@ -24,7 +24,7 @@ export function activateEmailTemplate(name, activateUrl) {
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                             <td style="color: #333333; font-size: 20px; font-weight: bold;">
-                                Xin chào ${name},
+                                Xin chào ${username},
                             </td>
                         </tr>
                         <tr>

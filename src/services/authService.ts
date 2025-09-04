@@ -3,7 +3,7 @@ import { getAllUsers } from "./users";
 
 interface RegistrationData {
     id?: number;
-    name: string;
+    username: string;
     email: string;
     password: string;
     confirmPassword: string;
@@ -67,7 +67,7 @@ export const register = async (userData: RegistrationData) => {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                name: userData.name,
+                username: userData.username,
                 email: userData.email,
                 password: userData.password,
                 phone: userData.phone,

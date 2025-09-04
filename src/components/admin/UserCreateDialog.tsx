@@ -20,41 +20,46 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import { User } from '@/types';
-
+import * as z from 'zod';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Role } from '@/types/role';
+import { UserCreateFormData, userCreateSchema } from '@/schema/userSchema';
+import { Status } from '@/types/status';
 interface UserCreateDialogProps {
     isOpen: boolean;
     onClose: () => void;
     onUserCreated: (userData: Omit<User, 'id'>) => void;
 }
-
 export function UserCreateDialog({ isOpen, onClose, onUserCreated }: UserCreateDialogProps) {
-    const [formData, setFormData] = useState<Omit<User, 'id'>>({
-        username: '',
-        email: '',
-        role: 'CUSTOMER',
-        status: 'active',
-        password: '',
+    const [loading, setLoading] = useState(false);
+    const {
+        register,
+        handleSubmit,
+        formState: { errors, isSubmitting },
+        reset
+    } = useForm<UserCreateFormData>({
+        resolver: zodResolver(userCreateSchema),
+        defaultValues: {
+            username: '',
+            email: '',
+            role: Role.CUSTOMER,
+            status: Status.ACTIVE,
+            phone: ''
+        }
     });
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { id, value } = e.target;
-        setFormData(prev => ({ ...prev, [id]: value }));
-    };
-
-    const handleSelectChange = (field: 'role' | 'status') => (value: string) => {
-        setFormData(prev => ({ ...prev, [field]: value }));
-    };
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
+    const onSubmit = async (data: UserCreateFormData) => {
+        setLoading(true);
         try {
-            onUserCreated(formData);
-            setFormData({
+            onUserCreated(data);
+            reset({
                 username: '',
                 email: '',
-                role: 'CUSTOMER',
-                status: 'active',
-                password: '',
+                role: Role.CUSTOMER,
+                status: Status.ACTIVE,
+                phone: '',
+                address: '',
             });
         } catch (error) {
             console.error(error);
@@ -69,70 +74,85 @@ export function UserCreateDialog({ isOpen, onClose, onUserCreated }: UserCreateD
                     <DialogTitle>Thêm người dùng mới</DialogTitle>
                 </DialogHeader>
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit(onSubmit)}>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-
                         <div className="space-y-4">
                             <div>
-                                <Label htmlFor="username" className="text-sm font-medium">Tên</Label>
+                                <Label htmlFor="username" className="text-sm font-medium">Họ và tên</Label>
                                 <Input
                                     id="username"
-                                    value={formData.username}
-                                    onChange={handleInputChange}
-                                    className="mt-1"
+                                    {...register('username')}
+                                    className={`mt-1 ${errors.username ? 'border-red-500' : ''}`}
                                     required
                                 />
+                                {errors.username && (
+                                    <span className="text-sm text-red-500">{errors.username.message}</span>
+                                )}
                             </div>
-
                             <div>
                                 <Label htmlFor="email" className="text-sm font-medium">Email</Label>
                                 <Input
                                     id="email"
                                     type="email"
-                                    value={formData.email}
-                                    onChange={handleInputChange}
-                                    className="mt-1"
+                                    {...register('email')}
+                                    className={`mt-1 ${errors.email ? 'border-red-500' : ''}`}
                                     required
                                 />
+                                {errors.email && (
+                                    <span className="text-sm text-red-500">{errors.email.message}</span>
+                                )}
                             </div>
 
                             <div>
-                                <Label htmlFor="password" className="text-sm font-medium">Mật khẩu</Label>
+                                <Label htmlFor="phone" className="text-sm font-medium">Số điện thoại</Label>
                                 <Input
-                                    id="password"
-                                    type="password"
-                                    value={formData.password}
-                                    onChange={handleInputChange}
-                                    className="mt-1"
+                                    id="phone"
+                                    type="tel"
+                                    {...register('phone')}
+                                    className={`mt-1 ${errors.phone ? 'border-red-500' : ''}`}
                                     required
                                 />
+                                {errors.phone && (
+                                    <span className="text-sm text-red-500">{errors.phone.message}</span>
+                                )}
                             </div>
                         </div>
 
-
                         <div className="space-y-4">
+                            <div>
+                                <Label htmlFor="address" className="text-sm font-medium">Địa chỉ</Label>
+                                <Input
+                                    id="address"
+                                    {...register('address')}
+                                    className={`mt-1 ${errors.address ? 'border-red-500' : ''}`}
+                                    required
+                                />
+                                {errors.address && (
+                                    <span className="text-sm text-red-500">{errors.address.message}</span>
+                                )}
+                            </div>
                             <div>
                                 <Label htmlFor="role" className="text-sm font-medium">Vai trò</Label>
                                 <Select
-                                    onValueChange={handleSelectChange('role')}
-                                    value={formData.role}
+                                    {...register('role')}
                                 >
-                                    <SelectTrigger className="mt-1">
+                                    <SelectTrigger className={`mt-1 ${errors.role ? 'border-red-500' : ''}`}>
                                         <SelectValue placeholder="Chọn vai trò" />
                                     </SelectTrigger>
                                     <SelectContent>
-                                        <SelectItem value="Admin">Admin</SelectItem>
                                         <SelectItem value="CUSTOMER">CUSTOMER</SelectItem>
+                                        <SelectItem value="ADMIN">ADMIN</SelectItem>
                                     </SelectContent>
                                 </Select>
+                                {errors.role && (
+                                    <span className="text-sm text-red-500">{errors.role.message}</span>
+                                )}
                             </div>
-
                             <div>
                                 <Label htmlFor="status" className="text-sm font-medium">Trạng thái</Label>
                                 <Select
-                                    onValueChange={handleSelectChange('status')}
-                                    value={formData.status}
+                                    {...register('status')}
                                 >
                                     <SelectTrigger className="mt-1">
                                         <SelectValue placeholder="Chọn trạng thái" />
@@ -150,7 +170,12 @@ export function UserCreateDialog({ isOpen, onClose, onUserCreated }: UserCreateD
                         <DialogClose asChild>
                             <Button type="button" variant="secondary">Hủy</Button>
                         </DialogClose>
-                        <Button type="submit">Tạo người dùng</Button>
+                        <Button
+                            type="submit"
+                            disabled={isSubmitting || loading}
+                        >
+                            {isSubmitting || loading ? 'Đang tạo...' : 'Tạo người dùng'}
+                        </Button>
                     </DialogFooter>
                 </form>
             </DialogContent>

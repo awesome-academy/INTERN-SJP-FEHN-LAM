@@ -121,7 +121,7 @@ export default function UsersPage() {
                             <TableHead>Tên khách hàng</TableHead>
                             <TableHead>Email</TableHead>
                             <TableHead>Role</TableHead>
-                            <TableHead>TRạng thái</TableHead>
+                            <TableHead>Trạng thái</TableHead>
                             <TableHead className="text-right">Actions</TableHead>
                         </TableRow>
                     </TableHeader>
@@ -137,10 +137,10 @@ export default function UsersPage() {
                                     </Badge>
                                 </TableCell>
                                 <TableCell className="flex justify-end gap-2">
-                                    <Button size="sm" variant="secondary" onClick={() => handleEditUser(user)}>
+                                    <Button size="sm" variant="secondary" onClick={() => handleEditUser(user)} className='cursor-pointer'>
                                         <Edit className="h-3 w-3" /> Sửa
                                     </Button>
-                                    <Button size="sm" variant="destructive" onClick={() => handleDeleteUser(user.id)}>
+                                    <Button size="sm" variant="destructive" onClick={() => handleDeleteUser(user.id)} className='cursor-pointer'>
                                         <Trash2 className="h-3 w-3" /> Xóa
                                     </Button>
                                 </TableCell>

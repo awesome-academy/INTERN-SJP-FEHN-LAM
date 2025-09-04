@@ -10,7 +10,7 @@ export const getDashboardStats = async () => {
             apiClient<User[]>('/users'),
         ]);
 
-        // Kiểm tra và xử lý dữ liệu hợp lệ
+
         const validOrders = orders.filter(order =>
             order.total !== null &&
             order.total !== undefined &&

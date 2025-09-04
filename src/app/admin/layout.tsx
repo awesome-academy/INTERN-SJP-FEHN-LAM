@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link';
 import {
     LayoutDashboard,
@@ -7,16 +8,25 @@ import {
     ShoppingCart,
     Search,
     Bell,
+    LogOut,
+    ChevronDown,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useEffect, useRef, useState } from 'react';
+import { useAuth } from '@/context/AuthContext';
+import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation';
 
 export default function AdminLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+    const router = useRouter();
     const menuItems = [
         { name: 'Tổng quan', href: '/admin/dashboard', icon: LayoutDashboard },
         { name: 'Sản phẩm', href: '/admin/products', icon: Box },
@@ -25,6 +35,26 @@ export default function AdminLayout({
         { name: 'Người dùng', href: '/admin/users', icon: Users },
     ];
     const avatarSrc = "https://github.com/shadcn.png";
+    const { logout } = useAuth();
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setIsDropdownOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
+    const handleLogout = () => {
+        logout();
+        toast.success("Đăng xuất thành công");
+        router.push('/');
+    };
 
     return (
         <div className="flex min-h-screen w-full bg-muted/40">
@@ -57,10 +87,35 @@ export default function AdminLayout({
                     <Button variant="ghost" size="icon" className="rounded-full">
                         <Bell className="h-5 w-5" />
                     </Button>
-                    <Avatar>
-                        <AvatarImage src={avatarSrc} alt="@shadcn" />
-                        <AvatarFallback>AD</AvatarFallback>
-                    </Avatar>
+                    <div className="relative">
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            className="rounded-full"
+                            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                        >
+                            <Avatar>
+                                <AvatarImage src={avatarSrc} alt="@shadcn" />
+                                <AvatarFallback>AD</AvatarFallback>
+                            </Avatar>
+                        </Button>
+
+                        {isDropdownOpen && (
+                            <div
+                                ref={dropdownRef}
+                                className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border"
+                            >
+                                <Button
+                                    variant="ghost"
+                                    className="w-full justify-start gap-2 cursor-pointer hover:bg-gray-100"
+                                    onClick={handleLogout}
+                                >
+                                    <LogOut className="h-4 w-4" />
+                                    Đăng xuất
+                                </Button>
+                            </div>
+                        )}
+                    </div>
                 </header>
 
                 <main className="flex-1 p-6">{children}</main>

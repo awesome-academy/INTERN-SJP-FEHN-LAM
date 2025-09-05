@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { Trash2 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -104,7 +104,7 @@ export default function CartPage() {
         setConfirmOpen(true);
     };
 
-    const handleConfirmRemove = async () => {
+    const handleConfirmRemove = useCallback(async () => {
         if (!itemToDelete) return;
 
         try {
@@ -117,7 +117,7 @@ export default function CartPage() {
             setItemToDelete(null);
             setConfirmOpen(false);
         }
-    };
+    }, [itemToDelete]);
 
     const totalAmount = cartItems.reduce(
         (acc, item) => acc + (item.product?.price || 0) * item.quantity,
@@ -201,7 +201,7 @@ export default function CartPage() {
                                             {item.product.product_name}
                                         </TableCell>
                                         <TableCell className="py-4 px-4 text-red-600">
-                                            {formatCurrency(item.product.price)} Đ
+                                            {formatCurrency(item.product.price)}
                                         </TableCell>
                                         <TableCell className="py-4 px-4">
                                             <Input
@@ -215,7 +215,7 @@ export default function CartPage() {
                                             />
                                         </TableCell>
                                         <TableCell className="py-4 px-4 font-bold text-red-600">
-                                            {formatCurrency(item.product.price * item.quantity)} Đ
+                                            {formatCurrency(item.product.price * item.quantity)}
                                         </TableCell>
                                         <TableCell className="py-4 px-4 text-center">
                                             <Button
@@ -239,15 +239,15 @@ export default function CartPage() {
                             <CardContent className="p-0">
                                 <div className="flex justify-between items-center py-2 border-b">
                                     <span>Tổng tiền:</span>
-                                    <span>{formatCurrency(totalAmount)} Đ</span>
+                                    <span>{formatCurrency(totalAmount)}</span>
                                 </div>
                                 <div className="flex justify-between items-center py-2 border-b">
                                     <span>Thuế (VAT):</span>
-                                    <span>{formatCurrency(vat)} Đ</span>
+                                    <span>{formatCurrency(vat)} </span>
                                 </div>
                                 <div className="flex justify-between items-center py-2 font-bold text-lg">
                                     <span className="uppercase">Thanh toán:</span>
-                                    <span className="text-red-600">{formatCurrency(finalAmount)} Đ</span>
+                                    <span className="text-red-600">{formatCurrency(finalAmount)} </span>
                                 </div>
                             </CardContent>
                         </Card>

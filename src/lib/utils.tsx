@@ -16,3 +16,11 @@ export function formatCurrency(amount: number | string): string {
     currency: 'VND'
   }).format(numberAmount);
 }
+export const formatDate = (dateString: string): string => {
+  if (!dateString) return '';
+  return new Date(dateString).toLocaleDateString("vi-VN", {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+  });
+};

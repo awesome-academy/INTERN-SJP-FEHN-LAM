@@ -1,7 +1,10 @@
 import { apiClient } from './api';
-import { Order } from '@/types/order';
+import { Order, OrderItem } from '@/types/order';
 import { User } from '@/types/user';
 import { getUserById } from './users';
+import { Product } from '@/types';
+import { OrderDetail } from '@/types/order_detail';
+import { getProductById } from './products';
 
 export const getOrders = (params: string = "") => {
     return apiClient<Order[]>(`/orders${params}`);
@@ -44,4 +47,33 @@ export const getOrdersWithUserInfo = async (): Promise<(Order & { user: User })[
 export const getOrdersWithUserInfoOptimized = () => {
 
     return apiClient<(Order & { user: User })[]>('/orders?_embed=user');
+};
+export const getOrdersByUserId = (userId: string | number) => {
+    return apiClient<Order[]>(`/orders?userId=${userId}`);
+};
+export const getCompleteOrderDetails = async (
+    orderId: string | number
+): Promise<Order & { user: User; items: (OrderItem & { product: Product })[] }> => {
+    const orderWithUser = await apiClient<Order & { user: User }>(
+        `/orders/${orderId}?_expand=user`
+    );
+
+    if (!orderWithUser || !orderWithUser.items) {
+        throw new Error("Không tìm thấy đơn hàng hoặc đơn hàng không có sản phẩm.");
+    }
+
+    const detailedItemsPromises = orderWithUser.items.map(async (item) => {
+        const productDetails = await getProductById(item.productId);
+        return {
+            ...item,
+            product: productDetails,
+        };
+    });
+
+    const detailedItems = await Promise.all(detailedItemsPromises);
+
+    return {
+        ...orderWithUser,
+        items: detailedItems,
+    };
 };

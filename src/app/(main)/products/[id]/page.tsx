@@ -1,9 +1,5 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { Star, Minus, Plus, ShoppingCart } from 'lucide-react';
 import { Category } from '@/types/category';
 import { Product } from '@/types';
 import ProductCard from '@/components/product/ProductCard';

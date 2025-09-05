@@ -14,6 +14,7 @@ import { getUserById, updateUser } from '@/services/users';
 import * as z from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { User } from '@/types';
 
 const profileSchema = z.object({
     username: z.string().min(2, "Họ và tên phải ít nhất 2 ký tự"),
@@ -27,7 +28,7 @@ const ProfilePage = () => {
     const router = useRouter();
     const { isLoggedIn, userId, logout } = useAuth();
     const [loading, setLoading] = useState(true);
-    const [user, setUser] = useState<any>(null);
+    const [user, setUser] = useState<User>();
     const {
         register,
         handleSubmit,

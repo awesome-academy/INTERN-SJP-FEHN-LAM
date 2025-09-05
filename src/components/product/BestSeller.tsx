@@ -57,7 +57,7 @@ const Bestsellers = () => {
 
                 const productsWithSales: ProductWithSales[] = allProducts.map(product => ({
                     ...product,
-                    totalSold: salesCountMap.get(product.id) || 0
+                    totalSold: salesCountMap.get(parseInt(String(product.id), 10)) || 0
                 }));
 
                 productsWithSales.sort((a, b) => b.totalSold - a.totalSold);

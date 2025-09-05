@@ -6,7 +6,7 @@ import { Minus, Plus, ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 import { Product } from '@/types';
 import { Review } from '@/types/review';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaShareAlt } from 'react-icons/fa';
 import { Input } from '../ui/input';
 import { addProductToCart } from '@/services/cart';
@@ -37,13 +37,13 @@ export default function ProductOverview({ product, reviews }: ProductOverviewPro
                 toast.error("Bạn cần đăng nhập để thêm vào giỏ hàng!");
                 return;
             }
-            await addProductToCart(userId, product.id, quantity);
+            await addProductToCart(userId, parseInt(product.id), quantity);
             toast.success('Đã thêm vào giỏ hàng!')
         } catch (error) {
             toast.error(' Thêm vào giỏ hàng thất bại!')
         }
     }
-    const handleReviewSubmit = async (review: { rating: number; comment: string }) => {
+    const handleReviewSubmit = useCallback(async (review: { rating: number; comment: string }) => {
         if (!userId) {
             toast.error("Vui lòng đăng nhập để gửi bình luận.");
             return;
@@ -61,7 +61,7 @@ export default function ProductOverview({ product, reviews }: ProductOverviewPro
         } catch (error) {
             toast.error("Không thể gửi bình luận.");
         }
-    };
+    }, [userId, product.id]);
     return (
         <div className="flex flex-col md:flex-row gap-8 mb-12">
             <div className="w-full md:w-1/2">
@@ -104,7 +104,7 @@ export default function ProductOverview({ product, reviews }: ProductOverviewPro
                 </div>
                 <div className="my-4">
                     <span className="text-3xl font-bold text-red-600">
-                        GNY: {parseFloat(product.price).toLocaleString('vi-VN')} Đ
+                        GNY: {parseFloat(product.price.toString()).toLocaleString('vi-VN')} Đ
                     </span>
                 </div>
 

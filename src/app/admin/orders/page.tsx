@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
     Table,
@@ -15,6 +15,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getOrdersWithUserInfo } from "@/services/orders";
 import { Order, User } from "@/types";
 import { formatCurrency } from "@/lib/utils";
+import OrderDetailDialog from "@/components/orders/OrderDetailDialog";
 
 type OrderWithCustomerName = Order & { user: User };
 
@@ -39,7 +40,6 @@ export const ORDER_STATUS_CONFIG = {
 
 export const OrderStatusBadge = ({ status }: { status: string }) => {
     const config = ORDER_STATUS_CONFIG[status as keyof typeof ORDER_STATUS_CONFIG];
-
     if (!config) {
         return <Badge>{status}</Badge>;
     }
@@ -55,6 +55,7 @@ const formatDate = (dateString: string) =>
     new Date(dateString).toLocaleDateString("vi-VN");
 
 const OrdersTable = ({ orders }: { orders: OrderWithCustomerName[] }) => {
+    const [selectedOrderId, setSelectedOrderId] = useState("");
     if (orders.length === 0) {
         return <div className="p-4 text-center text-gray-500">Không có đơn hàng</div>;
     }
@@ -87,12 +88,19 @@ const OrdersTable = ({ orders }: { orders: OrderWithCustomerName[] }) => {
                                 {formatCurrency(order.total)}
                             </TableCell>
                             <TableCell className="text-center">
-                                <Button variant="outline" size="sm">
+                                <Button variant="outline" size="sm" onClick={() => setSelectedOrderId(order.id)}>
                                     Xem chi tiết
                                 </Button>
                             </TableCell>
                         </TableRow>
                     ))}
+                    {selectedOrderId && (
+                        <OrderDetailDialog
+                            orderId={selectedOrderId}
+                            open={!!selectedOrderId}
+                            onOpenChange={(open) => !open && setSelectedOrderId("")}
+                        />
+                    )}
                 </TableBody>
             </Table>
         </div>
@@ -119,16 +127,18 @@ export default function OrdersPage() {
 
         fetchOrders();
     }, []);
+    const filteredOrders = useMemo(() => {
+        return {
+            processing: orders.filter((o) => o.status === "Processing"),
+            shipped: orders.filter((o) => o.status === "Shipped"),
+            completed: orders.filter((o) => o.status === "Completed"),
+            cancelled: orders.filter((o) => o.status === "Cancelled"),
+        }
+    }, [orders]);
 
     if (loading) return <div>Đang tải dữ liệu...</div>;
     if (error) return <div className="text-red-500">{error}</div>;
 
-    const filteredOrders = {
-        processing: orders.filter((o) => o.status === "Processing"),
-        shipped: orders.filter((o) => o.status === "Shipped"),
-        completed: orders.filter((o) => o.status === "Completed"),
-        cancelled: orders.filter((o) => o.status === "Cancelled"),
-    };
 
     return (
         <div>

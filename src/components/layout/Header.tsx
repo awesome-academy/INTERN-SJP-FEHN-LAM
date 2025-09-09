@@ -11,19 +11,24 @@ import { FiSearch } from 'react-icons/fi';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-import { useAuth } from '@/context/AuthContext';
+import { signIn, signOut, useSession } from "next-auth/react";
 import logo from "@/assets/images/logo-thanh-cong.png";
 import { Product } from '@/types';
 import SearchResults from '../search/SearchResults';
 import { searchProducts } from '@/services/products';
 import { ThemeSwitcher } from '../theme/ThemeSwitcher';
 
-interface HeaderTopProps {
-    isLoggedIn: boolean | null;
-    onLogout: () => void;
-}
-
-const HeaderTop: React.FC<HeaderTopProps> = ({ isLoggedIn, onLogout }) => {
+const HeaderTop: React.FC = () => {
+    const { data: session, status } = useSession()
+    const handleSignOut = () => {
+        try {
+            signOut({ callbackUrl: "/" })
+            toast.success("Đăng xuất thành công")
+        }
+        catch {
+            toast.error("Đăng xuất không thành công")
+        }
+    }
     return (
         <div className="flex justify-between items-center pt-4 pb-2 border-b border-gray-200">
             <div className="flex items-center gap-4 text-gray-500">
@@ -35,11 +40,15 @@ const HeaderTop: React.FC<HeaderTopProps> = ({ isLoggedIn, onLogout }) => {
                 </a>
             </div>
 
+
             <div className="flex items-center gap-4 text-xs font-semibold uppercase text-gray-700 h-5">
-                {isLoggedIn === null ? (
+                {status === "loading" ? (
                     <div className="w-40 h-4 bg-gray-200 rounded animate-pulse"></div>
-                ) : isLoggedIn ? (
-                    <button onClick={onLogout} className="hover:text-yellow-600">Đăng xuất</button>
+                ) : session ? (
+                    <button onClick={() => handleSignOut()} className="hover:text-yellow-600">
+                        Đăng xuất
+                    </button>
+
                 ) : (
                     <>
                         <Link href="/login" className="hover:text-yellow-600">Đăng nhập</Link>
@@ -98,18 +107,6 @@ const HeaderMain: React.FC = () => {
     const handleSearchChange = (value: string) => {
         setSearchQuery(value);
     };
-
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-                setShowResults(false);
-            }
-        };
-
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
-
     const handleSearch = async (value: string) => {
         setSearchQuery(value);
         if (value.length >= 2) {
@@ -209,18 +206,11 @@ const HeaderMain: React.FC = () => {
 
 const Header = () => {
     const router = useRouter();
-    const { isLoggedIn, logout } = useAuth();
-
-    const handleLogout = () => {
-        logout();
-        toast.success("Đăng xuất thành công");
-        router.push('/');
-    };
 
     return (
         <header className="bg-card text-card-foreground border-b">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <HeaderTop isLoggedIn={isLoggedIn} onLogout={handleLogout} />
+                <HeaderTop />
                 <HeaderMain />
             </div>
         </header>

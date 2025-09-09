@@ -36,3 +36,6 @@ export const deleteUser = (id: string | number) => {
         method: 'DELETE',
     });
 };
+export const getUserByEmail = async (email: string | undefined) => {
+    return await apiClient<User[]>(`/users?email=${email}`);
+};

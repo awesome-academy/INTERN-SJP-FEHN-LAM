@@ -120,6 +120,8 @@ export default function UsersPage() {
                         <TableRow>
                             <TableHead>Tên khách hàng</TableHead>
                             <TableHead>Email</TableHead>
+                            <TableHead>Số điện thoại</TableHead>
+                            <TableHead>Địa chỉ</TableHead>
                             <TableHead>Role</TableHead>
                             <TableHead>Trạng thái</TableHead>
                             <TableHead className="text-right">Actions</TableHead>
@@ -130,10 +132,12 @@ export default function UsersPage() {
                             <TableRow key={user.id}>
                                 <TableCell className="font-medium">{user.username}</TableCell>
                                 <TableCell>{user.email}</TableCell>
+                                <TableCell>{user.phone}</TableCell>
+                                <TableCell>{user.address}</TableCell>
                                 <TableCell>{user.role}</TableCell>
                                 <TableCell>
-                                    <Badge variant={user.status === 'active' ? 'default' : 'destructive'}>
-                                        {user.status}
+                                    <Badge variant={user.isActivate ? 'default' : 'destructive'}>
+                                        {user.isActivate ? 'Đã kích hoạt' : 'Chưa kích hoạt'}
                                     </Badge>
                                 </TableCell>
                                 <TableCell className="flex justify-end gap-2">

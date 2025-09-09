@@ -28,10 +28,10 @@ import {
 } from "@/components/ui/table";
 
 import { formatCurrency, formatDate } from "@/lib/utils";
-import { useAuth } from "@/context/AuthContext";
 import { getCompleteOrderDetails } from "@/services/orders";
 import { Order } from "@/types/order";
 import { OrderStatusBadge } from "@/app/admin/orders/page";
+import { useSession } from "next-auth/react";
 
 interface OrderDetailDialogProps {
     orderId: string;
@@ -44,7 +44,8 @@ export default function OrderDetailDialog({
     open,
     onOpenChange,
 }: OrderDetailDialogProps) {
-    const { userId } = useAuth();
+    const { data: session, status } = useSession()
+    const userId = session?.user?.id;
     const [order, setOrder] = useState<Order | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);

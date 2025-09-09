@@ -4,7 +4,7 @@ import { PromoCardProps } from '@/types/PromoCardProps';
 
 const PromoCard: React.FC<PromoCardProps> = ({ brand, productType, price, promoText, imageUrl, imageAlt }) => {
     return (
-        <div className="relative bg-gray-50 rounded-lg p-6 flex items-center justify-between overflow-hidden">
+        <div className="relative bg-secondary rounded-lg p-6 flex items-center justify-between overflow-hidden">
             <div className="flex-1">
                 <h3 className="text-4xl font-bold text-gray-800">{brand}</h3>
                 <p className="text-lg text-gray-500 uppercase mt-1">{productType}</p>

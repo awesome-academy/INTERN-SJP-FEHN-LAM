@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 const PromoBanner = () => {
     return (
         <section className="max-w-7xl mx-auto px-4 py-8">
-            <div className="bg-gray-100 rounded-lg flex flex-col md:flex-row items-center p-8 overflow-hidden">
+            <div className="bg-secondary rounded-lg flex flex-col md:flex-row items-center p-8 overflow-hidden">
                 <div className="w-full md:w-1/2 relative h-56 mb-6 md:mb-0 flex justify-center">
                     <Image
                         src={tools}

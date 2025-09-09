@@ -52,7 +52,7 @@ const Footer = () => {
     const footerLinks = ["Trang chủ", "Giới thiệu", "Sản phẩm", "Tin khuyến mại", "Dịch vụ", "Liên hệ"];
 
     return (
-        <footer className="w-full bg-[#f8f8f8] text-[#555] text-sm">
+        <footer className="w-full bg-secondary text-secondary-foreground text-sm">
             <div className="max-w-7xl mx-auto px-4 py-10">
                 <div className="grid grid-cols-1 md:grid-cols-[2fr_1.25fr_1.25fr_1.25fr_1.25fr] gap-8">
                     <div>

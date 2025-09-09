@@ -1647,78 +1647,7 @@
       "createdAt": "2025-09-04T07:37:39.578Z"
     }
   ],
-  "order_details": [
-    {
-      "id": "2",
-      "orderId": 2,
-      "productId": 22,
-      "quantity": 1,
-      "unit_price": "8500000.00"
-    },
-    {
-      "id": "3",
-      "orderId": 2,
-      "productId": 32,
-      "quantity": 2,
-      "unit_price": "450000.00"
-    },
-    {
-      "id": "4",
-      "orderId": 3,
-      "productId": 6,
-      "quantity": 1,
-      "unit_price": "750000.00"
-    },
-    {
-      "id": "5",
-      "orderId": 4,
-      "productId": 72,
-      "quantity": 1,
-      "unit_price": "6500000.00"
-    },
-    {
-      "id": "6",
-      "orderId": 5,
-      "productId": 33,
-      "quantity": 1,
-      "unit_price": "3200000.00"
-    },
-    {
-      "id": "7",
-      "orderId": 6,
-      "productId": 60,
-      "quantity": 2,
-      "unit_price": "2900000.00"
-    },
-    {
-      "id": "8",
-      "orderId": 7,
-      "productId": 22,
-      "quantity": 1,
-      "unit_price": "8500000.00"
-    },
-    {
-      "id": "9",
-      "orderId": 8,
-      "productId": 21,
-      "quantity": 1,
-      "unit_price": "2800000.00"
-    },
-    {
-      "id": "10",
-      "orderId": 9,
-      "productId": 7,
-      "quantity": 1,
-      "unit_price": "145000000.00"
-    },
-    {
-      "id": "11",
-      "orderId": 10,
-      "productId": 72,
-      "quantity": 1,
-      "unit_price": "6500000.00"
-    }
-  ],
+  "order_details": [],
   "product_reviews": [
     {
       "productId": "68",
@@ -1766,6 +1695,98 @@
       "paymentMethod": "VNPay",
       "transactionNo": "15158310",
       "updatedAt": "2025-09-04T09:17:54.599Z"
+    },
+    {
+      "id": "20250909094429",
+      "items": [
+        {
+          "productId": "3",
+          "quantity": 3,
+          "price": "6800000.00"
+        },
+        {
+          "productId": "1",
+          "quantity": 2,
+          "price": "85500000.00"
+        }
+      ],
+      "total": 210540000,
+      "userId": 17,
+      "status": "Pending",
+      "createdAt": "2025-09-09T02:44:29.548Z",
+      "paymentMethod": "VNPay"
+    },
+    {
+      "id": "20250909095122",
+      "items": [
+        {
+          "productId": "78",
+          "quantity": 2,
+          "price": "1500000.00"
+        }
+      ],
+      "total": 3300000,
+      "userId": 17,
+      "status": "Completed",
+      "createdAt": "2025-09-09T02:51:22.231Z",
+      "paymentMethod": "VNPay",
+      "transactionNo": "15162247",
+      "updatedAt": "2025-09-09T02:52:02.407Z"
+    },
+    {
+      "id": "20250909100653",
+      "items": [
+        {
+          "productId": "68",
+          "quantity": 1,
+          "price": "3500000.00"
+        },
+        {
+          "productId": "79",
+          "quantity": 1,
+          "price": "18000000.00"
+        }
+      ],
+      "total": 23650000,
+      "userId": 17,
+      "status": "Pending",
+      "createdAt": "2025-09-09T03:06:53.165Z",
+      "paymentMethod": "VNPay"
+    },
+    {
+      "id": "20250909100814",
+      "items": [
+        {
+          "productId": "68",
+          "quantity": 1,
+          "price": "3500000.00"
+        },
+        {
+          "productId": "79",
+          "quantity": 1,
+          "price": "18000000.00"
+        }
+      ],
+      "total": 23650000,
+      "userId": 17,
+      "status": "Pending",
+      "createdAt": "2025-09-09T03:08:14.097Z",
+      "paymentMethod": "VNPay"
+    },
+    {
+      "id": "20250909100901",
+      "items": [
+        {
+          "productId": "68",
+          "quantity": 1,
+          "price": "3500000.00"
+        }
+      ],
+      "total": 3850000,
+      "userId": 17,
+      "status": "Pending",
+      "createdAt": "2025-09-09T03:09:01.293Z",
+      "paymentMethod": "VNPay"
     }
   ],
   "carts": [
@@ -1815,9 +1836,9 @@
     },
     {
       "cartId": "_kLQ7eU",
-      "productId": 3,
-      "quantity": 1,
-      "id": "LmUiAC2"
+      "productId": 68,
+      "quantity": 2,
+      "id": "FlqH_CW"
     }
   ],
   "statistics": [

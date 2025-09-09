@@ -9,11 +9,11 @@ import { Review } from '@/types/review';
 import { useCallback, useEffect, useState } from 'react';
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaShareAlt } from 'react-icons/fa';
 import { Input } from '../ui/input';
-import { addProductToCart } from '@/services/cart';
 import { toast } from 'react-toastify';
 import { useAuth } from '@/context/AuthContext';
 import ReviewDialog from './ReviewDialog';
 import { submitReview } from '@/services/review';
+import { useCartStore } from '@/stores/useCartStore';
 interface ProductOverviewProps {
     product: Product;
     reviews?: Review[];
@@ -31,14 +31,14 @@ export default function ProductOverview({ product, reviews }: ProductOverviewPro
     const avgRating = reviewCount > 0
         ? productReviews.reduce((acc, r) => acc + r.rating, 0) / reviewCount
         : 0;
+    const { addProductToCart } = useCartStore()
     const handleAddtoCart = async () => {
         try {
             if (!userId) {
                 toast.error("Bạn cần đăng nhập để thêm vào giỏ hàng!");
                 return;
             }
-            await addProductToCart(userId, parseInt(product.id), quantity);
-            toast.success('Đã thêm vào giỏ hàng!')
+            addProductToCart(product, quantity, userId.toString())
         } catch (error) {
             toast.error(' Thêm vào giỏ hàng thất bại!')
         }

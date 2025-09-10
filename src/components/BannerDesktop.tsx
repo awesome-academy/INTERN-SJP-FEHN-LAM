@@ -6,7 +6,7 @@ export default function BannerDesktopSplitWithImages() {
         <div className="hidden md:block w-full max-w-7xl mx-auto px-8 py-12">
             <div className="flex flex-col md:flex-row gap-12">
                 <div className="md:w-2/3">
-                    <div className="bg-gray-50 rounded-lg shadow-sm p-8 h-full">
+                    <div className="bg-secondary rounded-lg shadow-sm p-8 h-full">
                         <div className="flex items-center justify-between">
                             <div className="flex-1 mt-[50px]">
                                 <h2 className="text-3xl font-bold text-gray-900 mb-2">MÁY KHOAN ĐA NĂNG</h2>

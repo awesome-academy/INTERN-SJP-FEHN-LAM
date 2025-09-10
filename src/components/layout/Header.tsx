@@ -16,6 +16,7 @@ import logo from "@/assets/images/logo-thanh-cong.png";
 import { Product } from '@/types';
 import SearchResults from '../search/SearchResults';
 import { searchProducts } from '@/services/products';
+import { ThemeSwitcher } from '../theme/ThemeSwitcher';
 
 interface HeaderTopProps {
     isLoggedIn: boolean | null;
@@ -199,6 +200,7 @@ const HeaderMain: React.FC = () => {
                     <Link href="/profile" className="text-gray-700 hover:text-yellow-600">
                         <FaUser size={22} />
                     </Link>
+                    <ThemeSwitcher />
                 </div>
             </div>
         </div>
@@ -216,7 +218,7 @@ const Header = () => {
     };
 
     return (
-        <header className="bg-white shadow-sm sticky top-0 z-50">
+        <header className="bg-card text-card-foreground border-b">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <HeaderTop isLoggedIn={isLoggedIn} onLogout={handleLogout} />
                 <HeaderMain />

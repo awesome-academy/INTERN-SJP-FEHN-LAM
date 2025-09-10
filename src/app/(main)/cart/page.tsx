@@ -25,10 +25,10 @@ import { getProductById } from '@/services/products';
 import {
     getCartByUserId,
     getCartItemsByCartId,
-    removeCartItem,
     updateCartItemQuantity,
 } from '@/services/cart';
 import { createPaymentUrl } from '@/services/payment';
+import { useCartStore } from '@/stores/useCartStore';
 
 export interface CartItemWithProduct extends CartItem {
     product: Product;
@@ -39,9 +39,10 @@ export default function CartPage() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [confirmOpen, setConfirmOpen] = useState(false);
-    const [itemToDelete, setItemToDelete] = useState<string | number | null>(null);
+    const [itemToDelete, setItemToDelete] = useState<string>("");
     const { userId } = useAuth();
     const [isRedirecting, setIsRedirecting] = useState(false);
+    const { removeFromCart, updateQuantity } = useCartStore()
     useEffect(() => {
         if (!userId) {
             setLoading(false);
@@ -84,7 +85,7 @@ export default function CartPage() {
         fetchCartData();
     }, [userId]);
 
-    const handleQuantityChange = async (itemId: string | number, newQuantity: number) => {
+    const handleQuantityChange = (itemId: string, newQuantity: number) => {
         const quantity = Math.max(1, newQuantity);
 
         setCartItems(currentItems =>
@@ -93,13 +94,13 @@ export default function CartPage() {
             )
         );
         try {
-            await updateCartItemQuantity(itemId, quantity);
+            updateQuantity(itemId, quantity)
         } catch (err) {
             toast.error("Lỗi cập nhật số lượng.");
         }
     };
 
-    const handleRemoveItem = (id: string | number) => {
+    const handleRemoveItem = (id: string) => {
         setItemToDelete(id);
         setConfirmOpen(true);
     };
@@ -108,13 +109,13 @@ export default function CartPage() {
         if (!itemToDelete) return;
 
         try {
-            await removeCartItem(itemToDelete);
+            await removeFromCart(itemToDelete);
             setCartItems(current => current.filter(item => item.id !== itemToDelete));
             toast.success('Đã xóa sản phẩm khỏi giỏ hàng');
         } catch (err) {
             toast.error('Không thể xóa sản phẩm');
         } finally {
-            setItemToDelete(null);
+            setItemToDelete("");
             setConfirmOpen(false);
         }
     }, [itemToDelete]);
@@ -174,7 +175,7 @@ export default function CartPage() {
                     <Card className="mb-8">
                         <Table>
                             <TableHeader>
-                                <TableRow className="bg-gray-50">
+                                <TableRow className="bg-secondary">
                                     <TableHead className="text-center">#</TableHead>
                                     <TableHead>Ảnh</TableHead>
                                     <TableHead>Tên sản phẩm</TableHead>

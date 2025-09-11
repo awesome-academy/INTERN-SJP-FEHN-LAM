@@ -36,7 +36,7 @@ const NewProducts = () => {
             <section className="py-12">
                 <div className="flex justify-start items-center mb-4">
                     <h2 className="text-2xl font-bold uppercase ml-[250px] ">Sản phẩm mới</h2>
-                    <a href="/products?sort=newest" className="ml-auto flex items-center gap-2 text-sm text-gray-600 hover:text-amber-600">
+                    <a href="/products?sort=newest" className="ml-auto flex items-center gap-2 text-sm text-gray-600 hover:text-amber-600 mr-[50px]">
                         Xem tất cả <HiArrowRight />
                     </a>
                 </div>
@@ -70,7 +70,7 @@ const NewProducts = () => {
         <section className="py-12">
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-bold uppercase ml-[180px]">Sản phẩm mới</h2>
-                <a href="/products?sort=newest" className="flex items-center gap-2 text-sm text-gray-600 hover:text-amber-600">
+                <a href="/products?sort=newest" className="flex items-center gap-2 text-sm text-gray-600 hover:text-amber-600 mr-[250px]">
                     Xem tất cả <HiArrowRight />
                 </a>
             </div>

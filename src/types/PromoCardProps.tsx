@@ -3,6 +3,7 @@ export interface PromoCardProps {
     productType: string;
     price: string;
     promoText: string;
+    promoValue: string;
     imageUrl: string;
     imageAlt: string;
 }

@@ -29,7 +29,7 @@ export default function BannerDesktopSplitWithImages() {
                                     ĐẶT HÀNG
                                 </button>
                             </div>
-                            <div className="w-64 h-64 relative ml-8">
+                            <div className="w-10    0 h-100 relative ml-8">
                                 <Image
                                     src="/images/dewalt-drill.png"
                                     alt="Máy khoan Dewalt"

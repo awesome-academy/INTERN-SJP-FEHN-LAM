@@ -12,14 +12,14 @@ declare module "next-auth/jwt" {
 
 declare module "next-auth" {
     interface User extends DefaultUser {
-        id: string | number;
+        id: number;
         role: string;
         username: string;
     }
 
     interface Session {
         user?: {
-            id: string | number
+            id: number
             username: string
             email: string
             role: string

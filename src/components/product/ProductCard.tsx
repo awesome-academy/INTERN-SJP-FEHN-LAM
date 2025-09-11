@@ -26,10 +26,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, reviews, size = 'med
     const sizeStyles = {
         small: {
             padding: "p-2",
-            imageHeight: "h-24",
+            imageHeight: "h-30",
             title: "text-xs line-clamp-2",
             price: "text-sm",
             rating: "text-xs",
+            imageWidth: "max-w-[60%]"
         },
         medium: {
             padding: "p-3",

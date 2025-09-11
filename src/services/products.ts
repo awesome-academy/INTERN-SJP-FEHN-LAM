@@ -17,10 +17,9 @@ export const getProductById = (productId: string) => {
 };
 
 
-export const getRelatedProducts = (productId: number | string) => {
-    return apiClient<Product[]>(`/products?related=${productId}&_limit=4`);
+export const getRelatedProducts = (categoryId: number | string) => {
+    return apiClient<Product[]>(`/products?categoryId=${categoryId}&_limit=6`);
 };
-
 export const getLimitProduct = (limit: number) => {
     return getProducts(`?_limit=${limit}`);
 };

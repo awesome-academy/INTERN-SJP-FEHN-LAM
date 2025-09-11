@@ -30,8 +30,8 @@ const HeaderTop: React.FC = () => {
         }
     }
     return (
-        <div className="flex justify-between items-center pt-4 pb-2 border-b border-gray-200">
-            <div className="flex items-center gap-4 text-gray-500">
+        <div className="flex justify-between items-center pt-4 pb-2 ">
+            <div className="flex items-center gap-4 text-gray-500 ml-[70px]">
                 <a href="#" className="hover:text-black" aria-label="Google Plus">
                     <FaGooglePlusG size={20} />
                 </a>

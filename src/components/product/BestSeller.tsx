@@ -49,7 +49,7 @@ const Bestsellers = () => {
                     .map(order => order.id);
                 const salesCountMap = new Map<number, number>();
                 allOrderDetails.forEach(detail => {
-                    if (completedOrderIds.includes(detail.orderId)) {
+                    if (completedOrderIds.includes(detail.orderId.toString())) {
                         const currentSoldCount = salesCountMap.get(detail.productId) || 0;
                         salesCountMap.set(detail.productId, currentSoldCount + detail.quantity);
                     }
@@ -98,8 +98,8 @@ const Bestsellers = () => {
 
     return (
         <section className="max-w-7xl mx-auto px-4 py-12">
-            <div className="flex justify-between items-center mb-6">
-                <h2 className="text-xl font-bold uppercase mr-100">Sản phẩm bán chạy</h2>
+            <div className="flex justify-between items-center mb-12">
+                <h2 className="text-lg font-bold uppercase ml-[-100px]">Sản phẩm bán chạy</h2>
                 <div className="hidden md:flex items-center space-x-4 text-sm text-gray-500">
                     {DEVICE_TABS.map(tab => (
                         <Button

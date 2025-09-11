@@ -10,6 +10,6 @@ export interface Product {
     createdAt: string;
     updatedAt: string;
     stock_quantity: number;
-    size: [];
-    color: [string];
+    size: string[];
+    color: string[];
 }

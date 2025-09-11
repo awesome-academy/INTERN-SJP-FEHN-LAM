@@ -1,27 +1,31 @@
-import React from 'react';
-import { Star } from 'lucide-react';
+import { StarIcon as StarSolid } from '@heroicons/react/20/solid'
+import { StarIcon as StarOutline } from '@heroicons/react/24/outline'
 
 interface StarRatingProps {
-    rating: number;
-    size?: number;
+    rating: number
+    size?: number
 }
 
-const StarRating: React.FC<StarRatingProps> = ({ rating, size = 16 }) => {
-    const stars = Array.from({ length: 5 }).map((_, i) => ({
-        filled: i < rating,
-        key: i
-    }));
-
+const StarRating: React.FC<StarRatingProps> = ({ rating, size = 20 }) => {
     return (
         <div className="flex items-center my-1">
-            {stars.map(star => (
-                <Star
-                    key={star.key}
-                    className={`h-${size} w-${size} ${star.filled ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
-                />
-            ))}
+            {Array.from({ length: 5 }).map((_, i) =>
+                i < rating ? (
+                    <StarSolid
+                        key={i}
+                        className="text-yellow-400"
+                        style={{ width: size, height: size }}
+                    />
+                ) : (
+                    <StarOutline
+                        key={i}
+                        className="text-gray-300"
+                        style={{ width: size, height: size }}
+                    />
+                )
+            )}
         </div>
-    );
-};
+    )
+}
 
-export default StarRating;
+export default StarRating

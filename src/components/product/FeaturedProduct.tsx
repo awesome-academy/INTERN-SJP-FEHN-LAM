@@ -82,7 +82,7 @@ const FeaturedProducts = () => {
     return (
         <div className="container mx-auto mt-10 p-4">
             <div className="flex items-center justify-between pb-2">
-                <h2 className="text-xl font-bold uppercase">Sản phẩm nổi bật</h2>
+                <h2 className="text-xl font-bold uppercase ml-[20px]">Sản phẩm nổi bật</h2>
             </div>
 
             <div className="flex flex-col md:flex-row mt-8 gap-6">

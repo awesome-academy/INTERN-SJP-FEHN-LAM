@@ -35,18 +35,20 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
             setLoading(true);
             setError(null);
             try {
-                const [productRes, categoriesRes, relatedRes, reviewRes,] = await Promise.all([
+                const [productRes, categoriesRes, reviewRes,] = await Promise.all([
                     getProductById(productId),
                     getCategories(),
-                    getRelatedProducts(productId),
                     getReviewsByProductId(productId),
                 ]);
-
                 setProduct(productRes);
                 setCategories(categoriesRes);
-                setRelatedProducts(relatedRes);
                 setReviews(reviewRes);
-
+                if (productRes?.categoryId) {
+                    const relatedRes = await getRelatedProducts(productRes.categoryId);
+                    setRelatedProducts(
+                        relatedRes.filter((p) => String(p.id) !== String(productRes.id))
+                    );
+                }
             } catch (err: any) {
                 setError(err.message);
             } finally {

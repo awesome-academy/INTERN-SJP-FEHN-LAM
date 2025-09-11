@@ -38,7 +38,7 @@ export default function ProductOverview({ product, reviews }: ProductOverviewPro
                 toast.error("Bạn cần đăng nhập để thêm vào giỏ hàng!");
                 return;
             }
-            addProductToCart(product, quantity, userId.toString())
+            addProductToCart(product, quantity, userId)
         } catch (error) {
             toast.error(' Thêm vào giỏ hàng thất bại!')
         }

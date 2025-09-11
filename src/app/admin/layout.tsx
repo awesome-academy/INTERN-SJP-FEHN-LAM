@@ -15,10 +15,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useEffect, useRef, useState } from 'react';
-import { useAuth } from '@/context/AuthContext';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
-
+import { signOut } from "next-auth/react";
 export default function AdminLayout({
     children,
 }: {
@@ -35,7 +34,6 @@ export default function AdminLayout({
         { name: 'Người dùng', href: '/admin/users', icon: Users },
     ];
     const avatarSrc = "https://github.com/shadcn.png";
-    const { logout } = useAuth();
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -49,13 +47,6 @@ export default function AdminLayout({
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
-
-    const handleLogout = () => {
-        logout();
-        toast.success("Đăng xuất thành công");
-        router.push('/');
-    };
-
     return (
         <div className="flex min-h-screen w-full bg-muted/40">
             <aside className="fixed inset-y-0 left-0 z-10 hidden w-64 flex-col border-r bg-background sm:flex">
@@ -108,7 +99,7 @@ export default function AdminLayout({
                                 <Button
                                     variant="ghost"
                                     className="w-full justify-start gap-2 cursor-pointer hover:bg-gray-100"
-                                    onClick={handleLogout}
+                                    onClick={() => signOut({ callbackUrl: "/" })}
                                 >
                                     <LogOut className="h-4 w-4" />
                                     Đăng xuất

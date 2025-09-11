@@ -5,49 +5,75 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
-import { login as loginService } from '@/services/authService';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
-import { useAuth } from '@/context/AuthContext';
 import { Role } from '@/types/role';
 import { Checkbox } from "@/components/ui/checkbox";
 import CustomBreadcrumb from '@/components/breadcumb/CustomBreadcrumb';
+import { signIn, useSession } from 'next-auth/react';
+import { FaGoogle } from 'react-icons/fa';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth } from '@/lib/firebase';
 export default function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const router = useRouter();
-    const { login: updateAuthState } = useAuth();
-
+    const { data: session } = useSession();
+    const userId = session?.user?.id;
+    const role = session?.user?.role;
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setError('');
         setLoading(true);
-        try {
+        const result = await signIn('credentials', {
+            redirect: false,
+            email,
+            password,
+        });
 
-            const data = await loginService(email, password);
-            updateAuthState({
-                token: data.accessToken,
-                role: data.user.role,
-                id: data.user.id,
-            });
+        setLoading(false);
+
+        if (result?.error) {
+            toast.error(result.error);
+        } else if (result?.ok) {
             toast.success('Đăng nhập thành công!');
+            router.push("/")
+        }
+    };
+    const handleGoogleSignIn = async () => {
+        setLoading(true);
+        try {
+            const provider = new GoogleAuthProvider();
 
-            if (data.user.role === Role.ADMIN) {
-                router.push('/admin/dashboard');
-            } else {
-                router.push('/');
+            const result = await signInWithPopup(auth, provider);
+
+
+            const idToken = await result.user.getIdToken();
+
+
+            const signInResult = await signIn('firebase', {
+                idToken,
+                redirect: false,
+            });
+
+            if (signInResult?.error) {
+                toast.error("Đăng nhập thất bại, email chưa đăng ký tài khoản");
+            } else if (signInResult?.ok) {
+                toast.success('Đăng nhập thành công!');
+                router.push("/");
             }
-        } catch (err: any) {
-            setError(err.message);
-            toast.error(err.message || 'Đăng nhập thất bại. Vui lòng thử lại.');
+        } catch (error) {
+            console.error("Lỗi đăng nhập Google: ", error);
+            toast.error("Có lỗi xảy ra trong quá trình đăng nhập.");
         } finally {
             setLoading(false);
         }
     };
+
     return (
-        <div className="container mx-auto max-w-4xl px-4 py-8 mb-[200px]">
+        <div className="container mx-auto max-w-6xl px-4 py-8 mb-[200px]">
             <div className="py-4 text-sm text-gray-500">
                 <CustomBreadcrumb
                     items={[
@@ -116,12 +142,31 @@ export default function LoginPage() {
 
                             <Button
                                 type="submit"
-                                className="w-full max-w-xs mt-2"
+                                className="w-full mt-2 cursor-pointer"
                                 disabled={loading}
                             >
                                 {loading ? 'Đang đăng nhập...' : 'Đăng nhập'}
                             </Button>
                         </form >
+                        <div className="relative my-6">
+                            <div className="absolute inset-0 flex items-center">
+                                <span className="w-full border-t" />
+                            </div>
+                            <div className="relative flex justify-center text-xs uppercase">
+                                <span className="bg-card px-2 text-muted-foreground">
+                                    Hoặc tiếp tục với
+                                </span>
+                            </div>
+                        </div>
+                        <Button
+                            variant="outline"
+                            className="w-full cursor-pointer"
+                            onClick={() => handleGoogleSignIn()}
+                            disabled={loading}
+                        >
+                            <FaGoogle className="mr-2 h-4 w-4" />
+                            Google
+                        </Button>
                     </div >
                     <div>
                         <h2 className="text-base font-bold uppercase tracking-wider mb-8">

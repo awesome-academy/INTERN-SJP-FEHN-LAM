@@ -1,7 +1,6 @@
 'use client';
-
-import { useAuth } from '@/context/AuthContext';
 import { Role } from '@/types/role';
+import { useSession } from 'next-auth/react';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -29,20 +28,27 @@ const protectedRoutes: Record<'admin' | 'customer' | 'guest', RouteGroup> = {
 };
 
 export default function RouteGuard({ children }: { children: React.ReactNode }) {
-    const { isLoggedIn, role } = useAuth();
+    const { data: session, status } = useSession()
     const router = useRouter();
     const pathname = usePathname();
     const [isVerified, setIsVerified] = useState(false);
 
     useEffect(() => {
-        if (isLoggedIn === null) return;
+        const userRole: Role = session?.user?.role
+            ? (session.user.role as Role)
+            : Role.GUEST;
 
-        const userRole: Role = isLoggedIn ? (role as Role) : Role.GUEST;
         const matchedGroup = Object.values(protectedRoutes).find((group) =>
             group.paths.some((path) => pathname.startsWith(path))
         );
+
+        if (userRole === Role.ADMIN && !pathname.startsWith('/admin')) {
+            router.replace('/admin/dashboard');
+            return;
+        }
+
         if (matchedGroup) {
-            if (!matchedGroup.roles && isLoggedIn) {
+            if (!matchedGroup.roles && session) {
                 router.replace(matchedGroup.redirect(userRole));
                 return;
             }
@@ -53,7 +59,8 @@ export default function RouteGuard({ children }: { children: React.ReactNode }) 
         }
 
         setIsVerified(true);
-    }, [isLoggedIn, role, pathname, router]);
+    }, [status, session, pathname, router]);
+
 
     if (!isVerified) {
         return (

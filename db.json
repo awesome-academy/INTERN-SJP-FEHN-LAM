@@ -165,7 +165,7 @@
       "product_name": "Máy phay CNC Mini 3040",
       "brand": "OEM",
       "price": "25000000.00",
-      "description": "Máy phay CNC 4 trục, phù hợp gia công bo mạch, đồ trang sức, chi tiết nhỏ.",
+      "description": "Máy phay CNC 4 trục, phù hợp gia công bo mạch, đồ trang sức, chi tiết vua.",
       "image_url": "/images/products/cnc-mini-3040.jpg",
       "stock_quantity": 10,
       "created_at": "2025-06-05T18:55:00+07:00",
@@ -175,7 +175,8 @@
       ],
       "size": [
         "Vùng làm việc 300x400mm"
-      ]
+      ],
+      "imageFile": null
     },
     {
       "id": "6",
@@ -1807,6 +1808,12 @@
       "created_at": "2025-09-04T08:44:22.626Z",
       "updated_at": "2025-09-04T08:44:22.627Z",
       "id": "_kLQ7eU"
+    },
+    {
+      "userId": 14,
+      "created_at": "2025-09-10T06:12:06.933Z",
+      "updated_at": "2025-09-10T06:12:06.933Z",
+      "id": "cJUSUEI"
     }
   ],
   "cart_items": [
@@ -1839,6 +1846,12 @@
       "productId": 68,
       "quantity": 2,
       "id": "FlqH_CW"
+    },
+    {
+      "cartId": "cJUSUEI",
+      "productId": 1,
+      "quantity": 1,
+      "id": "-AmuTHK"
     }
   ],
   "statistics": [

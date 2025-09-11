@@ -9,20 +9,20 @@ import { Review } from '@/types/review';
 import { useCallback, useEffect, useState } from 'react';
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaShareAlt } from 'react-icons/fa';
 import { Input } from '../ui/input';
-import { toast } from 'react-toastify';
-import { useAuth } from '@/context/AuthContext';
 import ReviewDialog from './ReviewDialog';
 import { submitReview } from '@/services/review';
 import { useCartStore } from '@/stores/useCartStore';
+import { useSession } from 'next-auth/react';
+import { toast } from 'react-toastify';
 interface ProductOverviewProps {
     product: Product;
     reviews?: Review[];
 }
 
 export default function ProductOverview({ product, reviews }: ProductOverviewProps) {
-    const { userId, isLoggedIn } = useAuth();
+    const { data: session, status } = useSession();
+    const userId = session?.user?.id;
     const [quantity, setQuantity] = useState(1);
-    const [rating, setRating] = useState(0);
     const [isReviewDialogOpen, setIsReviewDialogOpen] = useState(false);
     const productReviews = reviews?.filter(r =>
         r.productId == product.id
@@ -91,7 +91,7 @@ export default function ProductOverview({ product, reviews }: ProductOverviewPro
                     <span className="mx-2">|</span>
                     <button
                         onClick={() => {
-                            if (!isLoggedIn) {
+                            if (!session) {
                                 toast.error("Vui lòng đăng nhập để gửi bình luận.");
                                 return;
                             }

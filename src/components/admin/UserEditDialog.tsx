@@ -56,7 +56,6 @@ export function UserEditDialog({ user, onClose, onUserUpdated }: UserEditDialogP
                 phone: user.phone,
                 address: user.address,
                 role: user.role,
-                status: user.status,
             });
         }
     }, [user]);

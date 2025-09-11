@@ -3,10 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import './globals.css';
 import React from "react";
 import { ToastProvider } from "@/components/product/toast/ToastProvider";
-import { AuthProvider } from "@/context/AuthContext";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import RouteGuard from "@/components/auth/RouteGuard";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { SessionProviderWrapper } from "@/components/providers/SessionProviderWrapper";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AuthProvider>
+        <SessionProviderWrapper>
           <ThemeProvider>
             <RouteGuard>
               <LayoutWrapper>
@@ -41,7 +41,7 @@ export default function RootLayout({
               </LayoutWrapper>
             </RouteGuard>
           </ThemeProvider>
-        </AuthProvider>
+        </SessionProviderWrapper>
       </body>
     </html>
   );

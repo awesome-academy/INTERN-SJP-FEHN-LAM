@@ -16,7 +16,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from 'react-toastify';
 
-import { useAuth } from '@/context/AuthContext';
 import { CartItem } from '@/types/cart';
 import { Product } from '@/types/product';
 import { ConfirmDialog } from '@/components/dialog/ConfirmDialog';
@@ -29,6 +28,7 @@ import {
 } from '@/services/cart';
 import { createPaymentUrl } from '@/services/payment';
 import { useCartStore } from '@/stores/useCartStore';
+import { useSession } from 'next-auth/react';
 
 export interface CartItemWithProduct extends CartItem {
     product: Product;
@@ -40,9 +40,11 @@ export default function CartPage() {
     const [error, setError] = useState<string | null>(null);
     const [confirmOpen, setConfirmOpen] = useState(false);
     const [itemToDelete, setItemToDelete] = useState<string>("");
-    const { userId } = useAuth();
+
     const [isRedirecting, setIsRedirecting] = useState(false);
     const { removeFromCart, updateQuantity } = useCartStore()
+    const { data: session, status } = useSession()
+    const userId = session?.user?.id
     useEffect(() => {
         if (!userId) {
             setLoading(false);

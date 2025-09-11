@@ -7,7 +7,6 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { useAuth } from '@/context/AuthContext';
 import { getOrdersByUserId } from '@/services/orders';
 import { Order, User } from '@/types';
 import { formatCurrency, formatDate } from '@/lib/utils';
@@ -17,11 +16,13 @@ import { toast } from 'react-toastify';
 import { CustomPagination } from '@/components/Pagination';
 import { string } from 'zod';
 import OrderDetailDialog from '@/components/orders/OrderDetailDialog';
+import { useSession } from 'next-auth/react';
 
 
 const MyOrdersPage = () => {
     const router = useRouter();
-    const { userId, isLoggedIn } = useAuth();
+    const { data: session, status } = useSession()
+    const userId = session?.user?.id;
     const [orders, setOrders] = useState<Order[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -34,7 +35,7 @@ const MyOrdersPage = () => {
     const [selectedOrderId, setSelectedOrderId] = useState("");
     useEffect(() => {
         const fetchUserData = async () => {
-            if (isLoggedIn === false) {
+            if (!session) {
                 router.push('/login');
                 return;
             }
@@ -53,13 +54,13 @@ const MyOrdersPage = () => {
         };
 
         fetchUserData();
-    }, [isLoggedIn, userId, router]);
+    }, [session, userId, router]);
     const handlePageChange = (page: number) => {
         router.push(`?page=${page}`);
     };
 
     useEffect(() => {
-        if (isLoggedIn === false) {
+        if (!session) {
             router.push('/login');
             return;
         }
@@ -80,12 +81,8 @@ const MyOrdersPage = () => {
                 setLoading(false);
             }
         };
-
-        if (isLoggedIn === true) {
-            fetchUserOrders();
-        }
-
-    }, [isLoggedIn, userId, router]);
+        fetchUserOrders();
+    }, [session, userId, router]);
 
     if (loading) {
         return (

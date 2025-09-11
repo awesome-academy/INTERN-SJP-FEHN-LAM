@@ -1,14 +1,15 @@
 'use client';
 
 import React from 'react';
-import { useAuth } from '@/context/AuthContext';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import { Role } from '@/types/role';
+import { useSession } from 'next-auth/react';
 const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
-    const { role } = useAuth();
-
-    if (role === Role.CUSTOMER || role === null) {
+    const { data: session } = useSession();
+    const userId = session?.user?.id;
+    const role = session?.user?.role;
+    if (role === Role.CUSTOMER || !session) {
         return (
             <>
                 <Header />
